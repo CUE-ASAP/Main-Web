@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://vimal:svg123@cluster0.yh6hl.mongodb.net/<dbname>?retryWrites=true&w=majority",
+    "jwtSecret": "vk_myjwtSecret"
+}

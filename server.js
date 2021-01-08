@@ -1,24 +1,20 @@
-require('dotenv').config();
-
-const mongoose = require('mongoose');
 const express = require('express');
-const cors = require('cors');
-const cookieParser = require('cookie-parser')
-const fileUpload = require('express-fileupload')
+const mongoose = require('mongoose');
+//const bodyParser = require('body-parser'); // allows to take request and get data from body
+const path = require('path');
+const config = require('config');
 
-const app = express();
-app.use(express.json())
-app.use(cors())
-app.use(cookieParser())
-app.use(fileUpload({
-    useTempFiles: true
-}))
 
-// Routes
-app.use('/user', require('./routes/userRouter'))
+// Initialize express
+const app = express()
 
-// Connect mongodb
-const db = process.env.MONGODB_URL
+// Body-parser middleware
+app.use(express.json());
+
+// DB Config
+const db = config.get('mongoURI');
+
+// Connect to Mongo
 mongoose
     .connect(db, {
         useNewUrlParser: true,
@@ -27,6 +23,20 @@ mongoose
     }) // Adding new mongo url parser
     .then(() => console.log('MongoDB Connected...'))
     .catch(err => console.log(err));
+
+// Use Routes
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/auth', require('./routes/api/auth'));
+
+// Serve static assets if in production
+if (process.env.NODE_ENV === 'production') {
+    // Set static folder
+    app.use(express.static('client/build'));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
+}
 
 const port = process.env.PORT || 5000;
 

@@ -86,8 +86,8 @@ class RegisterModal extends Component {
         return (
             <div>
 
-                <NavLink onClick={this.toggle} href="#">
-                    Register
+                <NavLink onClick={this.toggle} href="#" class="sup">
+                    Sign up
                 </NavLink>
 
                 <Modal
@@ -111,12 +111,12 @@ class RegisterModal extends Component {
                                     className='mb-3'
                                     onChange={this.onChange}
                                 />
-                                <Label for="email">Email</Label>
+                                <Label for="email">Email ID</Label>
                                 <Input
                                     type="email"
                                     name="email"
                                     id="email"
-                                    placeholder="Email"
+                                    placeholder="Email ID"
                                     className='mb-3'
                                     onChange={this.onChange}
                                 />

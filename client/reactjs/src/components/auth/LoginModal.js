@@ -97,12 +97,12 @@ class LoginModal extends Component {
 
                         <Form onSubmit={this.onSubmit}>
                             <FormGroup>
-                                <Label for="email">Email</Label>
+                                <Label for="email">Email ID</Label>
                                 <Input
                                     type="email"
                                     name="email"
                                     id="email"
-                                    placeholder="Email"
+                                    placeholder="Email ID"
                                     className='mb-3'
                                     onChange={this.onChange}
                                 />

@@ -19,3 +19,11 @@
     opacity: 0.01;
     transition: opacity 1000ms ease-in;
 }
+
+.app-navbar{
+    background-color: #00BCD4
+}
+
+.auth-button{
+    background-color: #00BCD4;
+}

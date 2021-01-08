@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import AppNavBar from './components/AppNavbar';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Provider } from 'react-redux';
+import store from './store'
+import { loadUser } from './actions/authActions';
+import { Component } from 'react';
+
+
+class App extends Component {
+
+  componentDidMount() {
+    store.dispatch(loadUser());
+  }
+  render() {
+    return (
+      <Provider store={store}>
+        <div className="App">
+          <AppNavBar />
+        </div>
+      </Provider>
+    );
+  }
 }
 
 export default App;

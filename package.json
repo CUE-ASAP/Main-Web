@@ -1,44 +1,35 @@
 {
   "name": "cue_asap_web",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Cue ASAP - Society's Helping Hand",
+  "main": "server.js",
   "scripts": {
-    "client-install": "cd client && npm install",
+    "client-install": "cd client && cd reactjs && npm install",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "cd client && yarn start",
+    "client": "cd client && cd reactjs && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && npm install && npm run build"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && cd reactjs && npm install && npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CUE-ASAP/Main-Web.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CUE-ASAP/Main-Web/issues"
-  },
-  "homepage": "https://github.com/CUE-ASAP/Main-Web#readme",
+  "author": "cue_guardian",
+  "license": "MIT",
   "dependencies": {
+    "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
-    "cloudinary": "^1.23.0",
+    "bootstrap": "^4.5.3",
     "concurrently": "^5.3.0",
     "config": "^3.3.3",
-    "cookie-parser": "^1.4.5",
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "express-fileupload": "^1.2.0",
-    "googleapis": "^66.0.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.11.10",
-    "node-fetch": "^2.6.1",
-    "nodemailer": "^6.4.17"
+    "mongoose": "^5.11.8",
+    "react-redux": "^7.2.2",
+    "react-transition-group": "^4.4.1",
+    "reactstrap": "^8.7.1",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.6"
   }
 }

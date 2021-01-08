@@ -15,20 +15,20 @@ const User = require('../../models/User');
 router.post('/', (req, res) => {
     const { email, password } = req.body;
 
-    // Simple validation
+    // Empty validation
     if (!email || !password) {
-        return res.status(400).json({ msg: 'Please enter all fields!' });
+        return res.status(400).json({ msg: 'Please enter all fields' });
     }
 
     // Check for existing user
     User.findOne({ email })
         .then(user => {
-            if (!user) return res.status(400).json({ msg: 'User does not exist!' });
+            if (!user) return res.status(400).json({ msg: 'User does not exist' });
 
            // Validate password 
            bcrypt.compare(password, user.password)
             .then(isMatch => {
-                if(!isMatch) return res.status(400).json({msg: 'Invalid credentials!' });
+                if(!isMatch) return res.status(400).json({msg: 'Invalid credentials' });
 
                 jwt.sign(
                     { id: user.id },

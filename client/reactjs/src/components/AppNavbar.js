@@ -17,6 +17,7 @@ import LoginModal from './auth/LoginModal';
 import Logout from './auth/Logout'
 
 class AppNavBar extends Component {
+
     state = {
         isOpen: false
     }

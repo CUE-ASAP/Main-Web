@@ -2,7 +2,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 //const bodyParser = require('body-parser'); // allows to take request and get data from body
 const path = require('path');
-const config = require('config');
+// Config .env (To ignore sensitive data from github)
+require('dotenv').config({
+    path: './config/config.env'
+});
 
 
 // Initialize express
@@ -12,7 +15,7 @@ const app = express()
 app.use(express.json());
 
 // DB Config
-const db = config.get('mongoURI');
+const db = process.env.MONGOURI;
 
 // Connect to Mongo
 mongoose

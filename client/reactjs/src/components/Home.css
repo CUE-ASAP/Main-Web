@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+.custom-section{
+    width: inherit;
+    padding: 80px 0;
+    padding-left: 35px;
+    justify-content: center;
+    text-align: center;
+}
+
+#home-text h1{
+      font-size: 44px;
+      font-family: 'PT Sans', sans-serif;
+      color: #398abd;
+  }
+
+#home-text h3{
+      font-size: 30px;
+      font-family: 'Cairo', sans-serif;
+      color: #67b0dd;
+  }
+
+#home-text p{
+      font-size: 20px;
+      font-family: 'Hind guntur', sans-serif;
+      color:#7ac0ec;
+  }
+
+.box-area{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.single-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: auto;
+    border-radius: 4px;
+    background-color: #87cefa;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    transition: .3s;
+}
+
+.img-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border: 7px solid #87eefa;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    padding: 20px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.single-box:nth-child(1) .img-area{
+    background-image: url('../assets//OnBoarding/OB2.png');
+}
+.single-box:nth-child(2) .img-area{
+    background-image: url('../assets//OnBoarding/OB1.png');
+}
+.single-box:nth-child(3) .img-area{
+    background-image: url('../assets//OnBoarding/OB3.png');
+}
+
+.header-text{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 48px;
+}
+
+.img-text{
+    font-family: 'Hind guntur', sans-serif;
+    padding-top: 20px;
+}
+
+.img-text p{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.single-box:hover{
+    background: #00bcd4;
+    color: #000;
+}
+
+#main-footer{
+    background: #00bcd4;
+    color:#fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 80px;
+}
+
+@media(max-width:600px){
+    #main{
+        width: 100%;
+        float: none;
+    }
+    #sidebar{
+        width: 100%;
+        float: none;
+    }
+}

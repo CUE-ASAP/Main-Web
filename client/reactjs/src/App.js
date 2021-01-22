@@ -6,6 +6,8 @@ import { Provider } from 'react-redux';
 import store from './store'
 import {loadUser} from './actions/authActions';
 import { Component } from 'react';
+import { Container } from 'reactstrap';
+import GetStarted from './components/GetStarted';
 
 
 class App extends Component{
@@ -18,6 +20,9 @@ class App extends Component{
     <Provider store={store}>
       <div className="App">
         <AppNavBar />
+        <Container>
+          <GetStarted/>
+        </Container>
       </div>
     </Provider>
   );

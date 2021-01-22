@@ -15,7 +15,7 @@ import PropTypes from 'prop-types';
 import RegisterModal from './auth/RegisterModal'
 import LoginModal from './auth/LoginModal';
 import Logout from './auth/Logout'
-
+import Logo from '../assets/Asset 4.png'
 class AppNavBar extends Component {
 
     state = {
@@ -63,7 +63,8 @@ class AppNavBar extends Component {
             <div>
                 <Navbar dark expand="sm" className="app-navbar">
                     <Container>
-                        <NavbarBrand href="/">CUE ASAP</NavbarBrand>
+                        < a href="/"><img src={Logo} style={{ height: 40, width: 75, paddingRight:10 }}></img></a>
+                        <NavbarBrand href="/" style={{paddingLeft:5}}>CUE ASAP</NavbarBrand>
                         <NavbarToggler onClick={this.toggle} />
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav className="ml-auto" navbar>

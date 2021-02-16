@@ -15,6 +15,10 @@ import {
 import PropTypes from 'prop-types'
 import './HomeUser.css'
 import Logo from '../assets/Asset 4.png'
+import fire_icon from '../assets/Fire Icon.png'
+import police_icon from '../assets/Police icon.png'
+import medical_icon from '../assets/Med Icon.png'
+import vehicle_icon from '../assets/Car Icon.png'
 
 class Home extends React.Component {
 
@@ -74,31 +78,56 @@ class Home extends React.Component {
     }
 
     render(){
+
+        // Tracking user's current location:
+        this.getLocation()
+        
         return (
+
             <Container>
-                <section id="landing">
-                    <div class="container">
-                        <div class="row custom-section d-flex align-items-center">
-                            <div class="col-12 col-lg-4" id="home-text">
-                                <h1>Your Location</h1>
-                                <h3>Coordinates!</h3>
-                                <Button onClick={this.getLocation}>Get Coordinates</Button>
-                                <p style={{ paddingTop: 16 }}>Latitude: { this.state.latitude}</p>
-                                <p style={{}}>Longitude: { this.state.longitude}</p>
-                                <p style={{}}>Address: { this.state.useAddress}</p>
+
+                <div class="box-area-map">
+                    <div class="box-area-cue">
+                        <div class="single-box-cue">
+                            <div class="img-area-cue"><img src={police_icon} width="30px"/></div>
+                            <div class="img-text-cue">
+                                <span class="header-text-cue"><strong>POLICE</strong></span>
                             </div>
-                            <div class="col-12 col-lg-8">
-                            {
-                                this.state.latitude && this.state.longitude ?
-                                        <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.latitude},${this.state.longitude}&zoom=14&size=400x300&sensor=false&markers=color:red%7C${this.state.latitude},${this.state.longitude}&key=${'AIzaSyBHgWojYObkZUzJRtOrGH9dEZHXPXQMwFE'}`} alt='' />
-                                :
-                                null
-                            }
+                        </div>
+                        <div class="single-box-cue">
+                            <div class="img-area-cue"><img src={medical_icon} width="30px"/></div>
+                            <div class="img-text-cue">
+                                <span class="header-text-cue"><strong>MEDICAL</strong></span>
                             </div>
                         </div>
                     </div>
-                </section>
+                    <div class="box-area-cue" style={{ marginLeft: 25 , marginRight: 60}}>
+                        <div class="single-box-cue">
+                            <div class="img-area-cue" ><img src={fire_icon} width="24px"/></div>
+                            <div class="img-text-cue">
+                                <span class="header-text-cue"><strong>FIRE</strong></span>
+                            </div>
+                        </div>
+                        <div class="single-box-cue">
+                            <div class="img-area-cue"><img src={vehicle_icon} width="40.3px"/></div>
+                            <div class="img-text-cue">
+                                <span class="header-text-cue"><strong>VEHICLE</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="single-box-map" id="home-text">
+                        {
+                            this.state.latitude && this.state.longitude ?
+                                <img class="map-api" src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.latitude},${this.state.longitude}&zoom=14&size=300x260&sensor=false&markers=color:red%7C${this.state.latitude},${this.state.longitude}&key=${'AIzaSyBHgWojYObkZUzJRtOrGH9dEZHXPXQMwFE'}`} alt='' />
+                                :
+                                null
+                        }
+                        <h4 style={{paddingTop:6}}>{this.state.useAddress}</h4>
+                    </div>
 
+                </div>
+                
                 <div class="box-area">
                     <div class="single-box">
                         <div class="img-area"></div>

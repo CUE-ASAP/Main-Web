@@ -15,10 +15,17 @@ import {
 import PropTypes from 'prop-types'
 import './HomeUser.css'
 import Logo from '../assets/Asset 4.png'
-import fire_icon from '../assets/Fire Icon.png'
-import police_icon from '../assets/Police icon.png'
-import medical_icon from '../assets/Med Icon.png'
-import vehicle_icon from '../assets/Car Icon.png'
+import Logo_gif from '../assets/CUE asap LOGO Black.gif'
+import fire_icon from '../assets/Fire.svg'
+import police_icon from '../assets/Police.svg'
+import medical_icon from '../assets/Medical.svg'
+import vehicle_icon from '../assets/Car.svg'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+// To configure Toast notification:
+toast.configure()
 
 class Home extends React.Component {
 
@@ -39,7 +46,7 @@ class Home extends React.Component {
             navigator.geolocation.getCurrentPosition(this.getCoordinates, this.handleLocationError);
         }
         else{
-            alert("Geolocation is not supported by this browser");
+            toast.warn("Geolocation is not supported by this browse",{position: toast.POSITION.BOTTOM_RIGHT});
         }
     }
 
@@ -55,27 +62,44 @@ class Home extends React.Component {
         fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${this.state.latitude},${this.state.longitude}&sensor=false&key=${'AIzaSyBHgWojYObkZUzJRtOrGH9dEZHXPXQMwFE'}`)
             .then(response => response.json())
             .then(data => this.setState({
-                useAddress: data.results[3].formatted_address
+                useAddress: data.results[0].formatted_address
             }))
-            .catch(error => alert(error))
+            .catch(error => toast.warn(error, { position: toast.POSITION.BOTTOM_RIGHT }))
     }
 
     handleLocationError(error){
         switch (error.code) {
             case error.PERMISSION_DENIED:
-                alert("User denied the request for Geolocation.")
+                toast.warn("User denied the request for Geolocation.", { position: toast.POSITION.BOTTOM_RIGHT });
                 break;
             case error.POSITION_UNAVAILABLE:
-                alert("Location information is unavailable.")
+                toast.warn("Location information is unavailable.", { position: toast.POSITION.BOTTOM_RIGHT });
                 break;
             case error.TIMEOUT:
-                alert("The request to get user location timed out.")
+                toast.warn("The request to get user location timed out.", { position: toast.POSITION.BOTTOM_RIGHT });
                 break;
             case error.UNKNOWN_ERROR:
-                alert("An unknown error occurred.")
+                toast.warn("An unknown error occurred.", { position: toast.POSITION.BOTTOM_RIGHT });
                 break;
         }
     }
+
+    police() {
+        toast.success("You clicked police.", { position: toast.POSITION.BOTTOM_RIGHT });
+    }
+    
+    fire() {
+        toast.success("You clicked fire.", { position: toast.POSITION.BOTTOM_RIGHT });
+    }
+
+    medical() {
+        toast.success("You clicked medical.", { position: toast.POSITION.BOTTOM_RIGHT });
+    }
+
+    vehicle() {
+        toast.success("You clicked vehicle.", { position: toast.POSITION.BOTTOM_RIGHT });
+    }
+
 
     render(){
 
@@ -87,28 +111,28 @@ class Home extends React.Component {
             <Container>
 
                 <div class="box-area-map">
-                    <div class="box-area-cue">
-                        <div class="single-box-cue">
-                            <div class="img-area-cue"><img src={police_icon} width="30px"/></div>
-                            <div class="img-text-cue">
-                                <span class="header-text-cue"><strong>POLICE</strong></span>
-                            </div>
+                    <div class="box-area-cue" style={{marginLeft:20,marginRight:20}}>
+                        <div class="single-box-cue" onClick={this.police} >
+                                <div class="img-area-cue"><img src={police_icon} width="30px" /></div>
+                                <div class="img-text-cue">
+                                    <span class="header-text-cue"><strong>POLICE</strong></span>
+                                </div>
                         </div>
-                        <div class="single-box-cue">
+                        <div class="single-box-cue" onClick={this.medical} >
                             <div class="img-area-cue"><img src={medical_icon} width="30px"/></div>
                             <div class="img-text-cue">
                                 <span class="header-text-cue"><strong>MEDICAL</strong></span>
                             </div>
                         </div>
                     </div>
-                    <div class="box-area-cue" style={{ marginLeft: 25 , marginRight: 60}}>
-                        <div class="single-box-cue">
+                    <div class="box-area-cue" style={{ marginLeft: 20, marginRight: 20 }}>
+                        <div class="single-box-cue-2" onClick={this.fire}>
                             <div class="img-area-cue" ><img src={fire_icon} width="24px"/></div>
                             <div class="img-text-cue">
                                 <span class="header-text-cue"><strong>FIRE</strong></span>
                             </div>
                         </div>
-                        <div class="single-box-cue">
+                        <div class="single-box-cue-2" onClick={this.vehicle}>
                             <div class="img-area-cue"><img src={vehicle_icon} width="40.3px"/></div>
                             <div class="img-text-cue">
                                 <span class="header-text-cue"><strong>VEHICLE</strong></span>
@@ -116,7 +140,7 @@ class Home extends React.Component {
                         </div>
                     </div>
                 
-                    <div class="single-box-map" id="home-text">
+                    <div class="single-box-map" id="home-text" style={{ marginLeft: 60 , marginRight:60}}>
                         {
                             this.state.latitude && this.state.longitude ?
                                 <img class="map-api" src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.latitude},${this.state.longitude}&zoom=14&size=300x260&sensor=false&markers=color:red%7C${this.state.latitude},${this.state.longitude}&key=${'AIzaSyBHgWojYObkZUzJRtOrGH9dEZHXPXQMwFE'}`} alt='' />

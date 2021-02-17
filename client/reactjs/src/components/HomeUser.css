@@ -4,14 +4,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Blinker:wght@200&display=swap');
 .custom-section{
     width: inherit;
-    padding: 70px 0;
+    padding: 20px 0;
+    padding-left: 260px;
     margin-left: 0px;
     justify-content: center;
     text-align: start;
 }
 
 #home-text h1{
-      font-size: 44px;
+      font-size: 34px;
       font-family: 'PT Sans', sans-serif;
       color: #398abd;
   }
@@ -34,6 +35,12 @@
       color:#7ac0ec;
   }
 
+.logo-area{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .box-area{
     display: flex;
     flex-wrap: wrap;
@@ -47,7 +54,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
 }
 
 
@@ -75,14 +81,27 @@
     justify-content: center;
     width: 75px;
     height: auto;
-    border-radius: 4px;
-    background-color: #00bcd4;
+    border-radius: 12px;
     text-align: center;
     margin: 20px;
     padding: 20px;
     transition: .3s;
 }
 
+.single-box-cue-2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: auto;
+    border-radius: 12px;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    transition: .3s;
+}
 
 .single-box-template{
     position: relative;
@@ -142,6 +161,19 @@
     background-image: url('../assets//OnBoarding/OB3.png');
 }
 
+.single-box-cue:nth-child(1){
+    background-color: #bd976b;
+}
+.single-box-cue:nth-child(2){
+    background-color:#9675aa;
+}
+.single-box-cue-2:nth-child(1){
+    background-color: #ce2024;
+}
+.single-box-cue-2:nth-child(2){
+    background-color: #214fc6;
+}
+
 
 
 .header-text{
@@ -173,11 +205,23 @@
 
 .single-box:hover{
     background: #00bcd4;
-    color: #000;
 }
+
 .single-box-map:hover{
     background: #1bdf1b;
-    color: #000;
+}
+
+.single-box-cue:nth-child(1):hover{
+    background-color: #bdd76b;
+}
+.single-box-cue:nth-child(2):hover{
+    background-color:#96c5aa;
+}
+.single-box-cue-2:nth-child(1):hover{
+    background-color: #ce8024;
+}
+.single-box-cue-2:nth-child(2):hover{
+    background-color: #219fc6;
 }
 
 

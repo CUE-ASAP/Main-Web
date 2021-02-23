@@ -62,6 +62,10 @@ router.get('/user', auth, (req, res) => {
         .then(user => res.json(user));
 });
 
+// @route GET api/auth/user
+// @desc Get all emails (SOS)
+// @access Private
+
 router.get('/data', (req,res) => {
     User.find({})
     .select('email')

@@ -32,20 +32,18 @@ function Home() {
  
     return (
             <Container>
-            <section id="landing">
-            <div class="container">
-                <div class="row custom-section d-flex align-items-center">
-                    <div class="col-12 col-lg-4" id="home-text">
-                        <h1>Stay Logged</h1>
-                        <h1>Be Safe!</h1>
-                        <h3>We are there to help you.</h3>
-                        <p style={{marginTop:16}}>CUE-ASAP is a solution that can help us to survive in this world without about any kind of threats and accidents.</p>
-                    </div>
-                    <div class="col-12 col-lg-8" ref={container}>   
-                    </div>
+
+            <div class="box-area-landing">
+                <div class="single-box-landing" id="home-text">
+                    <h1>Stay Logged</h1>
+                    <h1>Be Safe!</h1>
+                    <h3>We are there to help you.</h3>
+                    <p style={{ marginTop: 16 }}>CUE-ASAP is a solution that can help us to survive in this world without about any kind of threats and accidents.</p>
+                </div>
+                <div class="single-box-landing" ref={container}>
+                    
                 </div>
             </div>
-            </section>
             
             <div class="box-area">
             <div class="single-box">

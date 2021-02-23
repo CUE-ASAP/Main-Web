@@ -18,11 +18,11 @@ class GetStarted extends Component {
         const { isAuthenticated, user } = this.props.auth;
 
         const authHome = (
-            <Home/>
+            <HomeUser/>
         )
 
         const guestHome = (
-            <HomeUser />
+            <Home />
         )
 
         return (

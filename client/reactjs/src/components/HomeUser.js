@@ -12,6 +12,7 @@ import {
     NavLink,
     Container
 } from 'reactstrap';
+
 import PropTypes from 'prop-types'
 import './HomeUser.css'
 import Logo from '../assets/Asset 4.png'
@@ -22,19 +23,26 @@ import medical_icon from '../assets/Medical.svg'
 import vehicle_icon from '../assets/Car.svg'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import emailjs from 'emailjs-com'
+import axios from 'axios';
 
 
 // To configure Toast notification:
 toast.configure()
 
-class Home extends React.Component {
+class HomeUser extends React.Component {
+
+    static propTypes = {
+        auth: PropTypes.object.isRequired
+    }
 
     constructor(props){
         super(props);
         this.state = {
             latitude: null,
             longitude: null,
-            useAddress: null
+            useAddress: null,
+            emails_for_sos: null
         };
         this.getLocation = this.getLocation.bind(this);
         this.getCoordinates = this.getCoordinates.bind(this)
@@ -84,27 +92,101 @@ class Home extends React.Component {
         }
     }
 
-    police() {
-        toast.success("You clicked police.", { position: toast.POSITION.BOTTOM_RIGHT });
+    police(user_name, user_location, email_for_bcc) {
+        emailjs.send('gmail', 'template_a7xa4hf', {
+            "subject": "Regarding crime emergency",
+            "name": `Dear ${user_name},`,
+            "email_from": "savage_coders@gmail.com",
+            "email_to": "kurtzcolonel848@gmail.com",
+            "email_to_bcc": `${email_for_bcc}`,
+            "message": `Today, a fire broke out at ${user_location} on ${new Date().toLocaleTimeString()}\n.`,
+        }, 'user_8jlcQ5ZP3b4DP5GVGoiSd')
+            .then((result) => {
+                toast.success("Mail sent to the fire authority & citizens, rescue team is one their way!", { position: toast.POSITION.BOTTOM_RIGHT });
+            }, (error) => {
+                toast.error("Couldn't send your mail (Sorry for inconvenience!).", { position: toast.POSITION.BOTTOM_RIGHT });
+            });
     }
     
-    fire() {
-        toast.success("You clicked fire.", { position: toast.POSITION.BOTTOM_RIGHT });
+    fire(user_name, user_location, email_for_bcc) {
+        emailjs.send('gmail', 'template_a7xa4hf', {
+            "subject": "Regarding fire emergency",
+            "name": `Dear ${user_name},`,
+            "email_from": "savage_coders@gmail.com",
+            "email_to": "kurtzcolonel848@gmail.com",
+            "email_to_bcc": `${email_for_bcc}`,
+            "message": `Today, a fire broke out at ${user_location} on ${new Date().toLocaleTimeString()}.`,
+            "my_html": `View Map:<br/>  <a href="https://maps.google.com/maps?q=${user_location}&t=&z=14&ie=UTF">Click here...</a>`,
+        }, 'user_8jlcQ5ZP3b4DP5GVGoiSd')
+        .then((result) => {
+            toast.success("Mail sent to the fire authority & citizens, rescue team is one their way! ", { position: toast.POSITION.BOTTOM_RIGHT });
+        }, (error) => {
+            toast.error("Couldn't send your mail (Sorry for inconvenience!).", { position: toast.POSITION.BOTTOM_RIGHT });
+        });
+        
     }
 
-    medical() {
-        toast.success("You clicked medical.", { position: toast.POSITION.BOTTOM_RIGHT });
+    medical(user_name, user_location, email_for_bcc) {
+        emailjs.send('gmail', 'template_a7xa4hf', {
+            "subject": "Regarding medical emergency",
+            "name": `Dear ${user_name},`,
+            "email_from": "savage_coders@gmail.com",
+            "email_to": "kurtzcolonel848@gmail.com",
+            "email_to_bcc": `${email_for_bcc}`,
+            "message": `Today, a fire broke out at ${user_location} on ${new Date().toLocaleTimeString()}\n.`,
+        }, 'user_8jlcQ5ZP3b4DP5GVGoiSd')
+            .then((result) => {
+                toast.success("Mail sent to the fire authority & citizens, rescue team is one their way!", { position: toast.POSITION.BOTTOM_RIGHT });
+            }, (error) => {
+                toast.error("Couldn't send your mail (Sorry for inconvenience!).", { position: toast.POSITION.BOTTOM_RIGHT });
+            });
     }
 
-    vehicle() {
-        toast.success("You clicked vehicle.", { position: toast.POSITION.BOTTOM_RIGHT });
+    vehicle(user_name, user_location, email_for_bcc) {
+        emailjs.send('gmail', 'template_a7xa4hf', {
+            "subject": "Regarding motor accident emergency",
+            "name": `Dear ${user_name},`,
+            "email_from": "savage_coders@gmail.com",
+            "email_to": "kurtzcolonel848@gmail.com",
+            "email_to_bcc": `${email_for_bcc}`,
+            "message": `Today, a fire broke out at ${user_location} on ${new Date().toLocaleTimeString()}\n.`,
+        }, 'user_8jlcQ5ZP3b4DP5GVGoiSd')
+            .then((result) => {
+                toast.success("Mail sent to the fire authority & citizens, rescue team is one their way!", { position: toast.POSITION.BOTTOM_RIGHT });
+            }, (error) => {
+                toast.error("Couldn't send your mail (Sorry for inconvenience!).", { position: toast.POSITION.BOTTOM_RIGHT });
+            });
     }
 
+    // Fetch all emails from server for sos
+
+    get_email_id = () => {
+        axios.get('/api/auth/data')
+        .then((response) => {
+            const data = response.data;
+            let email_sos = []
+            for (let i=0; i<data.length; i++)
+                email_sos[i] = data[i].email
+            email_sos = email_sos.join(', ')
+            this.setState({emails_for_sos: email_sos})
+        })
+    }
+
+
+    componentDidMount = () => {
+        // To fetch all emails from server for sos
+        this.get_email_id()
+        // Tracking user's current location:
+        this.getLocation()
+    }
 
     render(){
 
-        // Tracking user's current location:
-        this.getLocation()
+        
+        
+        //<a href={`https://maps.google.com/maps?q=fire&t=&z=14&ie=UTF`} target="_blank">Click here...</a>
+
+        const { user } = this.props.auth;
         
         return (
 
@@ -112,13 +194,13 @@ class Home extends React.Component {
 
                 <div class="box-area-map">
                     <div class="box-area-cue" style={{marginLeft:20,marginRight:20}}>
-                        <div class="single-box-cue" onClick={this.police} >
+                        <div class="single-box-cue" onClick={() => this.police(user.name, this.state.useAddress, this.state.emails_for_sos)} >
                                 <div class="img-area-cue"><img src={police_icon} width="30px" /></div>
                                 <div class="img-text-cue">
                                     <span class="header-text-cue"><strong>POLICE</strong></span>
                                 </div>
                         </div>
-                        <div class="single-box-cue" onClick={this.medical} >
+                        <div class="single-box-cue" onClick={() => this.medical(user.name, this.state.useAddress, this.state.emails_for_sos)} >
                             <div class="img-area-cue"><img src={medical_icon} width="30px"/></div>
                             <div class="img-text-cue">
                                 <span class="header-text-cue"><strong>MEDICAL</strong></span>
@@ -126,13 +208,13 @@ class Home extends React.Component {
                         </div>
                     </div>
                     <div class="box-area-cue" style={{ marginLeft: 20, marginRight: 20 }}>
-                        <div class="single-box-cue-2" onClick={this.fire}>
+                        <div class="single-box-cue-2" onClick={() => this.fire(user.name, this.state.useAddress, this.state.emails_for_sos)}>
                             <div class="img-area-cue" ><img src={fire_icon} width="24px"/></div>
                             <div class="img-text-cue">
                                 <span class="header-text-cue"><strong>FIRE</strong></span>
                             </div>
                         </div>
-                        <div class="single-box-cue-2" onClick={this.vehicle}>
+                        <div class="single-box-cue-2" onClick={() => this.vehicle(user.name, this.state.useAddress, this.state.emails_for_sos)}>
                             <div class="img-area-cue"><img src={vehicle_icon} width="40.3px"/></div>
                             <div class="img-text-cue">
                                 <span class="header-text-cue"><strong>VEHICLE</strong></span>
@@ -140,14 +222,14 @@ class Home extends React.Component {
                         </div>
                     </div>
                 
-                    <div class="single-box-map" id="home-text" style={{ marginLeft: 60 , marginRight:60}}>
+                    <div class="single-box-map" id="home-text" style={{ marginLeft: 60 , marginRight:60}} >
                         {
                             this.state.latitude && this.state.longitude ?
                                 <img class="map-api" src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.latitude},${this.state.longitude}&zoom=14&size=300x260&sensor=false&markers=color:red%7C${this.state.latitude},${this.state.longitude}&key=${'AIzaSyBHgWojYObkZUzJRtOrGH9dEZHXPXQMwFE'}`} alt='' />
                                 :
                                 null
                         }
-                        <h4 style={{paddingTop:6}}>{this.state.useAddress}</h4>
+                        <h4 style={{ paddingTop: 6 }}>{this.state.useAddress}</h4>
                     </div>
 
                 </div>
@@ -186,4 +268,8 @@ class Home extends React.Component {
     }
 }
 
-export default Home;
+const mapStateToProps = state => ({
+    auth: state.auth
+});
+
+export default connect(mapStateToProps, null)(HomeUser);

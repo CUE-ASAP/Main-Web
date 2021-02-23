@@ -3,6 +3,7 @@
         "jwtsecret",
         "mern",
         "mongouri",
-        "reactjs"
+        "reactjs",
+        "toastify"
     ]
 }

@@ -2,13 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
-.custom-section{
-    width: inherit;
-    padding: 70px 0;
-    margin-left: 0px;
-    justify-content: center;
-    text-align: center;
-}
 
 #home-text h1{
       font-size: 44px;
@@ -35,6 +28,13 @@
     align-items: center;
 }
 
+.box-area-landing{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 .single-box{
     position: relative;
     display: flex;
@@ -49,6 +49,18 @@
     margin: 20px;
     padding: 20px;
     transition: .3s;
+}
+
+.single-box-landing{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 540px;
+    height: auto;
+    margin-top: 80px;
+    text-align: center;
 }
 
 .img-area{

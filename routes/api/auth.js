@@ -62,4 +62,13 @@ router.get('/user', auth, (req, res) => {
         .then(user => res.json(user));
 });
 
+router.get('/data', (req,res) => {
+    User.find({})
+    .select('email')
+    .select('-_id')
+    .then(data =>{
+        res.json(data)
+    })
+});
+
 module.exports = router;

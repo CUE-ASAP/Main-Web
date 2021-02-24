@@ -21,6 +21,8 @@ import fire_icon from '../assets/Fire.svg'
 import police_icon from '../assets/Police.svg'
 import medical_icon from '../assets/Medical.svg'
 import vehicle_icon from '../assets/Car.svg'
+import sos_icon from '../assets/sos_icon.png'
+import maps_icon from '../assets/msg_icon.png'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import emailjs from 'emailjs-com'
@@ -42,7 +44,11 @@ class HomeUser extends React.Component {
             latitude: null,
             longitude: null,
             useAddress: null,
-            emails_for_sos: null
+            emails_for_sos: null,
+            police_cue_state: false,
+            fire_cue_state: false,
+            medical_cue_state: false,
+            vehicle_cue_state: false
         };
         this.getLocation = this.getLocation.bind(this);
         this.getCoordinates = this.getCoordinates.bind(this)
@@ -172,17 +178,39 @@ class HomeUser extends React.Component {
         })
     }
 
+    change_police_cue_state = () => {
+        this.setState({ police_cue_state: !this.state.police_cue_state })
+        setTimeout(() => {
+            this.setState({ police_cue_state: !this.state.police_cue_state })
+        },2000);
+    }
+    change_fire_cue_state = () => {
+        this.setState({ fire_cue_state: !this.state.fire_cue_state })
+        setTimeout(() => {
+            this.setState({ fire_cue_state: !this.state.fire_cue_state })
+        }, 2000);
+    }
+    change_medical_cue_state = () => {
+        this.setState({ medical_cue_state: !this.state.medical_cue_state })
+        setTimeout(() => {
+            this.setState({ medical_cue_state: !this.state.medical_cue_state })
+        }, 2000);
+    }
+    change_vehicle_cue_state = () => {
+        this.setState({ vehicle_cue_state: !this.state.vehicle_cue_state })
+        setTimeout(() => {
+            this.setState({ vehicle_cue_state: !this.state.vehicle_cue_state })
+        }, 2000);
+    }
 
     componentDidMount = () => {
         // To fetch all emails from server for sos
-        this.get_email_id()
+        //this.get_email_id()
         // Tracking user's current location:
-        this.getLocation()
+        //this.getLocation()
     }
 
     render(){
-
-        
         
         //<a href={`https://maps.google.com/maps?q=fire&t=&z=14&ie=UTF`} target="_blank">Click here...</a>
 
@@ -230,9 +258,98 @@ class HomeUser extends React.Component {
                                 null
                         }
                         <h4 style={{ paddingTop: 6 }}>{this.state.useAddress}</h4>
+                        <h4>{this.state.police_state}</h4>
                     </div>
 
                 </div>
+
+
+
+             
+            <div class="cue-wrapper-body">
+                <div class="cue-wrapper-outer">
+                    {
+                        this.state.police_cue_state?
+                        <button class="sos-pole-police-open"><img src={sos_icon} width="52px" /></button>
+                        :
+                        <button class="sos-pole-police-close"><img src={sos_icon} width="52px" /></button>
+                    }
+                    {
+                        this.state.fire_cue_state?
+                        <button class="sos-pole-fire-open"><img src={sos_icon} width="52px" /></button>
+                        :
+                        <button class="sos-pole-fire-close"><img src={sos_icon} width="52px" /></button>
+                    }
+                </div>
+                <div class="cue-wrapper-inner">
+                    {
+                        this.state.police_cue_state?
+                        <button class="maps-pole-police-open"><img src={maps_icon} width="52px" /></button>
+                        :
+                        <button class="maps-pole-police-close"><img src={maps_icon} width="52px" /></button>
+                    }
+                        <div class="single-box-cue-pole-police" onClick={()=>this.change_police_cue_state()}>
+                            <div class="img-area-cue-pole"><img src={police_icon} width="30px" /></div>
+                            <div class="img-text-cue-pole">
+                                <span class="header-text-cue-pole"><strong>POLICE</strong></span>
+                            </div>
+                        </div>
+                        <div class="single-box-cue-pole-fire" onClick={() => this.change_fire_cue_state()}>
+                            <div class="img-area-cue-pole"><img src={fire_icon} width="24px" /></div>
+                            <div class="img-text-cue-pole">
+                                <span class="header-text-cue-pole"><strong>FIRE</strong></span>
+                            </div>
+                        </div>
+                    {
+                        this.state.fire_cue_state?
+                        <button class="maps-pole-fire-open"><img src={maps_icon} width="52px" /></button>
+                        :
+                        <button class="maps-pole-fire-close"><img src={maps_icon} width="52px" /></button>
+                    }
+                </div>
+                <div class="cue-wrapper-inner">
+                    {
+                        this.state.medical_cue_state?
+                        <button class="maps-pole-medical-open"><img src={maps_icon} width="52px" /></button>
+                        :
+                        <button class="maps-pole-medical-close"><img src={maps_icon} width="52px" /></button>
+                    }
+                        <div class="single-box-cue-pole-medical" onClick={() => this.change_medical_cue_state()}>
+                            <div class="img-area-cue-pole"><img src={medical_icon} width="30px" /></div>
+                            <div class="img-text-cue-pole">
+                                <span class="header-text-cue-pole"><strong>MEDICAL</strong></span>
+                            </div>
+                        </div>
+                        <div class="single-box-cue-pole-vehicle" onClick={() => this.change_vehicle_cue_state()}>
+                            <div class="img-area-cue-pole"><img src={vehicle_icon} width="40.3px" /></div>
+                            <div class="img-text-cue-pole">
+                                <span class="header-text-cue-pole"><strong>VEHICLE</strong></span>
+                            </div>
+                        </div>
+                    {
+                        this.state.vehicle_cue_state?
+                        <button class="maps-pole-vehicle-open"><img src={maps_icon} width="52px" /></button>
+                        :
+                        <button class="maps-pole-vehicle-close"><img src={maps_icon} width="52px" /></button>
+                    }
+                </div>
+                <div class="cue-wrapper-outer">
+                    {
+                        this.state.medical_cue_state?
+                        <button class="sos-pole-medical-open"><img src={sos_icon} width="52px" /></button>
+                        :
+                        <button class="sos-pole-medical-close"><img src={sos_icon} width="52px" /></button>
+                    }
+                    {
+                        this.state.vehicle_cue_state?
+                        <button class="sos-pole-vehicle-open"><img src={sos_icon} width="52px" /></button>
+                        :
+                        <button class="sos-pole-vehicle-close"><img src={sos_icon} width="52px" /></button>
+                    }
+                </div>
+            </div>
+
+
                 
                 <div class="box-area">
                     <div class="single-box">

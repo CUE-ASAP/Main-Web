@@ -8,24 +8,28 @@
       font-size: 44px;
       font-family: 'PT Sans', sans-serif;
       color: #398abd;
+      pointer-events: none;
   }
 
 #home-text h3{
       font-size: 30px;
       font-family: 'Cairo', sans-serif;
       color: #67b0dd;
+      pointer-events: none;
   }
 
 #home-text h4{
     font-size: 18px;
     font-family: 'Blinker', sans-serif;
     color:#fff;
+    pointer-events: none;
 }
 
 #home-text p{
       font-size: 20px;
       font-family: 'Hind guntur', sans-serif;
       color:#7ac0ec;
+      pointer-events: none;
   }
 
 .logo-area{
@@ -174,10 +178,12 @@
     font-size: 24px;
     font-weight: 500;
     line-height: 48px;
+    pointer-events: none;
 }
 
 .header-text-cue{
     font-size: 12px;
+    pointer-events: none;
 }
 
 .img-text-cue{
@@ -189,12 +195,14 @@
 .img-text{
     font-family: 'Hind guntur', sans-serif;
     padding-top: 20px;
+    pointer-events: none;
 }
 
 .img-text p{
     font-size: 15px;
     font-weight: 400;
     line-height: 30px;
+    pointer-events: none;
 }
 
 .single-box:hover{
@@ -233,6 +241,406 @@
     height: auto;
     border-radius: 8px;
 }
+
+
+
+.cue-wrapper-body{
+    height: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.cue-wrapper-inner{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 2.2em;
+}
+.cue-wrapper-outer{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2.1em;
+}
+
+.single-box-cue-pole-police{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: auto;
+    border-radius: 12px;
+    text-align: center;
+    margin: 20px;
+    padding: 18px;
+    transition: .3s;
+    background-color: #bd976b;
+    z-index: 99;
+    transition: 500ms transform cubic-bezier(0.785, 0.18, 0.415, 1.65);
+}
+.single-box-cue-pole-fire{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: auto;
+    border-radius: 12px;
+    text-align: center;
+    margin: 20px;
+    padding: 18px;
+    transition: .3s;
+    background-color: #ce2024;
+}
+.single-box-cue-pole-medical{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: auto;
+    border-radius: 12px;
+    text-align: center;
+    margin: 20px;
+    padding: 16px;
+    padding-top: 18px;
+    transition: .3s;
+    background-color:#9675aa;
+}
+.single-box-cue-pole-vehicle{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 75px;
+    height: auto;
+    border-radius: 12px;
+    text-align: center;
+    margin: 20px;
+    transition: .3s;
+    padding-top: 18px;
+    background-color: #214fc6;
+}
+
+.single-box-cue-pole-police:hover{
+    background-color: #bdd76b;
+    transform:scale(1.1)
+}
+.single-box-cue-pole-medical:hover{
+    background-color:#96c5aa;
+    transform:scale(1.1)
+}
+.single-box-cue-pole-fire:hover{
+    background-color: #ce8024;
+    transform:scale(1.1)
+}
+.single-box-cue-pole-vehicle:hover{
+    background-color: #219fc6;
+    transform:scale(1.1)
+}
+
+
+.header-text-cue-pole{
+    font-size: 12px;
+    pointer-events: none;
+}
+
+.img-text-cue-pole{
+    font-family: 'Blinker', sans-serif;
+    padding-top: 10px;
+    color: #fff;
+}
+
+.sos-pole-police-close{
+    position: relative;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    transition: 500ms all cubic-bezier(0.785, 0.18, 0.415, 1.65);
+    bottom: -8rem;
+    opacity: 0;
+    transform:rotatez(-45deg);
+    pointer-events: none;
+}
+.sos-pole-police-open{
+    position: relative;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    transition: 500ms all cubic-bezier(0.785, 0.18, 0.415, 1.65);
+    opacity:1;
+    bottom:0rem;
+    transform:rotatez(0deg);
+    pointer-events:auto;
+}
+
+.sos-pole-fire-close{
+    position: relative;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    transition: 500ms all cubic-bezier(0.785, 0.18, 0.415, 1.65);
+    bottom: -8rem;
+    opacity: 0;
+    transform:rotatez(-45deg);
+    pointer-events: none;
+}
+.sos-pole-fire-open{
+    position: relative;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    transition: 500ms all cubic-bezier(0.785, 0.18, 0.415, 1.65);
+    opacity:1;
+    bottom:0rem;
+    transform:rotatez(0deg);
+    pointer-events:auto;
+}
+
+.sos-pole-medical-close{
+    position: relative;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    transition: 500ms all cubic-bezier(0.785, 0.18, 0.415, 1.65);
+    bottom: 8rem;
+    opacity: 0;
+    transform:rotatez(-45deg);
+    pointer-events: none;
+}
+.sos-pole-medical-open{
+    position: relative;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    transition: 500ms all cubic-bezier(0.785, 0.18, 0.415, 1.65);
+    opacity:1;
+    bottom:0rem;
+    transform:rotatez(0deg);
+    pointer-events:auto;
+}
+
+.sos-pole-vehicle-close{
+    position: relative;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    transition: 500ms all cubic-bezier(0.785, 0.18, 0.415, 1.65);
+    bottom: 8rem;
+    opacity: 0;
+    transform:rotatez(-45deg);
+    pointer-events: none;
+}
+.sos-pole-vehicle-open{
+    position: relative;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    transition: 500ms all cubic-bezier(0.785, 0.18, 0.415, 1.65);
+    opacity:1;
+    bottom:0rem;
+    transform:rotatez(0deg);
+    pointer-events:auto;
+}
+
+.maps-pole-police-close{
+    position: relative;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 70px;
+    margin-top: 35px;
+    border-radius: 50%;
+    text-align: center;
+    transition: 500ms all cubic-bezier(0.785, 0.18, 0.415, 1.65);
+    right: -8rem;
+    opacity: 0;
+    transform:rotatez(-45deg);
+    pointer-events: none;
+}
+.maps-pole-police-open{
+    position: relative;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 70px;
+    margin-top: 35px;
+    border-radius: 50%;
+    text-align: center;
+    transition: 500ms all cubic-bezier(0.785, 0.18, 0.415, 1.65);
+    opacity:1;
+    right:0rem;
+    transform:rotatez(0deg);
+    pointer-events:auto;
+}
+.maps-pole-fire-close{
+    position: relative;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 70px;
+    margin-top: 35px;
+    border-radius: 50%;
+    text-align: center;
+    transition: 500ms all cubic-bezier(0.785, 0.18, 0.415, 1.65);
+    right: 8rem;
+    opacity: 0;
+    transform:rotatez(-45deg);
+    pointer-events: none;
+}
+.maps-pole-fire-open{
+    position: relative;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 70px;
+    margin-top: 35px;
+    border-radius: 50%;
+    text-align: center;
+    transition: 500ms all cubic-bezier(0.785, 0.18, 0.415, 1.65);
+    opacity:1;
+    right:0rem;
+    transform:rotatez(0deg);
+    pointer-events:auto;
+}
+.maps-pole-medical-close{
+    position: relative;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 70px;
+    margin-top: 35px;
+    border-radius: 50%;
+    text-align: center;
+    transition: 500ms all cubic-bezier(0.785, 0.18, 0.415, 1.65);
+    right: -8rem;
+    opacity: 0;
+    transform:rotatez(-45deg);
+    pointer-events: none;
+}
+.maps-pole-medical-open{
+    position: relative;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 70px;
+    margin-top: 35px;
+    border-radius: 50%;
+    text-align: center;
+    transition: 500ms all cubic-bezier(0.785, 0.18, 0.415, 1.65);
+    opacity:1;
+    right:0rem;
+    transform:rotatez(0deg);
+    pointer-events:auto;
+}
+.maps-pole-vehicle-close{
+    position: relative;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 70px;
+    margin-top: 35px;
+    border-radius: 50%;
+    text-align: center;
+    transition: 500ms all cubic-bezier(0.785, 0.18, 0.415, 1.65);
+    right: 8rem;
+    opacity: 0;
+    transform:rotatez(-45deg);
+    pointer-events: none;
+}
+.maps-pole-vehicle-open{
+    position: relative;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 70px;
+    margin-top: 35px;
+    border-radius: 50%;
+    text-align: center;
+    transition: 500ms all cubic-bezier(0.785, 0.18, 0.415, 1.65);
+    opacity:1;
+    right:0rem;
+    transform:rotatez(0deg);
+    pointer-events:auto;
+}
+
+.sos-pole-police:hover,.maps-pole-police:hover{
+    transform:scale(1.1)
+}
+.sos-pole-fire:hover,.maps-pole-fire:hover{
+    transform:scale(1.1)
+}
+.sos-pole-medical:hover,.maps-pole-medical:hover{
+    transform:scale(1.1)
+}
+.sos-pole-vehicle:hover,.maps-pole-vehicle:hover{
+    transform:scale(1.1)
+}
+
+
 
 @media(max-width:600px){
     #main{

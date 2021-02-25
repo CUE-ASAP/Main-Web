@@ -21,8 +21,9 @@ import fire_icon from '../assets/Fire.svg'
 import police_icon from '../assets/Police.svg'
 import medical_icon from '../assets/Medical.svg'
 import vehicle_icon from '../assets/Car.svg'
-import sos_icon from '../assets/sos_icon.png'
-import maps_icon from '../assets/msg_icon.png'
+import sos_icon from '../assets/sos-icon.png'
+import maps_icon from '../assets/maps-tracking.png'
+import user_locate from '../assets/user-location.png'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import emailjs from 'emailjs-com'
@@ -180,27 +181,27 @@ class HomeUser extends React.Component {
 
     change_police_cue_state = () => {
         this.setState({ police_cue_state: !this.state.police_cue_state })
-        setTimeout(() => {
+       /* setTimeout(() => {
             this.setState({ police_cue_state: !this.state.police_cue_state })
-        },2000);
+        }, 2500);*/
     }
     change_fire_cue_state = () => {
         this.setState({ fire_cue_state: !this.state.fire_cue_state })
         setTimeout(() => {
             this.setState({ fire_cue_state: !this.state.fire_cue_state })
-        }, 2000);
+        }, 2500);
     }
     change_medical_cue_state = () => {
         this.setState({ medical_cue_state: !this.state.medical_cue_state })
         setTimeout(() => {
             this.setState({ medical_cue_state: !this.state.medical_cue_state })
-        }, 2000);
+        }, 2500);
     }
     change_vehicle_cue_state = () => {
         this.setState({ vehicle_cue_state: !this.state.vehicle_cue_state })
         setTimeout(() => {
             this.setState({ vehicle_cue_state: !this.state.vehicle_cue_state })
-        }, 2000);
+        }, 2500);
     }
 
     componentDidMount = () => {

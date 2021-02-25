@@ -242,7 +242,7 @@
     border-radius: 8px;
 }
 
-
+/* Cue-primary-buttons*/
 
 .cue-wrapper-body{
     height: auto;
@@ -338,7 +338,6 @@
     transform:scale(1.1)
 }
 
-
 .header-text-cue-pole{
     font-size: 12px;
     pointer-events: none;
@@ -350,9 +349,21 @@
     color: #fff;
 }
 
+/* Cue-secondary-buttons */
+
+.sos-pole-police-open:focus,.sos-pole-fire-open:focus,.sos-pole-medical-open:focus,.sos-pole-vehicle-open:focus,.maps-pole-police-open:focus,.maps-pole-fire-open:focus,.maps-pole-medical-open:focus,.maps-pole-vehicle-open:focus{
+    border: none;
+    outline: none;
+}
+.sos-pole-police-close:focus,.sos-pole-fire-close:focus,.sos-pole-medical-close:focus,.sos-pole-vehicle-close:focus,.maps-pole-police-close:focus,.maps-pole-fire-close:focus,.maps-pole-medical-close:focus,.maps-pole-vehicle-close:focus{
+    border: none;
+    outline: none;
+}
+
 .sos-pole-police-close{
     position: relative;
     border: none;
+    outline: none;
     align-items: center;
     justify-content: center;
     width: 78px;
@@ -371,6 +382,7 @@
 .sos-pole-police-open{
     position: relative;
     border: none;
+    outline: none;
     align-items: center;
     justify-content: center;
     width: 78px;
@@ -385,11 +397,22 @@
     bottom:0rem;
     transform:rotatez(0deg);
     pointer-events:auto;
+    background-position: center;
+    background-color: #bd976b;
+    background-image: radial-gradient(circle, transparent 1%, #bd976b 1%);
+    background-size: 20000%;
+}
+.sos-pole-police-open:active{
+    outline: none;
+    background-color: #bdd76b;
+    transition: background 0s;
+    background-size: 100%;
 }
 
 .sos-pole-fire-close{
     position: relative;
     border: none;
+    outline: none;
     align-items: center;
     justify-content: center;
     width: 78px;
@@ -408,6 +431,7 @@
 .sos-pole-fire-open{
     position: relative;
     border: none;
+    outline: none;
     align-items: center;
     justify-content: center;
     width: 78px;
@@ -422,11 +446,22 @@
     bottom:0rem;
     transform:rotatez(0deg);
     pointer-events:auto;
+    background-position: center;
+    background-color: #ce2024;
+    background-image: radial-gradient(circle, transparent 1%, #ce2024 1%);
+    background-size: 20000%;
+}
+.sos-pole-fire-open:active{
+    outline: none;
+    background-color: #ce8024;
+    transition: background 0s;
+    background-size: 100%;
 }
 
 .sos-pole-medical-close{
     position: relative;
     border: none;
+    outline: none;
     align-items: center;
     justify-content: center;
     width: 78px;
@@ -445,6 +480,7 @@
 .sos-pole-medical-open{
     position: relative;
     border: none;
+    outline: none;
     align-items: center;
     justify-content: center;
     width: 78px;
@@ -459,11 +495,22 @@
     bottom:0rem;
     transform:rotatez(0deg);
     pointer-events:auto;
+    background-position: center;
+    background-color: #9675aa;
+    background-image: radial-gradient(circle, transparent 1%, #9675aa 1%);
+    background-size: 20000%;
+}
+.sos-pole-medical-open:active{
+    outline: none;
+    background-color: #96c5aa;
+    transition: background 0s;
+    background-size: 100%;
 }
 
 .sos-pole-vehicle-close{
     position: relative;
     border: none;
+    outline: none;
     align-items: center;
     justify-content: center;
     width: 78px;
@@ -482,6 +529,7 @@
 .sos-pole-vehicle-open{
     position: relative;
     border: none;
+    outline: none;
     align-items: center;
     justify-content: center;
     width: 78px;
@@ -496,15 +544,28 @@
     bottom:0rem;
     transform:rotatez(0deg);
     pointer-events:auto;
+    background-position: center;
+    background-color: #214fc6;
+    background-image: radial-gradient(circle, transparent 1%, #214fc6 1%);
+    background-size: 20000%;
+}
+.sos-pole-vehicle-open:active{
+    outline: none;
+    background-color: #219fc6;
+    transition: background 0s;
+    background-size: 100%;
 }
 
 .maps-pole-police-close{
     position: relative;
     border: none;
+    outline: none;
     align-items: center;
     justify-content: center;
     width: 78px;
     height: 70px;
+    padding-left: 10px;
+    padding-top: 4px;
     margin-top: 35px;
     border-radius: 50%;
     text-align: center;
@@ -517,10 +578,13 @@
 .maps-pole-police-open{
     position: relative;
     border: none;
+    outline: none;
     align-items: center;
     justify-content: center;
     width: 78px;
     height: 70px;
+    padding-left: 10px;
+    padding-top: 4px;
     margin-top: 35px;
     border-radius: 50%;
     text-align: center;
@@ -529,14 +593,28 @@
     right:0rem;
     transform:rotatez(0deg);
     pointer-events:auto;
+    background-position: center;
+    background-color: #bd976b;
+    background-image: radial-gradient(circle, transparent 1%, #bd976b 1%);
+    background-size: 20000%;
 }
+.maps-pole-police-open:active{
+    outline: none;
+    background-color: #bdd76b;
+    transition: background 0s;
+    background-size: 100%;
+}
+
 .maps-pole-fire-close{
     position: relative;
     border: none;
+    outline: none;
     align-items: center;
     justify-content: center;
     width: 78px;
     height: 70px;
+    padding-left: 10px;
+    padding-top: 4px;
     margin-top: 35px;
     border-radius: 50%;
     text-align: center;
@@ -549,10 +627,13 @@
 .maps-pole-fire-open{
     position: relative;
     border: none;
+    outline: none;
     align-items: center;
     justify-content: center;
     width: 78px;
     height: 70px;
+    padding-left: 10px;
+    padding-top: 4px;
     margin-top: 35px;
     border-radius: 50%;
     text-align: center;
@@ -561,14 +642,28 @@
     right:0rem;
     transform:rotatez(0deg);
     pointer-events:auto;
+    background-position: center;
+    background-color: #ce2024;
+    background-image: radial-gradient(circle, transparent 1%, #ce2024 1%);
+    background-size: 20000%;
 }
+.maps-pole-fire-open:active{
+    outline: none;
+    background-color: #ce8024;
+    transition: background 0s;
+    background-size: 100%;
+}
+
 .maps-pole-medical-close{
     position: relative;
     border: none;
+    outline: none;
     align-items: center;
     justify-content: center;
     width: 78px;
     height: 70px;
+    padding-left: 10px;
+    padding-top: 4px;
     margin-top: 35px;
     border-radius: 50%;
     text-align: center;
@@ -581,10 +676,13 @@
 .maps-pole-medical-open{
     position: relative;
     border: none;
+    outline: none;
     align-items: center;
     justify-content: center;
     width: 78px;
     height: 70px;
+    padding-left: 10px;
+    padding-top: 4px;
     margin-top: 35px;
     border-radius: 50%;
     text-align: center;
@@ -593,14 +691,28 @@
     right:0rem;
     transform:rotatez(0deg);
     pointer-events:auto;
+    background-position: center;
+    background-color: #9675aa;
+    background-image: radial-gradient(circle, transparent 1%, #9675aa 1%);
+    background-size: 20000%;
 }
+.maps-pole-medical-open:active{
+    outline: none;
+    background-color: #96c5aa;
+    transition: background 0s;
+    background-size: 100%;
+}
+
 .maps-pole-vehicle-close{
     position: relative;
     border: none;
+    outline: none;
     align-items: center;
     justify-content: center;
     width: 78px;
     height: 70px;
+    padding-left: 10px;
+    padding-top: 4px;
     margin-top: 35px;
     border-radius: 50%;
     text-align: center;
@@ -613,10 +725,13 @@
 .maps-pole-vehicle-open{
     position: relative;
     border: none;
+    outline: none;
     align-items: center;
     justify-content: center;
     width: 78px;
     height: 70px;
+    padding-left: 10px;
+    padding-top: 4px;
     margin-top: 35px;
     border-radius: 50%;
     text-align: center;
@@ -625,18 +740,32 @@
     right:0rem;
     transform:rotatez(0deg);
     pointer-events:auto;
+    background-position: center;
+    background-color: #214fcb;
+    background-image: radial-gradient(circle, transparent 1%, #214fcb 1%);
+    background-size: 20000%;
+}
+.maps-pole-vehicle-open:active{
+    outline: none;
+    background-color: #219fc6;
+    transition: background 0s;
+    background-size: 100%;
 }
 
-.sos-pole-police:hover,.maps-pole-police:hover{
+.sos-pole-police-open:hover,.maps-pole-police-open:hover{
+    background-color: #bdd76b;
     transform:scale(1.1)
 }
-.sos-pole-fire:hover,.maps-pole-fire:hover{
+.sos-pole-fire-open:hover,.maps-pole-fire-open:hover{
+    background-color: #ce8024;
     transform:scale(1.1)
 }
-.sos-pole-medical:hover,.maps-pole-medical:hover{
+.sos-pole-medical-open:hover,.maps-pole-medical-open:hover{
+    background-color: #96c5aa;
     transform:scale(1.1)
 }
-.sos-pole-vehicle:hover,.maps-pole-vehicle:hover{
+.sos-pole-vehicle-open:hover,.maps-pole-vehicle-open:hover{
+    background-color: #219fc6;
     transform:scale(1.1)
 }
 

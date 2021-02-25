@@ -351,34 +351,44 @@ class HomeUser extends React.Component {
             </div>
 
 
-                
-                <div class="box-area">
-                    <div class="single-box">
-                        <div class="img-area"></div>
-                        <div class="img-text">
-                            <span class="header-text"><strong>Hello There</strong></span>
-                            <p>Description 1</p>
+            <div class="container">
+                    <div class="card">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <div class="card-content">
+                            <div class="card-img-area"></div>
+                            <h2>01</h2>
+                            <h3>Location Tracking</h3>
+                            <p>Tracks the user location via maps</p>
                         </div>
                     </div>
-                    <div class="single-box">
-                        <div class="img-area"></div>
-                        <div class="img-text">
-                            <span class="header-text"><strong>Spread The Awareness</strong></span>
-                            <p>Description 2</p>
+                    <div class="card">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <div class="card-content">
+                            <div class="card-img-area"></div>
+                            <h2>02</h2>
+                            <h3>Save your Souls</h3>
+                            <p>Sends SoS message to other citizens</p>
                         </div>
                     </div>
-                    <div class="single-box">
-                        <div class="img-area"></div>
-                        <div class="img-text">
-                            <span class="header-text"><strong>Service authorities</strong></span>
-                            <p>Description 3</p>
+                    <div class="card">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <div class="card-content">
+                            <div class="card-img-area"></div>
+                            <h2>03</h2>
+                            <h3>Contact Authority</h3>
+                            <p>To contact the service authorities via maps</p>
                         </div>
                     </div>
-                </div>
-
-                <footer id="main-footer">
-                    <p>CUE-ASAP, Copyright &copy; 2021</p>
-                </footer>
+            </div>
 
             </Container>
 

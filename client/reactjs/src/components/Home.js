@@ -22,16 +22,16 @@ function Home() {
 
     useEffect(() => {
         lottie.loadAnimation({
-            container:container.current,
+            container: container.current,
             renderer: 'svg',
             loop: true,
             autoplay: true,
             animationData: require('../assets/contact-us.json')
         })
-    },[])
- 
+    }, [])
+
     return (
-            <Container>
+        <Container>
 
             <div class="box-area-landing">
                 <div class="single-box-landing" id="home-text">
@@ -41,42 +41,38 @@ function Home() {
                     <p style={{ marginTop: 16 }}>CUE-ASAP is a solution that can help us to survive in this world without about any kind of threats and accidents.</p>
                 </div>
                 <div class="single-box-landing" ref={container}>
-                    
+
                 </div>
             </div>
-            
+
             <div class="box-area">
-            <div class="single-box">
-                <div class="img-area"></div>
-                <div class="img-text">
-                        <span class="header-text"><strong>Hello There</strong></span>
-                    <p>Description 1</p>
-                </div>
-            </div>
                 <div class="single-box">
-                <div class="img-area"></div>
-                <div class="img-text">
+                    <div class="img-area"></div>
+                    <div class="img-text">
+                        <span class="header-text"><strong>Hello There</strong></span>
+                        <p>Description 1</p>
+                    </div>
+                </div>
+                <div class="single-box">
+                    <div class="img-area"></div>
+                    <div class="img-text">
                         <span class="header-text"><strong>Spread The Awareness</strong></span>
-                    <p>Description 2</p>
+                        <p>Description 2</p>
+                    </div>
                 </div>
-            </div>
-            <div class="single-box">
-                <div class="img-area"></div>
-                <div class="img-text">
+                <div class="single-box">
+                    <div class="img-area"></div>
+                    <div class="img-text">
                         <span class="header-text"><strong>Service authorities</strong></span>
-                    <p>Description 3</p>
+                        <p>Description 3</p>
+                    </div>
                 </div>
             </div>
-            </div>
-            
-            <footer id="main-footer">
-                <p>CUE-ASAP, Copyright &copy; 2021</p>
-            </footer>
-            
-            </Container>
-            
+
+        </Container>
+
     );
 }
- 
+
 
 export default Home;

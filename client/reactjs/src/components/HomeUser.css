@@ -4,39 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Blinker:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
-#home-text h1{
-      font-size: 44px;
-      font-family: 'PT Sans', sans-serif;
-      color: #398abd;
-      pointer-events: none;
-  }
-
-#home-text h3{
-      font-size: 30px;
-      font-family: 'Cairo', sans-serif;
-      color: #67b0dd;
-      pointer-events: none;
-  }
-
-#home-text h4{
-    font-size: 18px;
-    font-family: 'Blinker', sans-serif;
-    color:#fff;
-    pointer-events: none;
-}
-
-#home-text p{
-      font-size: 20px;
-      font-family: 'Hind guntur', sans-serif;
-      color:#7ac0ec;
-      pointer-events: none;
-  }
-
-.logo-area{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
+/*Map API UI*/
 
 .box-area-map{
     display: flex;
@@ -44,52 +12,6 @@
     justify-content: center;
     align-items: center;
     margin-top: 60px;
-}
-
-.single-box-cue{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 75px;
-    height: auto;
-    border-radius: 12px;
-    text-align: center;
-    margin: 20px;
-    padding: 20px;
-    transition: .3s;
-}
-
-.single-box-cue-2{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 75px;
-    height: auto;
-    border-radius: 12px;
-    text-align: center;
-    margin: 20px;
-    padding: 20px;
-    transition: .3s;
-}
-
-.single-box-template{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-    background-color: #fff;
-    text-align: center;
-    margin: 20px;
-    padding: 3px;
-    transition: .3s;
 }
 
 .single-box-map{
@@ -108,54 +30,15 @@
     transition: .3s;
 }
 
-.single-box-cue:nth-child(1){
-    background-color: #bd976b;
-}
-.single-box-cue:nth-child(2){
-    background-color:#9675aa;
-}
-.single-box-cue-2:nth-child(1){
-    background-color: #ce2024;
-}
-.single-box-cue-2:nth-child(2){
-    background-color: #214fc6;
-}
-
-.header-text-cue{
-    font-size: 12px;
-    pointer-events: none;
-}
-
-.img-text-cue{
+#home-text h4{
+    font-size: 18px;
     font-family: 'Blinker', sans-serif;
-    padding-top: 10px;
-    color: #fff;
+    color:#fff;
+    pointer-events: none;
 }
 
 .single-box-map:hover{
     background: #1bdf1b;
-}
-
-.single-box-cue:nth-child(1):hover{
-    background-color: #bdd76b;
-}
-.single-box-cue:nth-child(2):hover{
-    background-color:#96c5aa;
-}
-.single-box-cue-2:nth-child(1):hover{
-    background-color: #ce8024;
-}
-.single-box-cue-2:nth-child(2):hover{
-    background-color: #219fc6;
-}
-
-
-#main-footer{
-    background: #00bcd4;
-    color:#fff;
-    text-align: center;
-    padding: 10px;
-    margin-top: 120px;
 }
 
 .map-api{
@@ -164,7 +47,6 @@
     height: auto;
     border-radius: 8px;
 }
-
 
 /*Card UI*/
 .container{

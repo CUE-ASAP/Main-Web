@@ -31,8 +31,9 @@ function Home() {
     }, [])
 
     return (
-        <Container>
 
+        
+            <div class="box-container">
             <div class="box-area-landing">
                 <div class="single-box-landing" id="home-text">
                     <h1>Stay Logged</h1>
@@ -49,27 +50,26 @@ function Home() {
                 <div class="single-box">
                     <div class="img-area"></div>
                     <div class="img-text">
-                        <span class="header-text"><strong>Hello There</strong></span>
-                        <p>Description 1</p>
+                        <span class="header-text"><strong>Responsive Web Design</strong></span>
+                        <p>This website is responsive across a wide range of devices</p>
                     </div>
                 </div>
                 <div class="single-box">
                     <div class="img-area"></div>
                     <div class="img-text">
-                        <span class="header-text"><strong>Spread The Awareness</strong></span>
-                        <p>Description 2</p>
+                        <span class="header-text"><strong>Maps API</strong></span>
+                        <p>Your exact location and services are provided using Maps API</p>
                     </div>
                 </div>
                 <div class="single-box">
                     <div class="img-area"></div>
                     <div class="img-text">
-                        <span class="header-text"><strong>Service authorities</strong></span>
-                        <p>Description 3</p>
+                        <span class="header-text"><strong>CUE-Assist</strong></span>
+                        <p>A chatbot used to conduct an on-line chat conversation for user queries</p>
                     </div>
                 </div>
             </div>
-
-        </Container>
+            </div>
 
     );
 }

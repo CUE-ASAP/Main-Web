@@ -4,6 +4,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Blinker:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
+
+/*Wrapping Cue-buttons and Map API*/
+
+.box-container-home-user{
+    background-image: url('../assets/bg3.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#box-card-ui{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.cue-wrap-btn-map{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/bg6.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
 /*Map API UI*/
 
 .box-area-map{
@@ -49,8 +73,8 @@
 }
 
 /*Card UI*/
+
 .container{
-    width: 1100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,14 +131,17 @@
 
 .container .card:nth-child(1) .card-img-area{
     background-image: url('../assets/user-location-large.png');
+    background-repeat: no-repeat;
 }
 .container .card:nth-child(2) .card-img-area{
     background-image: url('../assets/sos-icon-large.png');
+    background-repeat: no-repeat;
 }
 .container .card:nth-child(3) .card-img-area{
     background-image: url('../assets/maps-tracking-large.png');
     background-size: 90%;
-    background-position: 0.42em;
+    background-position: 0.58em;
+    background-repeat: no-repeat;
 }
 
 .container .card .card-content h2{
@@ -260,7 +287,6 @@
 /* Cue-primary-buttons*/
 
 .cue-wrapper-body{
-    height: auto;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -784,15 +810,30 @@
     transform:scale(1.1)
 }
 
-
-
-@media(max-width:600px){
-    #main{
-        width: 100%;
-        float: none;
+@media only screen and (max-width : 500px){
+    .cue-wrapper-inner{
+        gap:0em;
     }
-    #sidebar{
-        width: 100%;
-        float: none;
+    .cue-wrapper-outer{
+        gap:0em;
     }
+    .single-box-cue-pole-police,.single-box-cue-pole-fire,.single-box-cue-pole-medical,.single-box-cue-pole-vehicle{
+        width: 62px;
+        height: 90px;
+    }
+    .header-text-cue-pole{
+        font-size: 0.5em;
+        pointer-events: none;
+    }
+
+    .img-text-cue-pole{
+        padding-top: 4px;
+        pointer-events: none;
+    }
+    
+    #img-police{
+        margin-top: 3.5px;
+        width:27px;
+    }
+
 }

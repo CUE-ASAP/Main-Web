@@ -269,9 +269,11 @@ class HomeUser extends React.Component {
         const { user } = this.props.auth;
         
         return (
-
-            <Container>
-             
+          
+        <div class="box-container-home-user">
+  
+            <div class="cue-wrap-btn-map">
+        
             <div class="cue-wrapper-body">
                 <div class="cue-wrapper-outer">
                     {
@@ -302,7 +304,7 @@ class HomeUser extends React.Component {
                                 ?
                                 <Spinner animation="border" style={{ color: "#fff" }} />
                                 :
-                                <div class="img-area-cue-pole"><img src={police_icon} width="30px" /></div>
+                                <div class="img-area-cue-pole"><img id="img-police"src={police_icon} width="30px" /></div>
                             }
                             <div class="img-text-cue-pole">
                                 <span class="header-text-cue-pole"><strong>POLICE</strong></span>
@@ -386,25 +388,26 @@ class HomeUser extends React.Component {
                     }
                 </div>
             </div>
-                {
-                this.state.useAddress
-                ?
-                <div class="single-box-map" id="home-text" style={{ marginLeft: 60, marginRight: 60 }} >
                     {
-                    this.state.latitude && this.state.longitude
-                    ?
-                    <img class="map-api" src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.latitude},${this.state.longitude}&zoom=14&size=300x260&sensor=false&markers=color:red%7C${this.state.latitude},${this.state.longitude}&key=${'AIzaSyCvyyFRmRiF4WDVNblK38iSgeKv2LEeyvE'}`} alt='' />
-                    :
-                    null
+                        this.state.useAddress
+                            ?
+                            <div class="single-box-map" id="home-text" style={{ marginLeft: 60, marginRight: 60 }} >
+                                {
+                                    this.state.latitude && this.state.longitude
+                                        ?
+                                        <img class="map-api" src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.latitude},${this.state.longitude}&zoom=14&size=300x260&sensor=false&markers=color:red%7C${this.state.latitude},${this.state.longitude}&key=${'AIzaSyCvyyFRmRiF4WDVNblK38iSgeKv2LEeyvE'}`} alt='' />
+                                        :
+                                        null
+                                }
+                                <h4 style={{ paddingTop: 6 }}><img src={user_locate} width="32px" />{this.state.useAddress}</h4>
+                            </div>
+                            :
+                            null
                     }
-                    <h4 style={{ paddingTop: 6 }}><img src={user_locate} width="32px" />{this.state.useAddress}</h4>
-                </div>
-                :
-                null
-            }
+            </div>   
+                
 
-
-            <div class="container">
+            <div class="container" id="box-card-ui">
                     <div class="card">
                         <span></span>
                         <span></span>
@@ -443,7 +446,7 @@ class HomeUser extends React.Component {
                     </div>
             </div>
 
-            </Container>
+        </div>
 
         );
     }

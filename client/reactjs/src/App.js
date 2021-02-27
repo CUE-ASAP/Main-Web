@@ -19,10 +19,11 @@ class App extends Component{
   return (
     <Provider store={store}>
       <div className="App">
-        <AppNavBar />
-        <Container>
-          <GetStarted/>
-        </Container>
+          <AppNavBar />
+          <GetStarted />
+          <div id="main-footer">
+            <h3>CUE-ASAP &copy; 2020-2021. All Rights Reserved.</h3>
+          </div> 
       </div>
     </Provider>
   );

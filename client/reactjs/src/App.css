@@ -48,3 +48,46 @@
     pointer-events: none;
     margin-bottom: 0px;
 }
+
+/*Chatbot UI*/
+
+.chatbot-btn{
+    position: fixed;
+    border: none;
+    outline: none;
+    right: 30px;
+    bottom: 40px;
+    background: #faface ;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    box-shadow: 0 5px 5px #00BCD4;
+}
+
+.chatbot-btn:hover + .chatbot-btn-batch {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.chatbot-btn:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.chatbot-btn:focus{
+    outline: none;
+    border: none;
+}
+
+.chatbot-btn-batch{
+    position: fixed;
+    right: 30px;
+    bottom: 92px;
+    border-radius: 50%;
+    opacity: 0.54;
+    width: 15px;
+    height: 15px;
+    background: red;
+}

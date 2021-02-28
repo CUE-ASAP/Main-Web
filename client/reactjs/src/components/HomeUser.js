@@ -89,21 +89,23 @@ class HomeUser extends React.Component {
     handleLocationError(error){
         switch (error.code) {
             case error.PERMISSION_DENIED:
-                toast.warn("User denied the request for Geolocation.", { position: toast.POSITION.BOTTOM_RIGHT });
+                toast.warn("User denied the request for Geolocation.Don't panic! Just reload the website.", { position: toast.POSITION.BOTTOM_RIGHT });
                 break;
             case error.POSITION_UNAVAILABLE:
-                toast.warn("Location information is unavailable.", { position: toast.POSITION.BOTTOM_RIGHT });
+                toast.warn("Location information is unavailable.Don't panic! Just reload the website.", { position: toast.POSITION.BOTTOM_RIGHT });
                 break;
             case error.TIMEOUT:
-                toast.warn("The request to get user location timed out.", { position: toast.POSITION.BOTTOM_RIGHT });
+                toast.warn("The request to get user location timed out.Don't panic! Just reload the website.", { position: toast.POSITION.BOTTOM_RIGHT });
                 break;
             case error.UNKNOWN_ERROR:
-                toast.warn("An unknown error occurred.", { position: toast.POSITION.BOTTOM_RIGHT });
+                toast.warn("An unknown error occurred.Don't panic! Just reload the website.", { position: toast.POSITION.BOTTOM_RIGHT });
                 break;
         }
     }
 
-    police(user_name, user_location, email_for_bcc) {
+    // To send SoS message to users
+
+    police(user_name, user_location, email_for_bcc, user_email) {
         this.setState({
             police_loading: !this.state.police_loading
         })
@@ -113,7 +115,9 @@ class HomeUser extends React.Component {
             "email_from": "savage_coders@gmail.com",
             "email_to": "kurtzcolonel848@gmail.com",
             "email_to_bcc": `${email_for_bcc}`,
-            "message": `Today, a crime investigation at ${user_location} on ${new Date().toLocaleTimeString()}\n.`,
+            "message": `This mail is to notify regarding a crime scene that took place at ${user_location} on ${new Date().toLocaleTimeString()}.`,
+            "my_html": `View Map:<br/>  <a href="https://maps.google.com/maps?q=${user_location}&t=&z=14&ie=UTF">Click here...</a>`,
+            "contact": `For further details:<br/>  Contact:<br/>  ${user_email}`,
         }, 'user_8jlcQ5ZP3b4DP5GVGoiSd')
             .then((result) => {
                     this.setState({
@@ -128,7 +132,7 @@ class HomeUser extends React.Component {
             });
     }
     
-    fire(user_name, user_location, email_for_bcc) {
+    fire(user_name, user_location, email_for_bcc, user_email) {
         this.setState({
             fire_loading: !this.state.fire_loading
         })
@@ -140,6 +144,7 @@ class HomeUser extends React.Component {
             "email_to_bcc": `${email_for_bcc}`,
             "message": `Today, a fire broke out at ${user_location} on ${new Date().toLocaleTimeString()}.`,
             "my_html": `View Map:<br/>  <a href="https://maps.google.com/maps?q=${user_location}&t=&z=14&ie=UTF">Click here...</a>`,
+            "contact": `For further details:<br/>  Contact:<br/>  ${user_email}`,
         }, 'user_8jlcQ5ZP3b4DP5GVGoiSd')
         .then((result) => {
                 this.setState({
@@ -155,7 +160,7 @@ class HomeUser extends React.Component {
         
     }
 
-    medical(user_name, user_location, email_for_bcc) {
+    medical(user_name, user_location, email_for_bcc, user_email) {
         this.setState({
             medical_loading: !this.state.medical_loading
         })
@@ -165,7 +170,9 @@ class HomeUser extends React.Component {
             "email_from": "savage_coders@gmail.com",
             "email_to": "kurtzcolonel848@gmail.com",
             "email_to_bcc": `${email_for_bcc}`,
-            "message": `Today, a medical emergency at ${user_location} on ${new Date().toLocaleTimeString()}\n.`,
+            "message": `There is a need for medical assistance at ${user_location} on ${new Date().toLocaleTimeString()}.`,
+            "my_html": `View Map:<br/>  <a href="https://maps.google.com/maps?q=${user_location}&t=&z=14&ie=UTF">Click here...</a>`,
+            "contact": `For further details:<br/>  Contact:<br/>  ${user_email}`,
         }, 'user_8jlcQ5ZP3b4DP5GVGoiSd')
             .then((result) => {
                     this.setState({
@@ -180,17 +187,19 @@ class HomeUser extends React.Component {
             });
     }
 
-    vehicle(user_name, user_location, email_for_bcc) {
+    vehicle(user_name, user_location, email_for_bcc, user_email) {
         this.setState({
             vehicle_loading: !this.state.vehicle_loading
         })
         emailjs.send('gmail', 'template_a7xa4hf', {
-            "subject": "Regarding motor accident emergency",
+            "subject": "Regarding vehicle emergency",
             "name": `Dear ${user_name},`,
             "email_from": "savage_coders@gmail.com",
             "email_to": "kurtzcolonel848@gmail.com",
             "email_to_bcc": `${email_for_bcc}`,
-            "message": `Today, a vehicle emergency at ${user_location} on ${new Date().toLocaleTimeString()}\n.`,
+            "message": `It is regarding a vehicle emergency at ${user_location} on ${new Date().toLocaleTimeString()}.`,
+            "my_html": `View Map:<br/>  <a href="https://maps.google.com/maps?q=${user_location}&t=&z=14&ie=UTF">Click here...</a>`,
+            "contact": `For further details:<br/>  Contact:<br/>  ${user_email}`,
         }, 'user_8jlcQ5ZP3b4DP5GVGoiSd')
             .then((result) => {
                     this.setState({
@@ -204,6 +213,9 @@ class HomeUser extends React.Component {
                 toast.error("Couldn't send your mail (Sorry for inconvenience!).", { position: toast.POSITION.BOTTOM_RIGHT });
             });
     }
+
+
+    // Links to Map API
 
     police_maps_link(){
         window.open('https://maps.google.com/maps?q=police&t=&z=14&ie=UTF','_blank');
@@ -232,6 +244,8 @@ class HomeUser extends React.Component {
         })
     }
 
+    // Cue-buttons state (active/inactive)
+
     change_police_cue_state = () => {
         this.setState({ police_cue_state: !this.state.police_cue_state })
         setTimeout(() => {
@@ -257,11 +271,13 @@ class HomeUser extends React.Component {
         }, 2500);
     }
 
+    // To get invoked immediately after a component is mounted (inserted into the tree).
+
     componentDidMount = () => {
         // To fetch all emails from server for sos
-        //this.get_email_id()
+        this.get_email_id()
         // Tracking user's current location:
-        //this.getLocation()
+        this.getLocation()
     }
 
     render(){
@@ -279,14 +295,14 @@ class HomeUser extends React.Component {
                     {
                         this.state.police_cue_state
                         ?
-                        <button class="sos-pole-police-open" onClick={() => this.police(user.name, this.state.useAddress, this.state.emails_for_sos)}><img src={sos_icon} width="52px" /></button>
+                        <button class="sos-pole-police-open" onClick={() => this.police(user.name, this.state.useAddress, this.state.emails_for_sos, user.email)}><img src={sos_icon} width="52px" /></button>
                         :
                         <button class="sos-pole-police-close"><img src={sos_icon} width="52px" /></button>
                     }
                     {
                         this.state.fire_cue_state
                         ?
-                        <button class="sos-pole-fire-open" onClick={() => this.fire(user.name, this.state.useAddress, this.state.emails_for_sos)}><img src={sos_icon} width="52px" /></button>
+                        <button class="sos-pole-fire-open" onClick={() => this.fire(user.name, this.state.useAddress, this.state.emails_for_sos, user.email)}><img src={sos_icon} width="52px" /></button>
                         :
                         <button class="sos-pole-fire-close"><img src={sos_icon} width="52px" /></button>
                     }
@@ -375,14 +391,14 @@ class HomeUser extends React.Component {
                     {
                         this.state.medical_cue_state
                         ?
-                        <button class="sos-pole-medical-open" onClick={() => this.medical(user.name, this.state.useAddress, this.state.emails_for_sos)}><img src={sos_icon} width="52px" /></button>
+                        <button class="sos-pole-medical-open" onClick={() => this.medical(user.name, this.state.useAddress, this.state.emails_for_sos, user.email)}><img src={sos_icon} width="52px" /></button>
                         :
                         <button class="sos-pole-medical-close"><img src={sos_icon} width="52px" /></button>
                     }
                     {
                         this.state.vehicle_cue_state
                         ?
-                        <button class="sos-pole-vehicle-open" onClick={() => this.vehicle(user.name, this.state.useAddress, this.state.emails_for_sos)}><img src={sos_icon} width="52px" /></button>
+                        <button class="sos-pole-vehicle-open" onClick={() => this.vehicle(user.name, this.state.useAddress, this.state.emails_for_sos, user.email)}><img src={sos_icon} width="52px" /></button>
                         :
                         <button class="sos-pole-vehicle-close"><img src={sos_icon} width="52px" /></button>
                     }

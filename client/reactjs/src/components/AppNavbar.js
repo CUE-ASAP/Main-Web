@@ -15,7 +15,7 @@ import PropTypes from 'prop-types';
 import RegisterModal from './auth/RegisterModal'
 import LoginModal from './auth/LoginModal';
 import Logout from './auth/Logout'
-import Logo from '../assets/Cue_logo_v2_light.png'
+import Logo from '../assets/Cue_logo_v2_light.svg'
 class AppNavBar extends Component {
 
     state = {

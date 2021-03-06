@@ -22,7 +22,32 @@ class App extends Component{
       <div className="App">
           <AppNavBar />
           <GetStarted />
-          <div id="main-footer">
+          <div class="contact-footer">
+            <div id="footer-elements">
+              <h3>Quick links</h3>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Speed Test</a></li>
+              </ul>
+            </div>
+          <div id="footer-elements">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="#">Terms of use</a></li>
+              <li><a href="#">Privacy Statement</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+            </ul>
+          </div>
+          <div id="footer-elements">
+            <h3>Connect with us</h3>
+            <ul>
+              <li><a href="#">Email</a></li>
+              <li><a href="#">Social</a></li>
+            </ul>
+          </div>
+          </div>
+          <div class="main-footer">
             <h3>CUE-ASAP &copy; 2020-2021. All Rights Reserved.</h3>
           </div> 
       </div>

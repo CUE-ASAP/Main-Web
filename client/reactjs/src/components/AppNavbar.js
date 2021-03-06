@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import{
+import {
     Collapse,
     Navbar,
     NavbarToggler,
@@ -16,6 +16,7 @@ import RegisterModal from './auth/RegisterModal'
 import LoginModal from './auth/LoginModal';
 import Logout from './auth/Logout'
 import Logo from '../assets/Cue_logo_v2_light.svg'
+import Home from './Home'
 class AppNavBar extends Component {
 
     state = {
@@ -31,17 +32,17 @@ class AppNavBar extends Component {
             isOpen: !this.state.isOpen
         });
     }
-    render(){
+    render() {
 
         const { isAuthenticated, user } = this.props.auth;
-        
+
         const authLinks = (
             <Fragment>
-            <NavItem>
-                <span className="navbar-text mr-3">
-                    <strong>{ user ? `Welcome ${user.name}!` : ''}</strong>
-                </span>
-            </NavItem>
+                <NavItem>
+                    <span className="navbar-text mr-3">
+                        <strong>{user ? `Welcome ${user.name}!` : ''}</strong>
+                    </span>
+                </NavItem>
                 <NavItem>
                     <Logout />
                 </NavItem>
@@ -51,6 +52,26 @@ class AppNavBar extends Component {
         const guestLinks = (
             <Fragment>
                 <NavItem>
+                    <span className="navbar-text mr-4">
+                        <strong><a href="#Home">Home</a></strong>
+                    </span>
+                </NavItem>
+                <NavItem>
+                    <span className="navbar-text mr-4">
+                        <strong><a href="#About us">About us</a></strong>
+                    </span>
+                </NavItem>
+                <NavItem>
+                    <span className="navbar-text mr-4">
+                        <strong><a href="#Service">Service</a></strong>
+                    </span>
+                </NavItem>
+                <NavItem>
+                    <span className="navbar-text mr-4">
+                        <strong><a href="#Contact">Contact</a></strong>
+                    </span>
+                </NavItem>
+                <NavItem>
                     <RegisterModal />
                 </NavItem>
                 <NavItem>
@@ -59,16 +80,16 @@ class AppNavBar extends Component {
             </Fragment>
         )
 
-        return(
+        return (
             <div>
-                <Navbar dark expand="sm" className="app-navbar">
+                <Navbar dark expand="sm" className="app-navbar fixed-top" style={{ borderRadius:'0px 0px 26px 26px'}}>
                     <Container>
-                        < a href="/"><img src={Logo} style={{ height: 40, width: 75, paddingRight:10 }}></img></a>
-                        <NavbarBrand href="/" style={{paddingLeft:5}}>CUE ASAP</NavbarBrand>
+                        < a href="/"><img src={Logo} style={{ height: 40, width: 75, paddingRight: 10 }}></img></a>
+                        <NavbarBrand href="/" style={{ paddingLeft: 5 }}>CUE ASAP</NavbarBrand>
                         <NavbarToggler onClick={this.toggle} />
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav className="ml-auto" navbar>
-                                { isAuthenticated ? authLinks : guestLinks}
+                                {isAuthenticated ? authLinks : guestLinks}
                             </Nav>
                         </Collapse>
                     </Container>
@@ -82,4 +103,4 @@ const mapStateToProps = state => ({
     auth: state.auth
 });
 
-export default connect (mapStateToProps, null)(AppNavBar);
+export default connect(mapStateToProps, null)(AppNavBar);

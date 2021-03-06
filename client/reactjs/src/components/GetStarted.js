@@ -27,7 +27,6 @@ class GetStarted extends Component {
 
         return (
             isAuthenticated ? authHome : guestHome
-            //<HomeUser/>
         );
     }
 }

@@ -277,7 +277,7 @@ class HomeUser extends React.Component {
         // To fetch all emails from server for sos
         this.get_email_id()
         // Tracking user's current location:
-        this.getLocation()
+        //this.getLocation()
     }
 
     render(){

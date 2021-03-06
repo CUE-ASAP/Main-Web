@@ -34,19 +34,56 @@
     background-color: #00BCD4;
 }
 
-#main-footer{
+.main-footer{
     background: #00bcd4;
     color:#fff;
     text-align: center;
 }
 
-#main-footer h3{
+.main-footer h3{
     font-size: 18px;
     padding: 14px;
     font-family: 'Blinker', sans-serif;
     color:#fff;
     pointer-events: none;
     margin-bottom: 0px;
+}
+
+.contact-footer{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #87cefa;
+}
+
+#footer-elements{
+    position: relative;
+    width: 25%;
+}
+
+#footer-elements h3{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+    left:32px;
+}
+
+
+#footer-elements ul li{
+    list-style: none;
+}
+
+#footer-elements ul li a{
+    color: #1b07a3;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
 }
 
 /*Chatbot UI*/

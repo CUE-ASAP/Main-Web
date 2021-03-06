@@ -14,6 +14,7 @@ import {
 } from 'reactstrap';
 import PropTypes from 'prop-types'
 import lottie from 'lottie-web'
+import Logo from '../assets/Cue_logo_v2.svg'
 import './Home.css'
 
 function Home() {
@@ -32,9 +33,11 @@ function Home() {
 
     return (
 
-        
-            <div class="box-container">
-            <div class="box-area-landing">
+
+        <div class="box-container">
+
+            {/* Home */}
+            <div class="home-landing-section" id="Home">
                 <div class="single-box-landing" id="home-text">
                     <h1>Stay Logged</h1>
                     <h1>Be Safe!</h1>
@@ -42,11 +45,24 @@ function Home() {
                     <p style={{ marginTop: 16 }}>CUE-ASAP is a solution that can help us to survive in this world without about any kind of threats and accidents.</p>
                 </div>
                 <div class="single-box-landing" ref={container}>
-
                 </div>
             </div>
 
-            <div class="box-area">
+            {/* About us */}
+            <div class="about-us-landing-section" id="About us">
+                <div class="single-box-landing" >
+                <img src={Logo} width="300px" height="300px"></img>
+                </div>
+                <div class="single-box-landing" id="home-text">
+                    <h1>About us</h1>
+                    <h1>Be Safe!</h1>
+                    <h3>We are there to help you.</h3>
+                    <p style={{ marginTop: 16 }}>CUE-ASAP is a solution that can help us to survive in this world without about any kind of threats and accidents.</p>
+                </div>
+            </div>
+
+            {/* Service */}
+            <div class="service-landing-section" id="Service">
                 <div class="single-box">
                     <div class="img-area"></div>
                     <div class="img-text">
@@ -69,7 +85,21 @@ function Home() {
                     </div>
                 </div>
             </div>
+
+            {/* Contact */}
+            <div class="contact-landing-section" id="Contact">
+                <div class="single-box-landing" >
+                    <img src={Logo} width="300px" height="300px"></img>
+                </div>
+                <div class="single-box-landing" id="home-text">
+                    <h1>Contact us</h1>
+                    <h1>Be Safe!</h1>
+                    <h3>We are there to help you.</h3>
+                    <p style={{ marginTop: 16 }}>CUE-ASAP is a solution that can help us to survive in this world without about any kind of threats and accidents.</p>
+                </div>
             </div>
+
+        </div>
 
     );
 }

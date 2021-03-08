@@ -48,7 +48,7 @@ class App extends Component{
           </div>
           </div>
           <div class="main-footer">
-            <h3>CUE-ASAP &copy; 2020-2021. All Rights Reserved.</h3>
+          <h3>&copy; 2020-2021 CUE-ASAP. All Rights Reserved.</h3>
           </div> 
       </div>
     </Provider>

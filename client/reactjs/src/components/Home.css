@@ -3,10 +3,125 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Blinker:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 
 html{
     scroll-behavior: smooth;
 }
+
+/*Home UI*/
+.home-landing-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    height: 658px;
+    background:linear-gradient(to right top,#1a2980,#24c6dc);
+}
+
+.home-glass{
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+    min-height: 65vh;
+    width: 78%;
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    background: linear-gradient(to right bottom, #a5f1f6, rgba(255, 255, 255, 0.3));
+}
+
+.home-circle-1,.home-circle-2{
+    background: #fff;
+    background: linear-gradient(to right bottom, #b4f5fa, rgba(255, 255, 255, 0.1));
+    height: 14rem;
+    width: 14rem;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.home-circle-1{
+    top:12.6%;
+    right:4%;
+}
+
+.home-circle-2{
+    bottom: 2.4%;
+    left: 4%;
+}
+
+/*Home UI - Dashboard*/
+
+.home-dashboard{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    min-height: 65vh;
+    border-radius: 2rem;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.6), rgba(255,255,255,0.3));
+}
+
+#home-guest-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    background: #1a2980;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    background-image: url('../assets/Menu_icon/user_edit.svg');
+    background-size: 80%;
+    background-position: 1.18rem;
+    background-repeat: no-repeat;
+}
+
+#home-guest-btn{
+    height: 40px;
+    width: 80px;
+    position: relative;
+    border: 0rem solid;
+    text-decoration: none;
+    color: #a1f1f6;
+    font-family: 'Ubuntu';
+    background:linear-gradient(to right top,#1a2980,#37a0ad);
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 18px;
+}
+
+#home-guest-btn:hover{
+    text-decoration: none;
+    background:linear-gradient(to left bottom,#1a2980,#37a0ad);
+    transform: scale(1.1);
+}
+
+#home-guest-btn:active{
+    outline: none;
+}
+
+/*Home UI - Gist*/
+.home-gist{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#home-gist-welcome{
+    width: 400px;
+}
+
 #home-text h1{
       font-size: 44px;
       font-family: 'PT Sans', sans-serif;
@@ -16,15 +131,41 @@ html{
 #home-text h3{
       font-size: 30px;
       font-family: 'Cairo', sans-serif;
-      color: #67b0dd;
+      color: #457999;
+  }
+
+#home-text h5{
+      font-size: 18px;
+      font-family: 'Ubuntu';
+      color:#5089ac;
+      margin-bottom: 0px;
   }
 
 #home-text p{
       font-size: 20px;
       font-family: 'Hind guntur', sans-serif;
-      color:#7ac0ec;
+      line-height: 1.6rem;
+      color:#4e62d1;
   }
 
+  /**/
+
+
+.single-box-landing{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 580px;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+  /*Service UI*/
 .service-landing-section{
     display: flex;
     flex-wrap: wrap;
@@ -32,45 +173,7 @@ html{
     align-items: center;
     height: 658px;
     padding-top: 60px;
-    background-image: url('../assets/bg8.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
-.home-landing-section{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-top: 40px;
-    height: 658px;
-    background-image: url('../assets/bg3.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
-.about-us-landing-section{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-top: 40px;
-    height: 658px;
-    background-image: url('../assets/bg3.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
-.contact-landing-section{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-top: 40px;
-    height: 340px;
-    background-image: url('../assets/bg3.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background:linear-gradient(to right top,#2f80ed,#bacef0);
 }
 
 .single-box{
@@ -81,25 +184,14 @@ html{
     justify-content: center;
     width: 300px;
     height: auto;
-    border-radius: 4px;
-    background-color: #87cefa;
+    border-radius: 26px;
+    background: linear-gradient(to right bottom, #a5f1f6, rgba(255, 255, 255, 0.3));
     text-align: center;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
     margin: 20px;
     padding: 20px;
-    transition: .3s;
-}
-
-.single-box-landing{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 520px;
-    height: auto;
-    margin-top: 30px;
-    margin-bottom: 40px;
-    text-align: center;
+    transition: 1.2s;
 }
 
 .img-area{
@@ -108,11 +200,11 @@ html{
     align-items: center;
     width: 120px;
     height: 120px;
-    border: 2px solid #fff;
+    border: 2px solid #aff3f8;
     border-radius: 50%;
     margin-bottom: 10px;
     padding: 20px;
-    background: #fff;
+    background: #aff3f8;
     background-size: cover;
     background-position: center center;
 }
@@ -138,11 +230,13 @@ html{
     font-family: 'Poppins','sans-serif';
     font-weight: 500;
     line-height: 48px;
+    color: #1a2980;
 }
 
 .img-text{
     font-family: 'Hind guntur', sans-serif;
     padding-top: 20px;
+    color: #1a2980;
 }
 
 .img-text p{
@@ -153,5 +247,184 @@ html{
 }
 
 .single-box:hover{
-    background: #00bcd4;
+    background: #87cefa;
+    z-index: 0;
+    backdrop-filter: blur(0rem);
+}
+
+
+
+  /*About UI*/
+.about-us-landing-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    height: 658px;
+    background:linear-gradient(to right top,#fc1,#b33);
+}
+
+.about-us-glass{
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    margin-top: 10px;
+    min-height: 75vh;
+    width: 84%;
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3));
+}
+
+.about-us-gist{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center
+}
+
+.about-us-glass-inner{
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    margin: 40px 0px;
+    margin-right: 40px;
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+}
+.about-us-box-wrapper{
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+}
+
+
+.about-us-single-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 265px;
+    height: 75%;
+    border-radius: 50%;
+    background: linear-gradient(to right bottom,#ffffd4, rgba(255, 255, 255, 0.3));
+    text-align: center;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    margin: 20px;
+    padding: 20px;
+    transition: 1.2s;
+}
+
+
+#about-text h2{
+    font-size: 32px;
+    padding: 20px 10px;
+    font-family: 'Cairo', sans-serif;
+    color: rgb(185, 70, 70);
+}
+
+#about-us-single-box-details h3{
+    font-size: 22px;
+    font-family: 'Poppins';
+    margin-top: 28px;
+    color: #c69f26;
+}
+
+#about-us-single-box-details h4{
+    font-size: 15px;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    color: #cc9e06;
+}
+
+#about-us-single-box-details h5{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Blinker';
+    color: #cc9e06;
+}
+
+  /*Contact UI*/
+.contact-landing-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    margin-bottom: -40px;
+    height: 380px;
+    background:linear-gradient(180deg,#1d2b64,#f5a5bd);
+}
+
+.contact-glass{
+    display: flex;
+    flex-direction: row;
+    min-height: 46vh;
+    width: 84%;
+    border-radius: 2rem 2rem 0rem 0rem;
+    z-index: 0;
+    backdrop-filter: blur(2rem);
+    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3));
+}
+
+
+
+  /*Media Screen*/
+@media (max-width : 574px){
+    .box-container{
+        height: auto;
+    }
+    .home-glass{
+        flex-direction: column;
+        width: 75%;
+        height: auto;
+    }
+    .home-landing-section{
+        height: auto;
+        padding-bottom: 40px;
+        padding-top: 80px;
+    }
+    .home-circle-1,.home-circle-2{
+        visibility: hidden;
+    }
+    #home-gist-welcome{
+        width: auto;
+    }
+    .about-us-glass{
+        flex-direction: column;
+        width: 92%;
+        height: auto;
+    }
+    .about-us-glass-inner{
+        flex-direction: column;
+        margin: 20px;
+    }
+    .about-us-box-wrapper{
+        flex-direction: column;
+    }
+    .about-us-single-box{
+        width: auto;
+        height: 280px;
+    }
+    .about-us-landing-section{
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .service-landing-section{
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .contact-landing-section{
+        height: auto;
+    }
+    
+
 }

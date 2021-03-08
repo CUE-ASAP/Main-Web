@@ -79,9 +79,9 @@ class LoginModal extends Component {
     render() {
         return (
             <div>
-
-                <NavLink className="navbar-text mr-3" onClick={this.toggle} href="#">
-                    Login
+                
+                <NavLink className="navbar-text mr-3" id="login-btn" onClick={this.toggle} href="#">
+                    <h6 class="btn-text-log">Login</h6>
                 </NavLink>
 
                 <Modal

@@ -51,26 +51,29 @@ class AppNavBar extends Component {
 
         const guestLinks = (
             <Fragment>
+            {window.innerWidth>574?
+                <nav class="app-nav">
+                    <a class="app-nav-a" id="nav-a-indicator" href="#Home">Home</a>
+                    <a class="app-nav-a" id="nav-a-indicator" href="#About us">About us</a>
+                    <a class="app-nav-a" id="nav-a-indicator" href="#Services">Services</a>
+                    <a class="app-nav-a" id="nav-a-indicator" href="#Contact">Contact</a>
+                    <div class="animation start-home"></div>
+                </nav>:
+                <div class="app-nav-bar-mobile-view">
                 <NavItem>
-                    <span className="navbar-text mr-4">
-                        <strong><a href="#Home">Home</a></strong>
-                    </span>
+                    <a href="#Home">Home</a>
                 </NavItem>
                 <NavItem>
-                    <span className="navbar-text mr-4">
-                        <strong><a href="#About us">About us</a></strong>
-                    </span>
+                    <a href="#About us">About us</a>
                 </NavItem>
                 <NavItem>
-                    <span className="navbar-text mr-4">
-                        <strong><a href="#Service">Service</a></strong>
-                    </span>
+                    <a href="#Services">Services</a>
                 </NavItem>
                 <NavItem>
-                    <span className="navbar-text mr-4">
-                        <strong><a href="#Contact">Contact</a></strong>
-                    </span>
+                    <a href="#Contact">Contact</a>
                 </NavItem>
+                </div>
+                }
                 <NavItem>
                     <RegisterModal />
                 </NavItem>

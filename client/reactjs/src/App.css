@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Blinker:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 
 .remove-btn{
     margin-right: 0.5rem;
@@ -27,7 +30,8 @@
 }
 
 .app-navbar{
-    background-color: #00BCD4
+    height: 64px;
+    background-image: linear-gradient(to right, #c33764, #1d2671);
 }
 
 .auth-button{
@@ -35,7 +39,7 @@
 }
 
 .main-footer{
-    background: #00bcd4;
+    background:linear-gradient(to left bottom,#0f0c29,#302b63);
     color:#fff;
     text-align: center;
 }
@@ -55,15 +59,15 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
     height: auto;
-    padding: 50px 100px;
-    background: #87cefa;
+    padding: 30px 100px;
+    background:linear-gradient(to right top,#23074d,#cc5333);
+    border-radius: 26px 26px 0px 0px;
 }
 
 #footer-elements{
     position: relative;
-    width: 25%;
+    width:25%;
 }
 
 #footer-elements h3{
@@ -80,7 +84,7 @@
 }
 
 #footer-elements ul li a{
-    color: #1b07a3;
+    color: #fff;
     text-decoration: none;
     margin-bottom: 10px;
     display: inline-block;
@@ -127,4 +131,172 @@
     width: 15px;
     height: 15px;
     background: red;
+}
+
+/*App nav css*/
+
+.app-nav{
+    position: relative;
+    width: auto;
+    height: 52px;
+    border-radius: 8px;
+}
+
+.app-nav-a{
+  font-size: 1.0em;
+  color: white;
+  line-height: 52px;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.app-nav-a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+.app-nav-a:nth-child(1){
+    width:90px;
+}
+nav .start-home, .app-nav-a:nth-child(1):hover~.animation{
+    width:18%;
+    left:12px;
+}
+.app-nav-a:nth-child(2){
+    width:90px;
+}
+nav .start-about, .app-nav-a:nth-child(2):hover~.animation{
+    width:18%;
+    left:102px;
+}
+.app-nav-a:nth-child(3){
+    width:90px;
+}
+nav .start-services, .app-nav-a:nth-child(3):hover~.animation{
+    width:18%;
+    left:192px;
+}
+.app-nav-a:nth-child(4){
+    width:90px;
+}
+nav .start-contact, .app-nav-a:nth-child(4):hover~.animation{
+    width:18%;
+    left:283px;
+}
+
+.app-nav .animation{
+    position: absolute;
+    height: 5px;
+    bottom:0;
+    z-index: 0;
+    left: 12px;
+    background: #87cefa;
+    width:18%;
+    border-radius: 8px;
+    transition: all .5s ease 0s;
+}
+
+/*Button UI*/
+.btn-text-sup{
+    font-size: 14px;
+    font-family: 'Ubuntu';
+    color: #fff;
+    padding-top: 3px;
+    padding-left: 9px;
+}
+.btn-text-log{
+    font-size: 14px;
+    font-family: 'Ubuntu';
+    color: #fff;
+    padding-top: 3px;
+    padding-left: 14px;
+}
+#sign-up-btn{
+    left:30px;
+    top:5px;
+    height: 40px;
+    width: 80px;
+    position: relative;
+    border: 1px solid #fff;
+    text-decoration: none;
+    background: #2a0845;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 8px;
+}
+
+#sign-up-btn:hover{
+    text-decoration: none;
+    background: #1e90ff;
+    transform: scale(1.1);
+    box-shadow: 0 0 2px #0ff, 0 0 2px #0ff;
+}
+
+#login-btn{
+    left: 40px;
+    top:5px;
+    height: 40px;
+    width: 80px;
+    position: relative;
+    border: 1px solid #fff;
+    text-decoration: none;
+    background: #2a0845;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 8px;
+}
+
+#login-btn:hover{
+    text-decoration: none;
+    background: #1e90ff;
+    transform: scale(1.1);
+    box-shadow: 0 0 2px #0ff, 0 0 2px #0ff;
+}
+
+.app-nav-bar-mobile-view{
+    display: none;
+ }
+
+ .app-nav{
+    display: none;
+ }
+
+@media (max-width : 574px){
+ .app-nav-bar-mobile-view{
+     display: block;
+ }
+
+ .app-navbar{
+     height: auto;
+ }
+ .main-footer{
+     height: auto;
+ }
+ .contact-footer{
+     flex-direction: column;
+     padding: 30px 20px;
+     height: auto;
+ }
+ #footer-elements{
+     width:96%
+ }
+
+ #login-btn{
+  left:0px;
+ }
+ #sign-up-btn{
+  left:0px;
+ }
+}
+
+@media (min-width : 1060px){
+ .app-nav{
+     display: block;
+ }
+ .app-navbar{
+     height: 64px;
+ }
 }

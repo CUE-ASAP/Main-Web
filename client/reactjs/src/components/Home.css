@@ -29,7 +29,6 @@ html{
     width: 78%;
     border-radius: 2rem;
     z-index: 2;
-    backdrop-filter: blur(2rem);
     background: linear-gradient(to right bottom, #a5f1f6, rgba(255, 255, 255, 0.3));
 }
 
@@ -187,8 +186,7 @@ html{
     border-radius: 26px;
     background: linear-gradient(to right bottom, #a5f1f6, rgba(255, 255, 255, 0.3));
     text-align: center;
-    z-index: 2;
-    backdrop-filter: blur(2rem);
+    z-index: 0;
     margin: 20px;
     padding: 20px;
     transition: 1.2s;
@@ -249,7 +247,6 @@ html{
 .single-box:hover{
     background: #87cefa;
     z-index: 0;
-    backdrop-filter: blur(0rem);
 }
 
 
@@ -271,10 +268,9 @@ html{
     background: #fff;
     margin-top: 10px;
     min-height: 75vh;
-    width: 1100px;
+    width: 84%;
     border-radius: 2rem;
-    z-index: 2;
-    backdrop-filter: blur(2rem);
+    z-index: 0;
     background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3));
 }
 
@@ -293,16 +289,16 @@ html{
     flex-direction: row;
     margin: 40px 0px;
     margin-right: 40px;
+    width: 84%;
     border-radius: 2rem;
-    z-index: 2;
-    backdrop-filter: blur(2rem);
-    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    z-index: 0;
+    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
 }
 .about-us-box-wrapper{
     display: flex;
     flex-direction: row;
     margin-top: 60px;
-    width: auto;
+    width: 100%;
     height: auto;
 }
 
@@ -318,8 +314,7 @@ html{
     border-radius: 50%;
     background: linear-gradient(to right bottom,#ffffd4, rgba(255, 255, 255, 0.3));
     text-align: center;
-    z-index: 2;
-    backdrop-filter: blur(2rem);
+    z-index: 0;
     margin: 20px;
     padding: 20px;
     transition: 1.2s;
@@ -360,7 +355,7 @@ html{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding-top: 40px;
+    padding-top: 80px;
     margin-bottom: -40px;
     height: 380px;
     background:linear-gradient(180deg,#1d2b64,#f5a5bd);
@@ -373,20 +368,154 @@ html{
     width: 84%;
     border-radius: 2rem 2rem 0rem 0rem;
     z-index: 0;
-    backdrop-filter: blur(2rem);
     background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3));
 }
+.contact-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
 
+.contact-gist{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
+.contact-gist h3{
+    font-family: 'PT Sans';
+    color: #1d2b64;
+}
 
-  /*Media Screen*/
-@media (max-width : 574px){
+.contact-glass-inner{
+    
+    display: flex;
+    flex-direction: row;
+    min-height: 14vh;
+    width: 40%;
+    margin-bottom: 80px;
+    border-radius: 1.2rem;
+    backdrop-filter: blur(2rem);
+    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+}
+
+#contact-glass-inner-img-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    border-radius: 50%;
+    margin:2.5%;
+    background: #cc5333;
+    background-image: url('../assets/gmail.svg');
+    background-size: 55%;
+    background-position: 1.0rem;
+    background-repeat: no-repeat;
+}
+
+#contact-glass-inner-img-text{
+    flex:2;
+    display: flex;
+    width: 100%;
+    font-family: 'Cairo';
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-glass-inner-img-text h5{
+    font-size: 1.3rem;
+    padding: 4% 0%;
+    padding-right: 8%;
+    color: #1a2980;
+    text-decoration: underline;
+}
+
+/*Guest-user*/
+.back-to-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    background:linear-gradient(to right top,#1a2980,#24c6dc);
+}
+.back-to-home-glass-inner{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    min-height: 10vh;
+    width: 90%;
+    margin-bottom: 10px;
+    border-radius: 1rem;
+    z-index: 2;
+    background: linear-gradient(to right bottom, #a5f1f6, rgba(255, 255, 255, 0.3));
+}
+
+#back-to-home-glass-inner-info{
+    margin: 1% 4%;
+    width:84%;
+    justify-content: center;
+    align-items: center;
+}
+#back-to-home-glass-inner-info h5{
+   padding-top: 1.8%;
+   padding-left: 1%;
+   font-size: 25px;
+   font-family: 'PT Sans';
+   color: #1d2b64;
+}
+
+#back-to-home-glass-inner-text{
+  margin: 1% 4%;
+  justify-content: center;
+  align-items: center;
+}
+#back-to-home-glass-inner-text h5{
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Cairo';
+  color: #1d2b64;
+}
+
+#back-to-home-btn{
+    height: 40px;
+    width: 80px;
+    position: relative;
+    border: 0rem solid;
+    text-decoration: none;
+    color: #a1f1f6;
+    font-family: 'Ubuntu';
+    background:linear-gradient(to right top,#1a2980,#37a0ad);
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 8px;
+    outline: none;
+}
+#back-to-home-btn:hover{
+    text-decoration: none;
+    background:linear-gradient(to left bottom,#1a2980,#37a0ad);
+    transform: scale(1.1);
+}
+
+#back-to-home-btn:active{
+    outline: none;
+}
+
+  /*Media Screen (width:574px)*/
+@media (max-width :1024px){
     .box-container{
         height: auto;
     }
     .home-glass{
         flex-direction: column;
         width: 75%;
+        height: auto;
+    }
+    .back-to-home{
         height: auto;
     }
     .home-landing-section{
@@ -407,7 +536,8 @@ html{
     }
     .about-us-glass-inner{
         flex-direction: column;
-        margin: 20px;
+        margin: 6%;
+        width: 88%;
     }
     .about-us-box-wrapper{
         flex-direction: column;
@@ -425,8 +555,30 @@ html{
         padding-bottom: 50px;
     }
     .contact-landing-section{
+        padding-top: 40px;
         height: auto;
     }
+    .contact-glass-inner{
+        width: fit-content;
+    }
+    #contact-glass-inner-img-text h5{
+    font-size: 100%;
+    padding-left: 4%;
+    color: #1a2980;
+    text-decoration: underline;
+    }
+    #contact-glass-inner-img-area{
+        height: auto;
+        background-position: 0.8rem;
+    }
+    #back-to-home-glass-inner-info h5{
+        font-size: 23px;
+    }
     
+}
 
+@media (max-width :1024px) and (min-width:574px){
+    .about-us-glass{
+        width: 50%;
+    }
 }

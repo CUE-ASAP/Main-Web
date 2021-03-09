@@ -14,7 +14,7 @@ import {
 } from 'reactstrap';
 
 import PropTypes from 'prop-types'
-import './HomeUser.css'
+import './AuthUser.css'
 import Logo from '../assets/Asset 4.png'
 import Logo_gif from '../assets/CUE asap LOGO Black.gif'
 import fire_icon from '../assets/Fire.svg'
@@ -33,7 +33,7 @@ import axios from 'axios';
 // To configure Toast notification:
 toast.configure()
 
-class HomeUser extends React.Component {
+class AuthUser extends React.Component {
 
     static propTypes = {
         auth: PropTypes.object.isRequired
@@ -89,16 +89,16 @@ class HomeUser extends React.Component {
     handleLocationError(error){
         switch (error.code) {
             case error.PERMISSION_DENIED:
-                toast.warn("User denied the request for Geolocation.Don't panic! Just reload the website.", { position: toast.POSITION.BOTTOM_RIGHT });
+                toast.warn("User denied the request for Geolocation.Don't panic! Just reload the website.", { position: toast.POSITION.BOTTOM_CENTER });
                 break;
             case error.POSITION_UNAVAILABLE:
-                toast.warn("Location information is unavailable.Don't panic! Just reload the website.", { position: toast.POSITION.BOTTOM_RIGHT });
+                toast.warn("Location information is unavailable.Don't panic! Just reload the website.", { position: toast.POSITION.BOTTOM_CENTER });
                 break;
             case error.TIMEOUT:
-                toast.warn("The request to get user location timed out.Don't panic! Just reload the website.", { position: toast.POSITION.BOTTOM_RIGHT });
+                toast.warn("The request to get user location timed out.Don't panic! Just reload the website.", { position: toast.POSITION.BOTTOM_CENTER });
                 break;
             case error.UNKNOWN_ERROR:
-                toast.warn("An unknown error occurred.Don't panic! Just reload the website.", { position: toast.POSITION.BOTTOM_RIGHT });
+                toast.warn("An unknown error occurred.Don't panic! Just reload the website.", { position: toast.POSITION.BOTTOM_CENTER });
                 break;
         }
     }
@@ -111,7 +111,7 @@ class HomeUser extends React.Component {
         })
         emailjs.send('gmail', 'template_a7xa4hf', {
             "subject": "Regarding crime emergency",
-            "name": `Dear ${user_name},`,
+            "name": `Dear user,`,
             "email_from": "savage_coders@gmail.com",
             "email_to": "kurtzcolonel848@gmail.com",
             "email_to_bcc": `${email_for_bcc}`,
@@ -123,12 +123,12 @@ class HomeUser extends React.Component {
                     this.setState({
                         police_loading: !this.state.police_loading
                     })
-                toast.success("SoS message is sent to all other users!", { position: toast.POSITION.BOTTOM_RIGHT });
+                toast.success("SoS message is sent to all other users!", { position: toast.POSITION.BOTTOM_CENTER });
             }, (error) => {
                     this.setState({
                         police_loading: !this.state.police_loading
                     })
-                toast.error("Couldn't send your mail (Sorry for inconvenience!).", { position: toast.POSITION.BOTTOM_RIGHT });
+                toast.error("Couldn't send your mail (Sorry for inconvenience!).", { position: toast.POSITION.BOTTOM_CENTER });
             });
     }
     
@@ -138,7 +138,7 @@ class HomeUser extends React.Component {
         })
         emailjs.send('gmail', 'template_a7xa4hf', {
             "subject": "Regarding fire emergency",
-            "name": `Dear ${user_name},`,
+            "name": `Dear user,`,
             "email_from": "savage_coders@gmail.com",
             "email_to": "kurtzcolonel848@gmail.com",
             "email_to_bcc": `${email_for_bcc}`,
@@ -150,12 +150,12 @@ class HomeUser extends React.Component {
                 this.setState({
                     fire_loading: !this.state.fire_loading
                 })
-            toast.success("SoS message is sent to all other users!", { position: toast.POSITION.BOTTOM_RIGHT });
+            toast.success("SoS message is sent to all other users!", { position: toast.POSITION.BOTTOM_CENTER });
         }, (error) => {
                 this.setState({
                     fire_loading: !this.state.fire_loading
                 })
-            toast.error("Couldn't send your mail (Sorry for inconvenience!).", { position: toast.POSITION.BOTTOM_RIGHT });
+            toast.error("Couldn't send your mail (Sorry for inconvenience!).", { position: toast.POSITION.BOTTOM_CENTER });
         });
         
     }
@@ -166,7 +166,7 @@ class HomeUser extends React.Component {
         })
         emailjs.send('gmail', 'template_a7xa4hf', {
             "subject": "Regarding medical emergency",
-            "name": `Dear ${user_name},`,
+            "name": `Dear user,`,
             "email_from": "savage_coders@gmail.com",
             "email_to": "kurtzcolonel848@gmail.com",
             "email_to_bcc": `${email_for_bcc}`,
@@ -178,12 +178,12 @@ class HomeUser extends React.Component {
                     this.setState({
                         medical_loading: !this.state.medical_loading
                     })
-                toast.success("SoS message is sent to all other users!", { position: toast.POSITION.BOTTOM_RIGHT });
+                toast.success("SoS message is sent to all other users!", { position: toast.POSITION.BOTTOM_CENTER });
             }, (error) => {
                     this.setState({
                         medical_loading: !this.state.medical_loading
                     })
-                toast.error("Couldn't send your mail (Sorry for inconvenience!).", { position: toast.POSITION.BOTTOM_RIGHT });
+                toast.error("Couldn't send your mail (Sorry for inconvenience!).", { position: toast.POSITION.BOTTOM_CENTER });
             });
     }
 
@@ -193,7 +193,7 @@ class HomeUser extends React.Component {
         })
         emailjs.send('gmail', 'template_a7xa4hf', {
             "subject": "Regarding vehicle emergency",
-            "name": `Dear ${user_name},`,
+            "name": `Dear user,`,
             "email_from": "savage_coders@gmail.com",
             "email_to": "kurtzcolonel848@gmail.com",
             "email_to_bcc": `${email_for_bcc}`,
@@ -205,12 +205,12 @@ class HomeUser extends React.Component {
                     this.setState({
                         vehicle_loading: !this.state.vehicle_loading
                     })
-                toast.success("SoS message is sent to all other users!", { position: toast.POSITION.BOTTOM_RIGHT });
+                toast.success("SoS message is sent to all other users!", { position: toast.POSITION.BOTTOM_CENTER });
             }, (error) => {
                     this.setState({
                         vehicle_loading: !this.state.vehicle_loading
                     })
-                toast.error("Couldn't send your mail (Sorry for inconvenience!).", { position: toast.POSITION.BOTTOM_RIGHT });
+                toast.error("Couldn't send your mail (Sorry for inconvenience!).", { position: toast.POSITION.BOTTOM_CENTER });
             });
     }
 
@@ -472,4 +472,4 @@ const mapStateToProps = state => ({
     auth: state.auth
 });
 
-export default connect(mapStateToProps, null)(HomeUser);
+export default connect(mapStateToProps, null)(AuthUser);

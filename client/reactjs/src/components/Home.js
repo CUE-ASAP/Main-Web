@@ -15,12 +15,28 @@ import {
 import PropTypes from 'prop-types'
 import lottie from 'lottie-web'
 import Logo from '../assets/Cue_logo_v2.svg'
+import GuestUser from './GuestUser'
 import './Home.css'
 
 function Home() {
 
-    const container = useRef(null)
+    const container = useRef(null);
+    const [guest_log, set_guest_log] = React.useState(false)
 
+    // Access to Guest user (with expiry time)
+    const guest_user = React.useCallback(() => {
+        set_guest_log(true);
+        setTimeout(() => {
+                set_guest_log(false)
+            }, 300000)
+    },[guest_log]);
+
+    // Back to home from guest page
+    const back_to_home = React.useCallback(() => {
+        set_guest_log(false);
+    },[guest_log]);
+
+    // Lottie Animation container
     useEffect(() => {
         lottie.loadAnimation({
             container: container.current,
@@ -32,18 +48,35 @@ function Home() {
     }, [])
 
     return (
-
-
         <div class="box-container">
-
-            {/* Home */}
+            
+            {
+            guest_log
+            ?
+              //Guest 
+            <div class="guest-user-ui" id="Home">
+                <div class="back-to-home">
+                    <div class="back-to-home-glass-inner">
+                        <div id="back-to-home-glass-inner-info">
+                            <h5>Guest access will expire in 5 minutes</h5>
+                        </div>
+                        <div id="back-to-home-glass-inner-text">
+                            <h5>Back to</h5>
+                                    <button id="back-to-home-btn" onClick={back_to_home}>Home</button>
+                        </div>
+                    </div>
+                </div>
+                <GuestUser/>
+            </div>
+            :
+              // Home
             <div class="home-landing-section" id="Home">       
                 <section class="home-glass">
                     <div class="home-dashboard" id="home-text">
                         <div id="home-guest-img"></div>
                         <h3 style={{margin:0, padding:0}}>Get Started</h3>
                         <h5 style={{padding:0}}>as</h5>
-                        <button id="home-guest-btn">Guest</button>
+                        <button id="home-guest-btn" onClick={guest_user}>Guest</button>
                         <p>CUE-ASAP is a solution that can help us to survive in this world without about any kind of threats and accidents.</p>
                     </div>
                     <div class="home-gist" id="home-text">
@@ -56,6 +89,8 @@ function Home() {
                 <div class="home-circle-1"></div>
                 <div class="home-circle-2"></div>
             </div>
+            }
+
 
             {/* About us */}
             <div class="about-us-landing-section" id="About us">
@@ -119,12 +154,21 @@ function Home() {
             {/* Contact */}
             <div class="contact-landing-section" id="Contact">
                 <section class="contact-glass">
-                    
+                    <div class="contact-wrapper">
+                        <div class="contact-gist">
+                            <h3>For any assistance contact:</h3>
+                        </div>
+                        <div class="contact-glass-inner">
+                            <div id="contact-glass-inner-img-area"></div>
+                            <div id="contact-glass-inner-img-text">
+                                <h5>cueasap.help@gmail.com</h5>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </div>
 
         </div>
-
     );
 }
 

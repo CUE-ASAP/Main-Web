@@ -9,6 +9,9 @@ import { Component } from 'react';
 import { Container } from 'reactstrap';
 import GetStarted from './components/GetStarted';
 import chatbot from './assets/chatbot-color.png'
+import discord from "./assets/discord.svg"
+import github from "./assets/github.svg"
+import slack from "./assets/slack.svg"
 
 
 class App extends Component{
@@ -28,7 +31,7 @@ class App extends Component{
               <ul>
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">Help Center</a></li>
-                <li><a href="#">Speed Test</a></li>
+                <li><a href="#">Your Location</a></li>
               </ul>
             </div>
           <div id="footer-elements">
@@ -41,10 +44,11 @@ class App extends Component{
           </div>
           <div id="footer-elements">
             <h3>Connect with us</h3>
-            <ul>
-              <li><a href="#">Email</a></li>
-              <li><a href="#">Social</a></li>
-            </ul>
+            <div id="connect-with-us-img-area">
+              <a href="#"><img src={discord} width="22px"/></a>
+              <a href="#"><img src={github} width="22px"/></a>
+              <a href="#"><img src={slack} width="22px"/></a>
+            </div>
           </div>
           </div>
           <div class="main-footer">

@@ -256,6 +256,42 @@ nav .start-contact, .app-nav-a:nth-child(4):hover~.animation{
     box-shadow: 0 0 2px #0ff, 0 0 2px #0ff;
 }
 
+#connect-with-us-img-area{
+    margin-left: 28px;
+}
+#connect-with-us-img-area a{
+   display: inline-block;
+   height: 43px;
+   width: 40px;
+   margin: 0 10px 0 10px;
+   text-align: center;
+   line-height: 40px;
+   border-radius: 50%;
+   transition: all 0.3s ease;
+}
+#connect-with-us-img-area a:nth-child(1){
+    background: #7289DA;
+}
+#connect-with-us-img-area a:nth-child(2){
+    background: #2c2a2a;
+}
+#connect-with-us-img-area a:nth-child(3){
+    background: #511752;
+}
+
+#connect-with-us-img-area a:nth-child(1):hover{
+    background: #7fb8eb;
+    transform: scale(1.1);
+}
+#connect-with-us-img-area a:nth-child(2):hover{
+    background: #3f3d3d;
+    transform: scale(1.1);
+}
+#connect-with-us-img-area a:nth-child(3):hover{
+    background: #6f2372;
+    transform: scale(1.1);
+}
+
 .app-nav-bar-mobile-view{
     display: none;
  }

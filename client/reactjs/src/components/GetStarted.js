@@ -4,7 +4,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types'
 import Home from './Home'
-import HomeUser from './HomeUser'
+import AuthUser from './AuthUser'
 
 class GetStarted extends Component {
     
@@ -15,18 +15,18 @@ class GetStarted extends Component {
 
     render() {
 
-        const { isAuthenticated, user } = this.props.auth;
+        const { isAuthenticated } = this.props.auth;
 
         const authHome = (
-            <HomeUser/>
+            <AuthUser/>
         )
 
-        const guestHome = (
+        const newHome = (
             <Home />
         )
 
         return (
-            isAuthenticated ? authHome : guestHome
+            isAuthenticated ? authHome : newHome
         );
     }
 }

@@ -30,8 +30,8 @@ class App extends Component{
               <h3>Quick links</h3>
               <ul>
                 <li><a href="#">FAQ</a></li>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Your Location</a></li>
+                <li><a href="https://tawk.to/cueassist" target="_blank">Help Center</a></li>
+              <li><a href="https://maps.google.com/maps?q&t=&z=14&ie=UTF" target="_blank">Your Location</a></li>
               </ul>
             </div>
           <div id="footer-elements">
@@ -45,9 +45,9 @@ class App extends Component{
           <div id="footer-elements">
             <h3>Connect with us</h3>
             <div id="connect-with-us-img-area">
-              <a href="#"><img src={discord} width="22px"/></a>
-              <a href="#"><img src={github} width="22px"/></a>
-              <a href="#"><img src={slack} width="22px"/></a>
+              <a href="https://discord.gg/2SxxdHu2" target="_blank"><img src={discord} width="22px"/></a>
+              <a href="https://github.com/CUE-ASAP" target="_blank"><img src={github} width="22px"/></a>
+              <a href="https://join.slack.com/t/cueasap/shared_invite/zt-ng1p11v7-ubghuV9TzGp3XtN5KhlZ6Q" target="_blank"><img src={slack} width="22px"/></a>
             </div>
           </div>
           </div>

@@ -53,10 +53,10 @@ class AppNavBar extends Component {
             <Fragment>
             {window.innerWidth>574?
                 <nav class="app-nav">
-                    <a class="app-nav-a" id="nav-a-indicator" href="#Home">Home</a>
-                    <a class="app-nav-a" id="nav-a-indicator" href="#About us">About us</a>
-                    <a class="app-nav-a" id="nav-a-indicator" href="#Services">Services</a>
-                    <a class="app-nav-a" id="nav-a-indicator" href="#Contact">Contact</a>
+                    <a class="app-nav-a"  href="#Home">Home</a>
+                    <a class="app-nav-a"  href="#About us">About us</a>
+                    <a class="app-nav-a"  href="#Services">Services</a>
+                    <a class="app-nav-a"  href="#Contact">Contact</a>
                     <div class="animation start-home"></div>
                 </nav>:
                 <div class="app-nav-bar-mobile-view">

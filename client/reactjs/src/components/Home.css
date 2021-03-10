@@ -456,13 +456,22 @@ html{
 }
 
 #back-to-home-glass-inner-info{
-    margin: 1% 4%;
-    width:84%;
+    margin: 1%;
+    margin-left: 2%;
+    width:20%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#back-to-home-glass-inner-timer{
+    margin-top:1.25%;
+    width:60%;
     justify-content: center;
     align-items: center;
 }
+
 #back-to-home-glass-inner-info h5{
-   padding-top: 1.8%;
+   padding-top: 6.06%;
    padding-left: 1%;
    font-size: 25px;
    font-family: 'PT Sans';
@@ -572,13 +581,52 @@ html{
         background-position: 0.8rem;
     }
     #back-to-home-glass-inner-info h5{
-        font-size: 23px;
+        font-size: 18px;
     }
-    
+}
+@media (max-width :574px){
+    #back-to-home-glass-inner-info{
+        margin-top:2.2%;
+        width:90%;
+    }
+    #back-to-home-glass-inner-info h5{
+        font-size: 18px;
+    }
+    #back-to-home-glass-inner-timer{
+        margin-top:2.2%;
+    }
+    #back-to-home-btn{
+        height: 34px;
+        margin-bottom: 6px;
+    }
 }
 
 @media (max-width :1024px) and (min-width:574px){
     .about-us-glass{
         width: 50%;
+    }
+}
+
+@media (min-height : 670px){
+    .home-circle-1{
+        visibility: hidden;
+    }
+    .home-circle-2{
+        visibility: hidden;
+    }
+}
+
+@media (max-height : 600px){
+    .home-circle-1{
+        visibility: hidden;
+    }
+    .home-circle-2{
+        visibility: hidden;
+    }
+}
+
+@media (min-height : 700px){
+    .contact-glass-inner{
+        margin-bottom: 10%;
     }
 }

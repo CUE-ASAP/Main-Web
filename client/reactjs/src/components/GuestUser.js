@@ -293,26 +293,26 @@ class GuestUser extends React.Component {
                             {
                                 this.state.police_cue_state
                                     ?
-                                    <button class="sos-pole-police-open" onClick={() => this.police(this.state.useAddress, this.state.emails_for_sos)}><img src={sos_icon} width="52px" /></button>
+                                    <button class="sos-pole-police-open" id="guest-cue-circle" onClick={() => this.police(this.state.useAddress, this.state.emails_for_sos)}><img id="guest-img-circle" src={sos_icon} width="52px" /></button>
                                     :
-                                    <button class="sos-pole-police-close"><img src={sos_icon} width="52px" /></button>
+                                    <button class="sos-pole-police-close" id="guest-cue-circle" ><img id="guest-img-circle" src={sos_icon} width="52px" /></button>
                             }
                             {
                                 this.state.fire_cue_state
                                     ?
-                                    <button class="sos-pole-fire-open" onClick={() => this.fire(this.state.useAddress, this.state.emails_for_sos)}><img src={sos_icon} width="52px" /></button>
+                                    <button class="sos-pole-fire-open" id="guest-cue-circle" onClick={() => this.fire(this.state.useAddress, this.state.emails_for_sos)}><img id="guest-img-circle" src={sos_icon} width="52px" /></button>
                                     :
-                                    <button class="sos-pole-fire-close"><img src={sos_icon} width="52px" /></button>
+                                    <button class="sos-pole-fire-close" id="guest-cue-circle" ><img id="guest-img-circle" src={sos_icon} width="52px" /></button>
                             }
                         </div>
                         <div class="cue-wrapper-inner">
                             {
                                 this.state.police_cue_state ?
-                                    <button class="maps-pole-police-open" onClick={() => this.police_maps_link()}><img src={maps_icon} width="52px" /></button>
+                                    <button class="maps-pole-police-open" id="guest-cue-circle" onClick={() => this.police_maps_link()}><img id="guest-img-circle" src={maps_icon} width="52px" /></button>
                                     :
-                                    <button class="maps-pole-police-close"><img src={maps_icon} width="52px" /></button>
+                                    <button class="maps-pole-police-close" id="guest-cue-circle" ><img id="guest-img-circle" src={maps_icon} width="52px" /></button>
                             }
-                            <div class="single-box-cue-pole-police" onClick={() => this.change_police_cue_state()}>
+                            <div class="single-box-cue-pole-police" id="guest-cue-box" onClick={() => this.change_police_cue_state()}>
                                 {
                                     this.state.police_loading
                                         ?
@@ -324,7 +324,7 @@ class GuestUser extends React.Component {
                                     <span class="header-text-cue-pole"><strong>POLICE</strong></span>
                                 </div>
                             </div>
-                            <div class="single-box-cue-pole-fire" onClick={() => this.change_fire_cue_state()}>
+                            <div class="single-box-cue-pole-fire" id="guest-cue-box" onClick={() => this.change_fire_cue_state()}>
                                 {
                                     this.state.fire_loading
                                         ?
@@ -339,9 +339,9 @@ class GuestUser extends React.Component {
 
                             {
                                 this.state.fire_cue_state ?
-                                    <button class="maps-pole-fire-open" onClick={() => this.fire_maps_link()}><img src={maps_icon} width="52px" /></button>
+                                    <button class="maps-pole-fire-open" id="guest-cue-circle" onClick={() => this.fire_maps_link()}><img id="guest-img-circle" src={maps_icon} width="52px" /></button>
                                     :
-                                    <button class="maps-pole-fire-close"><img src={maps_icon} width="52px" /></button>
+                                    <button class="maps-pole-fire-close" id="guest-cue-circle" ><img id="guest-img-circle" src={maps_icon} width="52px" /></button>
                             }
 
                         </div>
@@ -349,11 +349,11 @@ class GuestUser extends React.Component {
                             {
                                 this.state.medical_cue_state
                                     ?
-                                    <button class="maps-pole-medical-open" onClick={() => this.medical_maps_link()}><img src={maps_icon} width="52px" /></button>
+                                    <button class="maps-pole-medical-open" id="guest-cue-circle" onClick={() => this.medical_maps_link()}><img id="guest-img-circle" src={maps_icon} width="52px" /></button>
                                     :
-                                    <button class="maps-pole-medical-close"><img src={maps_icon} width="52px" /></button>
+                                    <button class="maps-pole-medical-close" id="guest-cue-circle" ><img id="guest-img-circle" src={maps_icon} width="52px" /></button>
                             }
-                            <div class="single-box-cue-pole-medical" onClick={() => this.change_medical_cue_state()}>
+                            <div class="single-box-cue-pole-medical" id="guest-cue-box" onClick={() => this.change_medical_cue_state()}>
                                 {
                                     this.state.medical_loading
                                         ?
@@ -365,7 +365,7 @@ class GuestUser extends React.Component {
                                     <span class="header-text-cue-pole"><strong>MEDICAL</strong></span>
                                 </div>
                             </div>
-                            <div class="single-box-cue-pole-vehicle" onClick={() => this.change_vehicle_cue_state()}>
+                            <div class="single-box-cue-pole-vehicle" id="guest-cue-box" onClick={() => this.change_vehicle_cue_state()}>
                                 {
                                     this.state.vehicle_loading
                                         ?
@@ -380,25 +380,25 @@ class GuestUser extends React.Component {
                             {
                                 this.state.vehicle_cue_state
                                     ?
-                                    <button class="maps-pole-vehicle-open" onClick={() => this.vehicle_maps_link()}><img src={maps_icon} width="52px" /></button>
+                                    <button class="maps-pole-vehicle-open" id="guest-cue-circle" onClick={() => this.vehicle_maps_link()}><img id="guest-img-circle" src={maps_icon} width="52px" /></button>
                                     :
-                                    <button class="maps-pole-vehicle-close"><img src={maps_icon} width="52px" /></button>
+                                    <button class="maps-pole-vehicle-close" id="guest-cue-circle" ><img id="guest-img-circle" src={maps_icon} width="52px" /></button>
                             }
                         </div>
                         <div class="cue-wrapper-outer">
                             {
                                 this.state.medical_cue_state
                                     ?
-                                    <button class="sos-pole-medical-open" onClick={() => this.medical(this.state.useAddress, this.state.emails_for_sos)}><img src={sos_icon} width="52px" /></button>
+                                    <button class="sos-pole-medical-open" id="guest-cue-circle" onClick={() => this.medical(this.state.useAddress, this.state.emails_for_sos)}><img id="guest-img-circle" src={sos_icon} width="52px" /></button>
                                     :
-                                    <button class="sos-pole-medical-close"><img src={sos_icon} width="52px" /></button>
+                                    <button class="sos-pole-medical-close" id="guest-cue-circle" ><img id="guest-img-circle" src={sos_icon} width="52px" /></button>
                             }
                             {
                                 this.state.vehicle_cue_state
                                     ?
-                                    <button class="sos-pole-vehicle-open" onClick={() => this.vehicle(this.state.useAddress, this.state.emails_for_sos)}><img src={sos_icon} width="52px" /></button>
+                                    <button class="sos-pole-vehicle-open" id="guest-cue-circle"onClick={() => this.vehicle(this.state.useAddress, this.state.emails_for_sos)}><img id="guest-img-circle" src={sos_icon} width="52px" /></button>
                                     :
-                                    <button class="sos-pole-vehicle-close"><img src={sos_icon} width="52px" /></button>
+                                    <button class="sos-pole-vehicle-close" id="guest-cue-circle"><img id="guest-img-circle" src={sos_icon} width="52px" /></button>
                             }
                         </div>
                     </div>

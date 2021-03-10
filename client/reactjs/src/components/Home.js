@@ -14,6 +14,7 @@ import {
 } from 'reactstrap';
 import PropTypes from 'prop-types'
 import lottie from 'lottie-web'
+import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 import Logo from '../assets/Cue_logo_v2.svg'
 import GuestUser from './GuestUser'
 import './Home.css'
@@ -22,7 +23,8 @@ function Home() {
 
     const container = useRef(null);
     const [guest_log, set_guest_log] = React.useState(false)
-    const [guest_log_timer, set_guest_log_timer] = React.useState(300000)
+    const [guest_log_timer, set_guest_log_timer] = React.useState(300000)  
+
 
     // Access to Guest user (with expiry time)
     const guest_user = React.useCallback(() => {
@@ -62,11 +64,26 @@ function Home() {
                 <div class="back-to-home">
                     <div class="back-to-home-glass-inner">
                         <div id="back-to-home-glass-inner-info">
-                            <h5>Guest access will expire in 5 minutes</h5>
+                            <h5>Guest access will expire in </h5>
+                        </div>
+                        <div id="back-to-home-glass-inner-timer">
+                                    <CountdownCircleTimer
+                                        isPlaying
+                                        duration={300}
+                                        size={60}
+                                        strokeWidth={4}
+                                        colors={[
+                                            ['#1a2980', 0.33],
+                                            ['#2f80ed', 0.33],
+                                            ['#b33', 0.33],
+                                        ]}
+                                    >
+                                        {({ remainingTime }) => `${Math.floor(remainingTime / 60) > 9 ? Math.floor(remainingTime / 60) : '0' + Math.floor(remainingTime / 60)}:${remainingTime % 60 > 9 ? remainingTime % 60 : '0' + remainingTime % 60}`}
+                                    </CountdownCircleTimer>
                         </div>
                         <div id="back-to-home-glass-inner-text">
                                 <h5>Back to</h5>
-                                    <button id="back-to-home-btn" onClick={back_to_home}>Home</button>
+                                <button id="back-to-home-btn" onClick={back_to_home}>Home</button>
                         </div>
                     </div>
                 </div>

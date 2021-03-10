@@ -853,3 +853,30 @@
         padding-bottom: 100px;
     }
 }
+
+@media (max-width :330px){
+
+  .single-box-cue-pole-police,.single-box-cue-pole-fire,.single-box-cue-pole-medical,.single-box-cue-pole-vehicle{
+      width: 60px;
+  }
+
+  .sos-pole-police-open,.sos-pole-police-close,.sos-pole-fire-open,.sos-pole-fire-close,.sos-pole-medical-open,.sos-pole-medical-close,.sos-pole-vehicle-open,.sos-pole-vehicle-close{
+      width:40px;
+      height:40px;
+  }
+  .maps-pole-police-open,.maps-pole-police-close,.maps-pole-fire-open,.maps-pole-fire-close,.maps-pole-medical-open,.maps-pole-medical-close,.maps-pole-vehicle-open,.maps-pole-vehicle-close{
+      width:40px;
+      height:40px;
+  }
+
+  .maps-pole-police-open img,.maps-pole-police-close img,.maps-pole-fire-open img,.maps-pole-fire-close img,.maps-pole-medical-open img,.maps-pole-medical-close img,.maps-pole-vehicle-open img,.maps-pole-vehicle-close img{
+      width:24px;
+      height:24px;
+  }
+
+  .sos-pole-police-open img,.sos-pole-police-close img,.sos-pole-fire-open img,.sos-pole-fire-close img,.sos-pole-medical-open img,.sos-pole-medical-close img,.sos-pole-vehicle-open img,.sos-pole-vehicle-close img{
+      width:24px;
+      height:24px;
+  }
+ 
+}

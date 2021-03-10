@@ -22,18 +22,22 @@ function Home() {
 
     const container = useRef(null);
     const [guest_log, set_guest_log] = React.useState(false)
+    const [guest_log_timer, set_guest_log_timer] = React.useState(300000)
 
     // Access to Guest user (with expiry time)
     const guest_user = React.useCallback(() => {
+        set_guest_log_timer(300000);
         set_guest_log(true);
         setTimeout(() => {
                 set_guest_log(false)
-            }, 300000)
+            }, guest_log_timer)
     },[guest_log]);
 
     // Back to home from guest page
     const back_to_home = React.useCallback(() => {
+        set_guest_log_timer(0);
         set_guest_log(false);
+        window.location.reload()
     },[guest_log]);
 
     // Lottie Animation container
@@ -61,7 +65,7 @@ function Home() {
                             <h5>Guest access will expire in 5 minutes</h5>
                         </div>
                         <div id="back-to-home-glass-inner-text">
-                            <h5>Back to</h5>
+                                <h5>Back to</h5>
                                     <button id="back-to-home-btn" onClick={back_to_home}>Home</button>
                         </div>
                     </div>

@@ -447,7 +447,7 @@ html{
     display: flex;
     flex-direction: row;
     margin-top: 15px;
-    min-height: 10vh;
+    min-height: auto;
     width: 90%;
     margin-bottom: 10px;
     border-radius: 1rem;
@@ -475,7 +475,7 @@ html{
   align-items: center;
 }
 #back-to-home-glass-inner-text h5{
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   font-family: 'Cairo';
   color: #1d2b64;

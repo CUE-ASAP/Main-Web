@@ -284,9 +284,9 @@ class GuestUser extends React.Component {
 
         return (
 
-            <div class="box-container-home-user">
+            <div class="box-container-home-user" id="guest-home-user-bg">
 
-                <div class="cue-wrap-btn-map">
+                <div class="cue-wrap-btn-map" id="guest-home-btn-map-bg">
 
                     <div class="cue-wrapper-body">
                         <div class="cue-wrapper-outer">

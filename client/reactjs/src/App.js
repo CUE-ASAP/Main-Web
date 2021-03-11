@@ -6,12 +6,15 @@ import { Provider } from 'react-redux';
 import store from './store'
 import {loadUser} from './actions/authActions';
 import { Component } from 'react';
-import { Container } from 'reactstrap';
+import { Container, Fade } from 'reactstrap';
 import GetStarted from './components/GetStarted';
 import chatbot from './assets/chatbot-color.png'
 import discord from "./assets/discord.svg"
 import github from "./assets/github.svg"
 import slack from "./assets/slack.svg"
+import {NavItem} from 'reactstrap'
+import TermsServiceModal from './components/auth/TermsServiceModal'
+import FAQ from './components/auth/FAQ'
 
 
 class App extends Component{
@@ -29,7 +32,7 @@ class App extends Component{
             <div id="footer-elements">
               <h3>Quick links</h3>
               <ul>
-                <li><a href="#">FAQ</a></li>
+                <NavItem><FAQ/></NavItem>
                 <li><a href="https://tawk.to/cueassist" target="_blank">Help Center</a></li>
               <li><a href="https://maps.google.com/maps?q&t=&z=14&ie=UTF" target="_blank">Your Location</a></li>
               </ul>
@@ -37,7 +40,7 @@ class App extends Component{
           <div id="footer-elements">
             <h3>Support</h3>
             <ul>
-              <li><a href="#">Terms of use</a></li>
+              <NavItem><TermsServiceModal/></NavItem>
               <li><a href="#">Privacy Statement</a></li>
               <li><a href="#">Cookie Policy</a></li>
             </ul>

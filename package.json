@@ -30,7 +30,6 @@
     "google-maps-react": "^2.0.6",
     "jsonwebtoken": "^8.5.1",
     "lottie-web": "^5.7.6",
-    "mapbox-gl": "^2.1.1",
     "mongoose": "^5.11.8",
     "nodemailer": "^6.4.17",
     "react-countdown-circle-timer": "^2.5.0",
@@ -41,6 +40,7 @@
     "reactstrap": "^8.7.1",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
+    "scrollreveal": "^4.0.9",
     "uuid": "^8.3.2"
   },
   "devDependencies": {

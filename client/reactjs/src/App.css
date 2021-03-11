@@ -201,12 +201,18 @@ nav .start-contact, .app-nav-a:nth-child(4):hover~.animation{
 
 .app-nav-bar-mobile-view a{
     color:#a1f1f6;
+    display: block;
     font-family: 'Blinker';
     font-size: 1.0em;
     line-height: 2.4em;
-    text-align: center;
+    text-align: start;
     padding-left: 2px;
+    padding-top: 4px;
     text-decoration: none;
+}
+
+.app-nav-bar-mobile-view a:hover{
+    color:#fff;
 }
 
 /*Button UI*/

@@ -630,3 +630,9 @@ html{
         margin-bottom: 10%;
     }
 }
+
+@media (max-width :550px) and (min-width:370px){
+    .contact-glass-inner{
+        margin-bottom: 20%;
+    }
+}

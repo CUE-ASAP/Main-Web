@@ -54,6 +54,7 @@ function Home() {
     }, [])
 
     return (
+        
         <div class="box-container">
             
             {
@@ -190,6 +191,7 @@ function Home() {
             </div>
 
         </div>
+
     );
 }
 

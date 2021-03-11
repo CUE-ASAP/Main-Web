@@ -40,7 +40,7 @@ class AppNavBar extends Component {
             <Fragment>
                 <NavItem>
                     <span className="navbar-text mr-3">
-                        <strong>{user ? `Welcome ${user.name}!` : ''}</strong>
+                        <strong style={{ fontFamily: 'Poppins' }} >{user ? `Welcome ${user.name} !` : ''}</strong>
                     </span>
                 </NavItem>
                 <NavItem>
@@ -53,10 +53,10 @@ class AppNavBar extends Component {
             <Fragment>
             {window.innerWidth>574?
                 <nav class="app-nav">
-                    <a class="app-nav-a"  href="#Home">Home</a>
-                    <a class="app-nav-a"  href="#About us">About us</a>
-                    <a class="app-nav-a"  href="#Services">Services</a>
-                    <a class="app-nav-a"  href="#Contact">Contact</a>
+                    <a class="app-nav-a" style={{ fontFamily: 'Mulish' }} href="#Home">Home</a>
+                    <a class="app-nav-a" style={{ fontFamily: 'Mulish' }} href="#About us">About us</a>
+                    <a class="app-nav-a" style={{ fontFamily: 'Mulish' }} href="#Services">Services</a>
+                    <a class="app-nav-a" style={{ fontFamily: 'Mulish' }} href="#Contact">Contact</a>
                     <div class="animation start-home"></div>
                 </nav>:
                 <div class="app-nav-bar-mobile-view">
@@ -87,8 +87,8 @@ class AppNavBar extends Component {
             <div>
                 <Navbar dark expand="sm" className="app-navbar fixed-top" style={{ borderRadius:'0px 0px 26px 26px'}}>
                     <Container>
-                        < a href="/"><img src={Logo} style={{ height: 40, width: 75, paddingRight: 10 }}></img></a>
-                        <NavbarBrand href="/" style={{ paddingLeft: 5 }}>CUE ASAP</NavbarBrand>
+                        < a ><img src={Logo} style={{ height: 40, width: 75, paddingRight: 10 }}></img></a>
+                        <NavbarBrand style={{ paddingLeft: 5 , fontFamily:'Blinker', fontSize:22}}>CUE ASAP</NavbarBrand>
                         <NavbarToggler onClick={this.toggle} />
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav className="ml-auto" navbar>

@@ -15,6 +15,7 @@ import slack from "./assets/slack.svg"
 import {NavItem} from 'reactstrap'
 import TermsServiceModal from './components/auth/TermsServiceModal'
 import FAQ from './components/auth/FAQ'
+import License from './components/auth/License'
 
 
 class App extends Component{
@@ -32,17 +33,16 @@ class App extends Component{
             <div id="footer-elements">
               <h3>Quick links</h3>
               <ul>
-                <NavItem><FAQ/></NavItem>
-                <li><a href="https://tawk.to/cueassist" target="_blank">Help Center</a></li>
-              <li><a href="https://maps.google.com/maps?q&t=&z=14&ie=UTF" target="_blank">Your Location</a></li>
+              <li><a id="contact-footer-links" href="https://tawk.to/cueassist" target="_blank">Help Center</a></li>
+              <li><a id="contact-footer-links" href="https://maps.google.com/maps?q&t=&z=14&ie=UTF" target="_blank">Your Location</a></li>
               </ul>
             </div>
           <div id="footer-elements">
             <h3>Support</h3>
             <ul>
+              <NavItem><FAQ/></NavItem>
+              <NavItem><License/></NavItem>
               <NavItem><TermsServiceModal/></NavItem>
-              <li><a href="#">Privacy Statement</a></li>
-              <li><a href="#">Cookie Policy</a></li>
             </ul>
           </div>
           <div id="footer-elements">

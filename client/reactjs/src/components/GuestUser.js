@@ -17,6 +17,7 @@ import PropTypes from 'prop-types'
 import './GuestUser.css'
 import Logo from '../assets/Asset 4.png'
 import Logo_gif from '../assets/CUE asap LOGO Black.gif'
+import map_static_none from '../assets/map-static-none.png'
 import fire_icon from '../assets/Fire.svg'
 import police_icon from '../assets/Police.svg'
 import medical_icon from '../assets/Medical.svg'
@@ -404,7 +405,7 @@ class GuestUser extends React.Component {
                     </div>
                     {
                             <div class="single-box-map" id="home-text" style={{ marginLeft: 60, marginRight: 60 }} >
-                                        <img class="map-api" src={Logo_gif} width="300px" height="260px" alt='' />
+                                        <img class="map-api" src={map_static_none} width="auto" height="auto" />
                                 <h4 style={{ paddingTop: 6 }}><img src={user_locate} width="32px" />Login to track your location</h4>
                             </div>
                     }

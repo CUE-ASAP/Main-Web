@@ -24,13 +24,15 @@ class TermsServiceModal extends Component {
         return (
             <div>
 
-                <a onClick={this.toggle} href="#Terms-of-Service">Terms of Service</a>
+                <a onClick={this.toggle} id="contact-footer-links" href="#Terms-of-Service">Terms of Service</a>
 
                 <Modal class="terms-modal" isOpen={this.state.modal} toggle={this.toggle} >
 
-                    <ModalHeader toggle={this.toggle}>Service Agreement of CUE ASAP Platform</ModalHeader>
-                    <ModalBody style={{ 'max-height': 'calc(85vh - 210px)', 'overflow-y': 'auto', 'padding':'16px' ,'marginBottom':'10px'}}>
+                    <ModalHeader id="cue-terms-of-service-modal-header">Service Agreement of CUE ASAP Platform</ModalHeader>
+                    <ModalBody id="cue-terms-of-service-modal-body" style={{ 'max-height': 'calc(85vh - 210px)', 'overflow-y': 'auto', 'padding':'16px'}}>
                         
+                        <div id="cue-terms-of-service">
+
                         <h6>10 minutes 9 seconds reading.</h6>
                         <br/>
 
@@ -209,10 +211,12 @@ class TermsServiceModal extends Component {
                             &nbsp;10.4 I will respect the above terms and conditions truthfully and the agreement you have signed with CUE ASAP.
                         </p>
                         <br />
+
+                        </div>
                         
                         </ModalBody>
-                    <ModalFooter>
-                        <Button color="secondary" onClick={this.toggle}>Close</Button>
+                    <ModalFooter id="cue-terms-of-service-modal-footer" >
+                        <Button color="primary" onClick={this.toggle}>Close</Button>
                     </ModalFooter>
                 </Modal>
 

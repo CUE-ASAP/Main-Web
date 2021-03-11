@@ -636,3 +636,19 @@ html{
         margin-bottom: 20%;
     }
 }
+
+@media (max-height : 700px){
+    #back-to-home-glass-inner-info{
+        margin-top:1.3%;
+        width: 20%;
+    }
+    #back-to-home-glass-inner-info h5{
+        font-size: 20px;
+    }
+    #back-to-home-glass-inner-timer{
+        margin-top:1.1%;
+    }
+    #back-to-home-btn{
+        height: 36px;
+    }
+}

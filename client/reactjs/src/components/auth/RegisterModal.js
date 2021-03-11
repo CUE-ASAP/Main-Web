@@ -95,8 +95,8 @@ class RegisterModal extends Component {
                     toggle={this.toggle}
                 >
 
-                    <ModalHeader toggle={this.toggle}>Register</ModalHeader>
-                    <ModalBody>
+                    <ModalHeader id="cue-register-modal-header" toggle={this.toggle}>Register</ModalHeader>
+                    <ModalBody id="cue-register-modal-body" >
 
                         {this.state.msg ? (<Alert color='danger'> {this.state.msg} </Alert>): null}
 

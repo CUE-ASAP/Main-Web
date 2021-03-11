@@ -89,8 +89,8 @@ class LoginModal extends Component {
                     toggle={this.toggle}
                 >
 
-                    <ModalHeader toggle={this.toggle}>Login</ModalHeader>
-                    <ModalBody>
+                    <ModalHeader id="cue-login-modal-header" toggle={this.toggle}>Login</ModalHeader>
+                    <ModalBody id="cue-login-modal-body" >
 
                         {this.state.msg ? (<Alert color='danger'> {this.state.msg} </Alert>) : null}
 

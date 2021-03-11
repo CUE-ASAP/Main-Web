@@ -8,6 +8,7 @@
         "mongouri",
         "reactjs",
         "scrollreveal",
+        "tawk",
         "toastify"
     ]
 }

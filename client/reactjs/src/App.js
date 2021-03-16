@@ -48,14 +48,14 @@ class App extends Component{
           <div id="footer-elements">
             <h3>Connect with us</h3>
             <div id="connect-with-us-img-area">
-              <a href="https://discord.gg/2SxxdHu2" target="_blank"><img src={discord} width="22px"/></a>
+              <a href="https://discord.gg/BJHHxkMq8s" target="_blank"><img src={discord} width="22px"/></a>
               <a href="https://github.com/CUE-ASAP" target="_blank"><img src={github} width="22px"/></a>
-              <a href="https://join.slack.com/t/cueasap/shared_invite/zt-ng1p11v7-ubghuV9TzGp3XtN5KhlZ6Q" target="_blank"><img src={slack} width="22px"/></a>
+              <a href="https://join.slack.com/t/cueasap/shared_invite/zt-ng1p11v7-ubghuV9TzGp3XtN5KhIZ6Q" target="_blank"><img src={slack} width="22px"/></a>
             </div>
           </div>
           </div>
           <div class="main-footer">
-          <h3>&copy; 2020-2021 CUE-ASAP. All Rights Reserved.</h3>
+          <h3>&copy; 2020-2021 ⚡ CUE-ASAP ◽ Made with ❤ in India.</h3>
           </div> 
       </div>
     </Provider>

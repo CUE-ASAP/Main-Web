@@ -75,9 +75,9 @@ html{
     border-radius: 50%;
     margin-bottom: 10px;
     margin-top: 20px;
-    background-image: url('../assets/Menu_icon/user_edit.svg');
-    background-size: 80%;
-    background-position: 1.18rem;
+    background-image: url('../assets/guest_user_svg.svg');
+    background-size: 66%;
+    background-position: 1.45rem;
     background-repeat: no-repeat;
 }
 
@@ -208,18 +208,18 @@ html{
 }
 
 .single-box:nth-child(1) .img-area{
-    background-image: url('../assets/web-design.png');
-    background-size: 80%;
+    background-image: url('../assets/responsive_web_design_v2.svg');
+    background-size: 65%;
     background-repeat: no-repeat;
 }
 .single-box:nth-child(2) .img-area{
-    background-image: url('../assets/map-loc-api.png');
-    background-size: 70%;
+    background-image: url('../assets/map_api.svg');
+    background-size: 61%;
     background-repeat: no-repeat;
 }
 .single-box:nth-child(3) .img-area{
-    background-image: url('../assets/chatbot.png');
-    background-size: 80%;
+    background-image: url('../assets/chat_bot_svg_v2.svg');
+    background-size: 65%;
     background-repeat: no-repeat;
 }
 

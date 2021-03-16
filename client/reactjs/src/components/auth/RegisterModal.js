@@ -16,7 +16,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { register } from '../../actions/authActions';
 import { clearErrors } from '../../actions/errorActions';
-
+import Sign_up_icon from '../../assets/register_svg.svg'
 
 class RegisterModal extends Component {
     state = {
@@ -95,7 +95,7 @@ class RegisterModal extends Component {
                     toggle={this.toggle}
                 >
 
-                    <ModalHeader id="cue-register-modal-header" toggle={this.toggle}>Register</ModalHeader>
+                    <ModalHeader id="cue-register-modal-header" toggle={this.toggle}>< a ><img src={Sign_up_icon} style={{ height: 40, width: 32, paddingRight: 10,paddingBottom: 4}}></img></a>Register</ModalHeader>
                     <ModalBody id="cue-register-modal-body" >
 
                         {this.state.msg ? (<Alert color='danger'> {this.state.msg} </Alert>): null}

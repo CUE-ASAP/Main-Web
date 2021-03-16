@@ -16,6 +16,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/authActions';
 import { clearErrors } from '../../actions/errorActions';
+import Login_icon from '../../assets/login_svg.svg'
 
 class LoginModal extends Component {
     state = {
@@ -89,7 +90,7 @@ class LoginModal extends Component {
                     toggle={this.toggle}
                 >
 
-                    <ModalHeader id="cue-login-modal-header" toggle={this.toggle}>Login</ModalHeader>
+                    <ModalHeader id="cue-login-modal-header" toggle={this.toggle}>< a ><img src={Login_icon} style={{ height: 40, width: 40, paddingRight: 10}}></img></a>Login</ModalHeader>
                     <ModalBody id="cue-login-modal-body" >
 
                         {this.state.msg ? (<Alert color='danger'> {this.state.msg} </Alert>) : null}

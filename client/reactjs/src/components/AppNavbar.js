@@ -16,6 +16,7 @@ import RegisterModal from './auth/RegisterModal'
 import LoginModal from './auth/LoginModal';
 import Logout from './auth/Logout'
 import Logo from '../assets/Cue_logo_v2_light.svg'
+import User_icon from '../assets/user_avatar_svg_v2.svg'
 import Home from './Home'
 class AppNavBar extends Component {
 
@@ -39,8 +40,8 @@ class AppNavBar extends Component {
         const authLinks = (
             <Fragment>
                 <NavItem>
-                    <span className="navbar-text mr-3">
-                        <strong style={{ fontFamily: 'Poppins' }} >{user ? `Welcome ${user.name} !` : ''}</strong>
+                    <span style={{paddingTop:9, paddingRight:20}} className="navbar-text mr-3">
+                        < a ><img src={User_icon} style={{ height: 34, width: 40, paddingRight: 8, paddingBottom: 3 }}></img></a><strong style={{ fontFamily: 'Poppins', color: 'rgb(233, 220, 220)' }} >{user ? `Welcome ${user.name} !` : ''}</strong>
                     </span>
                 </NavItem>
                 <NavItem>

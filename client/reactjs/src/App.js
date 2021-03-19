@@ -6,9 +6,7 @@ import { Provider } from 'react-redux';
 import store from './store'
 import {loadUser} from './actions/authActions';
 import { Component } from 'react';
-import { Container, Fade } from 'reactstrap';
 import GetStarted from './components/GetStarted';
-import chatbot from './assets/chatbot-color.png'
 import discord from "./assets/discord.svg"
 import github from "./assets/github.svg"
 import slack from "./assets/slack.svg"
@@ -33,8 +31,8 @@ class App extends Component{
             <div id="footer-elements">
               <h3>Quick links</h3>
               <ul>
-              <li><a id="contact-footer-links" href="https://tawk.to/cueassist" target="_blank">Help Center</a></li>
-              <li><a id="contact-footer-links" href="https://maps.google.com/maps?q&t=&z=14&ie=UTF" target="_blank">Your Location</a></li>
+              <li><a id="contact-footer-links" href="https://tawk.to/cueassist" target="_blank" rel="noreferrer" >Help Center</a></li>
+              <li><a id="contact-footer-links" href="https://maps.google.com/maps?q&t=&z=14&ie=UTF" target="_blank" rel="noreferrer" >Your Location</a></li>
               </ul>
             </div>
           <div id="footer-elements">
@@ -48,9 +46,9 @@ class App extends Component{
           <div id="footer-elements">
             <h3>Connect with us</h3>
             <div id="connect-with-us-img-area">
-              <a href="https://discord.gg/BJHHxkMq8s" target="_blank"><img src={discord} width="22px"/></a>
-              <a href="https://github.com/CUE-ASAP" target="_blank"><img src={github} width="22px"/></a>
-              <a href="https://join.slack.com/t/cueasap/shared_invite/zt-ng1p11v7-ubghuV9TzGp3XtN5KhIZ6Q" target="_blank"><img src={slack} width="22px"/></a>
+              <a href="https://discord.gg/BJHHxkMq8s" target="_blank" rel="noreferrer" ><img src={discord} width="22px" alt="" /></a>
+              <a href="https://github.com/CUE-ASAP" target="_blank" rel="noreferrer" ><img src={github} width="22px" alt="" /></a>
+              <a href="https://join.slack.com/t/cueasap/shared_invite/zt-ng1p11v7-ubghuV9TzGp3XtN5KhIZ6Q" target="_blank" rel="noreferrer" ><img src={slack} width="22px" alt="" /></a>
             </div>
           </div>
           </div>

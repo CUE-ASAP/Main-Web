@@ -6,7 +6,6 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
     Container
 } from 'reactstrap';
 
@@ -17,7 +16,7 @@ import LoginModal from './auth/LoginModal';
 import Logout from './auth/Logout'
 import Logo from '../assets/Cue_logo_v2_light.svg'
 import User_icon from '../assets/user_avatar_svg_v2.svg'
-import Home from './Home'
+
 class AppNavBar extends Component {
 
     state = {
@@ -41,7 +40,7 @@ class AppNavBar extends Component {
             <Fragment>
                 <NavItem>
                     <span style={{paddingTop:9, paddingRight:20}} className="navbar-text mr-3">
-                        < a ><img src={User_icon} style={{ height: 34, width: 40, paddingRight: 8, paddingBottom: 3 }}></img></a><strong style={{ fontFamily: 'Poppins', color: 'rgb(233, 220, 220)' }} >{user ? `Welcome ${user.name} !` : ''}</strong>
+                        <a href><img src={User_icon} style={{ height: 34, width: 40, paddingRight: 8, paddingBottom: 3 }} alt="" ></img></a><strong style={{ fontFamily: 'Poppins', color: 'rgb(233, 220, 220)' }} >{user ? `Welcome ${user.name} !` : ''}</strong>
                     </span>
                 </NavItem>
                 <NavItem>
@@ -88,7 +87,7 @@ class AppNavBar extends Component {
             <div>
                 <Navbar dark expand="sm" className="app-navbar fixed-top" style={{ borderRadius:'0px 0px 26px 26px'}}>
                     <Container>
-                        < a ><img src={Logo} style={{ height: 40, width: 75, paddingRight: 10 }}></img></a>
+                        <a href="/" ><img src={Logo} style={{ height: 40, width: 75, paddingRight: 10 }} alt="" ></img></a>
                         <NavbarBrand style={{ paddingLeft: 5 , fontFamily:'Blinker', fontSize:22}}>CUE ASAP</NavbarBrand>
                         <NavbarToggler onClick={this.toggle} />
                         <Collapse isOpen={this.state.isOpen} navbar>

@@ -9,9 +9,7 @@ import {
     LOGIN_FAIL,
     LOGOUT_SUCCESS,
     REGISTER_SUCCESS,
-    REGISTER_FAIL,
-    GET_EMAILS,
-    ITEMS_LOADING
+    REGISTER_FAIL
 } from "./types"
 
 // Check token & load user

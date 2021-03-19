@@ -15,7 +15,7 @@ export class Logout extends Component {
         return (
             <Fragment>
                 <NavLink id="logout-btn" onClick={this.props.logout} style={{ fontFamily: 'Mulish', paddingRight:16, paddingTop:10 }} href='#'>
-                    < a onClick="return false;" disabled="disabled" style={{cursor:'default', pointerEvents: 'none'}}><img src={Logout_icon} style={{ height: 27, width: 40, paddingRight: 4 }}></img></a>
+                <a href onClick="return false;" disabled="disabled" style={{ cursor: 'default', pointerEvents: 'none' }}><img src={Logout_icon} style={{ height: 27, width: 40, paddingRight: 4 }} alt="" ></img></a>
                     Logout
                 </NavLink>
             </Fragment>

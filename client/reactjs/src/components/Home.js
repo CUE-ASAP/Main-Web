@@ -1,21 +1,7 @@
-import React, { Component, useEffect, useRef } from 'react'
-import { ListGroup, ListGroupItem, Button } from 'reactstrap';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import { connect } from 'react-redux';
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    Container
-} from 'reactstrap';
-import PropTypes from 'prop-types'
+import React, { useEffect, useRef } from 'react'
+
 import lottie from 'lottie-web'
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
-import Logo from '../assets/Cue_logo_v2.svg'
 import GuestUser from './GuestUser'
 import './Home.css'
 
@@ -33,14 +19,14 @@ function Home() {
         setTimeout(() => {
                 set_guest_log(false)
             }, guest_log_timer)
-    },[guest_log]);
+    },[guest_log_timer]);
 
     // Back to home from guest page
     const back_to_home = React.useCallback(() => {
         set_guest_log_timer(0);
         set_guest_log(false);
         window.location.reload()
-    },[guest_log]);
+    },[]);
 
     // Lottie Animation container
     useEffect(() => {

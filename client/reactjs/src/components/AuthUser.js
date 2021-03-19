@@ -1,22 +1,11 @@
-import React, { Component, useEffect, useRef } from 'react'
-import { ListGroup, ListGroupItem, Button, Spinner } from 'reactstrap';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import React from 'react'
+import { Spinner } from 'reactstrap';
 import { connect } from 'react-redux';
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    Container
-} from 'reactstrap';
+
 
 import PropTypes from 'prop-types'
 import './AuthUser.css'
-import Logo from '../assets/Asset 4.png'
-import Logo_gif from '../assets/CUE asap LOGO Black.gif'
+
 import fire_icon from '../assets/Fire.svg'
 import police_icon from '../assets/Police.svg'
 import medical_icon from '../assets/Medical.svg'
@@ -24,7 +13,7 @@ import vehicle_icon from '../assets/Car.svg'
 import sos_icon from '../assets/sos-icon.png'
 import maps_icon from '../assets/maps-tracking.png'
 import user_locate from '../assets/user-location.png'
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import emailjs from 'emailjs-com'
 import axios from 'axios';
@@ -99,6 +88,9 @@ class AuthUser extends React.Component {
                 break;
             case error.UNKNOWN_ERROR:
                 toast.warn("An unknown error occurred.Don't panic! Just reload the website.", { position: toast.POSITION.BOTTOM_CENTER });
+                break;
+            default:
+                toast.warn("An unidentified error occurred.Don't panic! Just reload the website.", { position: toast.POSITION.BOTTOM_CENTER });
                 break;
         }
     }
@@ -295,24 +287,24 @@ class AuthUser extends React.Component {
                     {
                         this.state.police_cue_state
                         ?
-                        <button class="sos-pole-police-open" onClick={() => this.police(user.name, this.state.useAddress, this.state.emails_for_sos, user.email)}><img src={sos_icon} width="52px" /></button>
+                        <button class="sos-pole-police-open" onClick={() => this.police(user.name, this.state.useAddress, this.state.emails_for_sos, user.email)}><img src={sos_icon} width="52px" alt=""/></button>
                         :
-                        <button class="sos-pole-police-close"><img src={sos_icon} width="52px" /></button>
+                        <button class="sos-pole-police-close"><img src={sos_icon} width="52px" alt="" /></button>
                     }
                     {
                         this.state.fire_cue_state
                         ?
-                        <button class="sos-pole-fire-open" onClick={() => this.fire(user.name, this.state.useAddress, this.state.emails_for_sos, user.email)}><img src={sos_icon} width="52px" /></button>
+                        <button class="sos-pole-fire-open" onClick={() => this.fire(user.name, this.state.useAddress, this.state.emails_for_sos, user.email)}><img src={sos_icon} width="52px" alt=""/></button>
                         :
-                        <button class="sos-pole-fire-close"><img src={sos_icon} width="52px" /></button>
+                        <button class="sos-pole-fire-close"><img src={sos_icon} width="52px" alt=""/></button>
                     }
                 </div>
                 <div class="cue-wrapper-inner">
                     {
                         this.state.police_cue_state?
-                        <button class="maps-pole-police-open" onClick={() => this.police_maps_link()}><img src={maps_icon} width="52px" /></button>
+                        <button class="maps-pole-police-open" onClick={() => this.police_maps_link()}><img src={maps_icon} width="52px" alt=""/></button>
                         :
-                        <button class="maps-pole-police-close"><img src={maps_icon} width="52px" /></button>
+                        <button class="maps-pole-police-close"><img src={maps_icon} width="52px" alt="" /></button>
                     }
                         <div class="single-box-cue-pole-police" onClick={()=>this.change_police_cue_state()}>
                             {
@@ -320,7 +312,7 @@ class AuthUser extends React.Component {
                                 ?
                                 <Spinner animation="border" style={{ color: "#fff" }} />
                                 :
-                                <div class="img-area-cue-pole"><img id="img-police"src={police_icon} width="30px" /></div>
+                                <div class="img-area-cue-pole"><img id="img-police" src={police_icon} width="30px" alt="" /></div>
                             }
                             <div class="img-text-cue-pole">
                                 <span class="header-text-cue-pole"><strong>POLICE</strong></span>
@@ -332,7 +324,7 @@ class AuthUser extends React.Component {
                                 ?
                                 <Spinner animation="border" style={{ color: "#fff" }}/>
                                 :
-                                <div class="img-area-cue-pole"><img src={fire_icon} width="24px" /></div>
+                                <div class="img-area-cue-pole"><img src={fire_icon} width="24px" alt="" /></div>
                             }
                             <div class="img-text-cue-pole">
                                 <span class="header-text-cue-pole"><strong>FIRE</strong></span>
@@ -341,9 +333,9 @@ class AuthUser extends React.Component {
                         
                     {
                         this.state.fire_cue_state?
-                        <button class="maps-pole-fire-open" onClick={()=>this.fire_maps_link()}><img src={maps_icon} width="52px" /></button>
+                        <button class="maps-pole-fire-open" onClick={() => this.fire_maps_link()}><img src={maps_icon} width="52px" alt="" /></button>
                         :
-                        <button class="maps-pole-fire-close"><img src={maps_icon} width="52px" /></button>
+                        <button class="maps-pole-fire-close"><img src={maps_icon} width="52px" alt="" /></button>
                     }
                         
                 </div>
@@ -351,9 +343,9 @@ class AuthUser extends React.Component {
                     {
                         this.state.medical_cue_state
                         ?
-                        <button class="maps-pole-medical-open" onClick={() => this.medical_maps_link()}><img src={maps_icon} width="52px" /></button>
+                        <button class="maps-pole-medical-open" onClick={() => this.medical_maps_link()}><img src={maps_icon} width="52px" alt="" /></button>
                         :
-                        <button class="maps-pole-medical-close"><img src={maps_icon} width="52px" /></button>
+                        <button class="maps-pole-medical-close"><img src={maps_icon} width="52px" alt="" /></button>
                     }
                         <div class="single-box-cue-pole-medical" onClick={() => this.change_medical_cue_state()}>
                             {
@@ -361,7 +353,7 @@ class AuthUser extends React.Component {
                                 ?
                                 <Spinner animation="border" style={{ color: "#fff" }} />
                                 :
-                                <div class="img-area-cue-pole"><img src={medical_icon} width="30px" /></div>
+                                <div class="img-area-cue-pole"><img src={medical_icon} width="30px" alt="" /></div>
                             }
                             <div class="img-text-cue-pole">
                                 <span class="header-text-cue-pole"><strong>MEDICAL</strong></span>
@@ -373,7 +365,7 @@ class AuthUser extends React.Component {
                                 ?
                                 <Spinner animation="border" style={{ color: "#fff" }} />
                                 :
-                                <div class="img-area-cue-pole"><img src={vehicle_icon} width="40.3px" /></div>
+                                <div class="img-area-cue-pole"><img src={vehicle_icon} width="40.3px" alt="" /></div>
                             }
                             <div class="img-text-cue-pole">
                                 <span class="header-text-cue-pole"><strong>VEHICLE</strong></span>
@@ -382,25 +374,25 @@ class AuthUser extends React.Component {
                     {
                         this.state.vehicle_cue_state
                         ?
-                        <button class="maps-pole-vehicle-open" onClick={() => this.vehicle_maps_link()}><img src={maps_icon} width="52px" /></button>
+                        <button class="maps-pole-vehicle-open" onClick={() => this.vehicle_maps_link()}><img src={maps_icon} width="52px" alt=""/></button>
                         :
-                        <button class="maps-pole-vehicle-close"><img src={maps_icon} width="52px" /></button>
+                        <button class="maps-pole-vehicle-close"><img src={maps_icon} width="52px" alt="" /></button>
                     }
                 </div>
                 <div class="cue-wrapper-outer">
                     {
                         this.state.medical_cue_state
                         ?
-                        <button class="sos-pole-medical-open" onClick={() => this.medical(user.name, this.state.useAddress, this.state.emails_for_sos, user.email)}><img src={sos_icon} width="52px" /></button>
+                        <button class="sos-pole-medical-open" onClick={() => this.medical(user.name, this.state.useAddress, this.state.emails_for_sos, user.email)}><img src={sos_icon} width="52px" alt=""/></button>
                         :
-                        <button class="sos-pole-medical-close"><img src={sos_icon} width="52px" /></button>
+                        <button class="sos-pole-medical-close"><img src={sos_icon} width="52px" alt="" /></button>
                     }
                     {
                         this.state.vehicle_cue_state
                         ?
-                        <button class="sos-pole-vehicle-open" onClick={() => this.vehicle(user.name, this.state.useAddress, this.state.emails_for_sos, user.email)}><img src={sos_icon} width="52px" /></button>
+                        <button class="sos-pole-vehicle-open" onClick={() => this.vehicle(user.name, this.state.useAddress, this.state.emails_for_sos, user.email)}><img src={sos_icon} width="52px" alt=""/></button>
                         :
-                        <button class="sos-pole-vehicle-close"><img src={sos_icon} width="52px" /></button>
+                        <button class="sos-pole-vehicle-close"><img src={sos_icon} width="52px" alt="" /></button>
                     }
                 </div>
             </div>
@@ -415,7 +407,7 @@ class AuthUser extends React.Component {
                                         :
                                         null
                                 }
-                                <h4 style={{ paddingTop: 6 }}><img src={user_locate} width="32px" />{this.state.useAddress}</h4>
+                                <h4 style={{ paddingTop: 6 }}><img src={user_locate} width="32px" alt="" />{this.state.useAddress}</h4>
                             </div>
                             :
                             null

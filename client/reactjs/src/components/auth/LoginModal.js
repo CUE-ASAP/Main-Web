@@ -90,7 +90,7 @@ class LoginModal extends Component {
                     toggle={this.toggle}
                 >
 
-                    <ModalHeader id="cue-login-modal-header" toggle={this.toggle}>< a ><img src={Login_icon} style={{ height: 40, width: 40, paddingRight: 10}}></img></a>Login</ModalHeader>
+                    <ModalHeader id="cue-login-modal-header" toggle={this.toggle}><a href><img src={Login_icon} style={{ height: 40, width: 40, paddingRight: 10 }} alt="" ></img></a>Login</ModalHeader>
                     <ModalBody id="cue-login-modal-body" >
 
                         {this.state.msg ? (<Alert color='danger'> {this.state.msg} </Alert>) : null}

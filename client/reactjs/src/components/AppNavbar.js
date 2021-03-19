@@ -53,7 +53,7 @@ class AppNavBar extends Component {
             <Fragment>
             {window.innerWidth>574?
                 <nav class="app-nav">
-                    <a class="app-nav-a" style={{ fontFamily: 'Mulish' }} href="#Home">Home</a>
+                    <a class="app-nav-a" style={{ fontFamily: 'Mulish' }} href="#Cue">Home</a>
                     <a class="app-nav-a" style={{ fontFamily: 'Mulish' }} href="#About us">About us</a>
                     <a class="app-nav-a" style={{ fontFamily: 'Mulish' }} href="#Services">Services</a>
                     <a class="app-nav-a" style={{ fontFamily: 'Mulish' }} href="#Contact">Contact</a>
@@ -61,7 +61,7 @@ class AppNavBar extends Component {
                 </nav>:
                 <div class="app-nav-bar-mobile-view">
                 <NavItem>
-                    <a href="#Home">Home</a>
+                    <a href="#Cue">Home</a>
                 </NavItem>
                 <NavItem>
                     <a href="#About us">About us</a>

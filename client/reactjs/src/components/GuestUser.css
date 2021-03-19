@@ -15,13 +15,6 @@
     background:linear-gradient(to right top,#fc1,#b33);
 }
 
-#box-card-ui{
-    padding-top: 40px;
-    padding-bottom: 40px;
-    height: 600px;
-    
-}
-
 .cue-wrap-btn-map{
     display: flex;
     flex-wrap: wrap;
@@ -30,261 +23,7 @@
     align-items: center;
 }
 
-/*Map API UI*/
 
-.box-area-map{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: 60px;
-}
-
-.single-box-map{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-    background-color: #00bcd4;
-    text-align: center;
-    margin: 20px;
-    padding: 3px;
-    transition: .3s;
-}
-
-#home-text h4{
-    font-size: 18px;
-    font-family: 'Blinker', sans-serif;
-    color:#fff;
-    pointer-events: none;
-}
-
-.single-box-map:hover{
-    background: #1bdf1b;
-}
-
-.map-api{
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 8px;
-}
-
-/*Card UI*/
-
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.container .card{
-    position: relative;
-    width: 280px;
-    height: 340px;
-    background: #1bb5d8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:30px;
-    box-shadow: 0 20px 50px #214fc6;
-    overflow: hidden;
-}
-
-/*
-.container:hover .card{
-    opacity: 0.2;
-}
-
-.container .card:hover{
-    opacity: 1;
-} */
-
-.container .card .card-content{
-    padding: 30px;
-    text-align: center;
-}
-
-.container .card .card-img-area{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    margin-left:27px;
-    margin-bottom: 24px;
-    background-size: cover;
-    background-position: center center;
-    z-index: 1;
-    opacity: 0.5;
-    transition: 0.5s;
-}
-
-.container .card:hover .card-img-area{
-    opacity:1;
-}
-
-.container .card:nth-child(1) .card-img-area{
-    background-image: url('../assets/user-location-large.png');
-    background-repeat: no-repeat;
-}
-.container .card:nth-child(2) .card-img-area{
-    background-image: url('../assets/sos-icon-large.png');
-    background-repeat: no-repeat;
-}
-.container .card:nth-child(3) .card-img-area{
-    background-image: url('../assets/maps-tracking-large.png');
-    background-size: 90%;
-    background-position: 0.58em;
-    background-repeat: no-repeat;
-}
-
-.container .card .card-content h2{
-    position: absolute;
-    right:30px;
-    top:100px;
-    color: #fff;
-    font-size: 3.4rem;
-    font-weight: 1000;
-    font-family: 'Poppins', 'sans-serif';
-    z-index: 1;
-    opacity: 0.1;
-    transition: 0.5s;
-}
-
-.container .card:hover .card-content h2{
-    opacity:1;
-    transform: translateY(-70px)
-}
-
-.container .card .card-content h3{
-    position: relative;
-    font-size: 1.7em;
-    color: #fff;
-    z-index: 2;
-    opacity: 0.5;
-    font-family: 'Poppins','sans-serif';
-    letter-spacing: 1px;
-    transition: 0.5s;
-    right: 30px;
-    justify-content: center;
-    align-items: center;
-}
-
-.container .card:hover .card-content h3{
-    opacity:1;
-}
-
-.container .card .card-content p{
-    position: relative;
-    font-size: 1.1em;
-    color: #fff;
-    z-index: 2;
-    opacity: 0.5;
-    font-family: 'Blinker','sans-serif';
-    font-weight: 500;
-    letter-spacing: 0.8px;
-    transition: 0.5s;
-    right: 30px;
-}
-
-.container .card:hover .card-content p{
-    opacity:1;
-}
-
-.container .card span{
-    transition: 0.5s;
-    opacity: 0;
-}
-
-.container .card:hover span{
-    opacity: 1;
-}
-
-.container .card span:nth-child(1){
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(to right, transparent, #cce7fc);
-    animation: animate1 2s linear infinite;
-}
-
-@keyframes animate1{
-    0%{
-        transform: translateX(-100%);
-    }
-    100%{
-        transform: translateX(100%);
-    }
-}
-
-.container .card span:nth-child(2){
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 3px;
-    height: 100%;
-    background: linear-gradient(to bottom, transparent, #cce7fc);
-    animation: animate2 2s linear infinite;
-    animation-delay: 1s;
-}
-
-@keyframes animate2{
-    0%{
-        transform: translateY(-100%);
-    }
-    100%{
-        transform: translateY(100%);
-    }
-}
-
-.container .card span:nth-child(3){
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(to left, transparent, #cce7fc);
-    animation: animate3 2s linear infinite;
-}
-
-@keyframes animate3{
-    0%{
-        transform: translateX(100%);
-    }
-    100%{
-        transform: translateX(-100%);
-    }
-}
-
-.container .card span:nth-child(4){
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 3px;
-    height: 100%;
-    background: linear-gradient(to top, transparent, #cce7fc);
-    animation: animate4 2s linear infinite;
-    animation-delay: 1s;
-}
-
-@keyframes animate4{
-    0%{
-        transform: translateY(100%);
-    }
-    100%{
-        transform: translateY(-100%);
-    }
-}
 
 /* Cue-primary-buttons*/
 
@@ -813,6 +552,271 @@
     transform:scale(1.1)
 }
 
+
+/*Map API UI*/
+
+.box-area-map{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.single-box-map{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    background-color: #00bcd4;
+    text-align: center;
+    margin: 20px;
+    padding: 3px;
+    transition: .3s;
+}
+
+#home-text h4{
+    font-size: 18px;
+    font-family: 'Blinker', sans-serif;
+    color:#fff;
+    pointer-events: none;
+}
+
+.single-box-map:hover{
+    background: #1bdf1b;
+}
+
+.map-api{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/*Card UI*/
+
+#box-card-ui{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: 600px; 
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container .card{
+    position: relative;
+    width: 280px;
+    height: 340px;
+    background: #1bb5d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:30px;
+    box-shadow: 0 20px 50px #214fc6;
+    overflow: hidden;
+}
+
+/*
+.container:hover .card{
+    opacity: 0.2;
+}
+
+.container .card:hover{
+    opacity: 1;
+} */
+
+.container .card .card-content{
+    padding: 30px;
+    text-align: center;
+}
+
+.container .card .card-img-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-left:27px;
+    margin-bottom: 24px;
+    background-size: cover;
+    background-position: center center;
+    z-index: 1;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.container .card:hover .card-img-area{
+    opacity:1;
+}
+
+.container .card:nth-child(1) .card-img-area{
+    background-image: url('../assets/user-location-large.png');
+    background-repeat: no-repeat;
+}
+.container .card:nth-child(2) .card-img-area{
+    background-image: url('../assets/sos-icon-large.png');
+    background-repeat: no-repeat;
+}
+.container .card:nth-child(3) .card-img-area{
+    background-image: url('../assets/maps-tracking-large.png');
+    background-size: 90%;
+    background-position: 0.58em;
+    background-repeat: no-repeat;
+}
+
+.container .card .card-content h2{
+    position: absolute;
+    right:30px;
+    top:100px;
+    color: #fff;
+    font-size: 3.4rem;
+    font-weight: 1000;
+    font-family: 'Poppins', 'sans-serif';
+    z-index: 1;
+    opacity: 0.1;
+    transition: 0.5s;
+}
+
+.container .card:hover .card-content h2{
+    opacity:1;
+    transform: translateY(-70px)
+}
+
+.container .card .card-content h3{
+    position: relative;
+    font-size: 1.7em;
+    color: #fff;
+    z-index: 2;
+    opacity: 0.5;
+    font-family: 'Poppins','sans-serif';
+    letter-spacing: 1px;
+    transition: 0.5s;
+    right: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card:hover .card-content h3{
+    opacity:1;
+}
+
+.container .card .card-content p{
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    z-index: 2;
+    opacity: 0.5;
+    font-family: 'Blinker','sans-serif';
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    transition: 0.5s;
+    right: 30px;
+}
+
+.container .card:hover .card-content p{
+    opacity:1;
+}
+
+.container .card span{
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.container .card:hover span{
+    opacity: 1;
+}
+
+.container .card span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #cce7fc);
+    animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+.container .card span:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #cce7fc);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate2{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+.container .card span:nth-child(3){
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, transparent, #cce7fc);
+    animation: animate3 2s linear infinite;
+}
+
+@keyframes animate3{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+.container .card span:nth-child(4){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #cce7fc);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate4{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+
+/*Media Screen (Responsiveness for Mobile View)*/
 @media only screen and (max-width : 574px){
     .cue-wrapper-inner{
         gap:0em;

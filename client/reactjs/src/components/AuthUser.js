@@ -278,7 +278,7 @@ class AuthUser extends React.Component {
         
         return (
           
-        <div class="box-container-home-user">
+        <div class="box-container-auth-user" id="Cue">
   
             <div class="cue-wrap-btn-map">
         

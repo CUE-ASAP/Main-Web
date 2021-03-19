@@ -10,134 +10,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&family=Rubik:wght@300&display=swap');
 
-.remove-btn{
-    margin-right: 0.5rem;
-}
-
-.fade-enter{
-    opacity: 0.01;
-}
-
-.fade-enter-active{
-    opacity: 1;
-    transition: opacity 1000ms ease-in;
-}
-
-.fade-exit{
-    opacity: 1;
-}
-
-.fade-exit-active{
-    opacity: 0.01;
-    transition: opacity 1000ms ease-in;
-}
-
+/* CUE-ASAP Navbar */
 .app-navbar{
     height: 64px;
     background-image: linear-gradient(to right, #c33764, #1d2671);
 }
-
-.auth-button{
-    background-color: #00BCD4;
-}
-
-.main-footer{
-    background:linear-gradient(to left bottom,#0f0c29,#302b63);
-    color:#fff;
-    text-align: center;
-}
-
-.main-footer h3{
-    font-size: 18px;
-    padding: 14px;
-    font-family: 'Blinker', sans-serif;
-    color:#fff;
-    pointer-events: none;
-    margin-bottom: 0px;
-    text-align: center;
-}
-
-.contact-footer{
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    height: auto;
-    padding: 30px 100px;
-    background:linear-gradient(to right top,#23074d,#cc5333);
-    border-radius: 26px 26px 0px 0px;
-}
-
-#footer-elements{
-    position: relative;
-    width:25%;
-}
-
-#footer-elements h3{
-    position: relative;
-    color: #fff;
-    font-weight: 500;
-    margin-bottom: 15px;
-    left:32px;
-}
-
-
-#footer-elements ul li{
-    list-style: none;
-}
-
-#footer-elements ul li a{
-    color: #fff;
-    text-decoration: none;
-    margin-bottom: 10px;
-    display: inline-block;
-}
-
-/*Chatbot UI*/
-
-.chatbot-btn{
-    position: fixed;
-    border: none;
-    outline: none;
-    right: 30px;
-    bottom: 40px;
-    background: #faface ;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    opacity: 0.5;
-    transition: opacity 0.3s;
-    box-shadow: 0 5px 5px #00BCD4;
-}
-
-.chatbot-btn:hover + .chatbot-btn-batch {
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-.chatbot-btn:hover{
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-.chatbot-btn:focus{
-    outline: none;
-    border: none;
-}
-
-.chatbot-btn-batch{
-    position: fixed;
-    right: 30px;
-    bottom: 92px;
-    border-radius: 50%;
-    opacity: 0.54;
-    width: 15px;
-    height: 15px;
-    background: red;
-}
-
-/*App nav css*/
 
 .app-nav{
     position: relative;
@@ -219,7 +96,7 @@ nav .start-contact, .app-nav-a:nth-child(4):hover~.animation{
     color:#fff;
 }
 
-/*Button UI*/
+/*CUE-ASAP NavBar - Button UI*/
 .btn-text-sup{
     font-size: 14px;
     font-family: 'Mulish';
@@ -287,9 +164,81 @@ nav .start-contact, .app-nav-a:nth-child(4):hover~.animation{
     background: #1e90ff;
 }
 
+/*CUE-ASAP NavBar - Sign up/Register Modal*/
+
+#cue-register-modal-header{
+    background:#f1e64a;
+    color: #1d2671;
+    font-family: 'Poppins';
+}
+
+#cue-register-modal-body{
+    background-image: linear-gradient(to top right, #e8f36c,#fffdd0);
+}
+
+#cue-register-modal-body Label{
+    color: #1d2671;
+    font-family: 'Rubik';
+}
+
+/*CUE-ASAP NavBar - Login Modal*/
+#cue-login-modal-header{
+    background:#7ec8f7;
+    color: #1d2671;
+    font-family: 'Poppins';
+}
+
+#cue-login-modal-body{
+    background-image: linear-gradient(to top right, #a9cdff,#89f7fe);
+}
+
+#cue-login-modal-body Label{
+    color: #1d2671;
+    font-family: 'Rubik';
+}
+
+/*Contact footer (A supplementary to CUE-ASAP Footer)*/
+.contact-footer{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    padding: 30px 100px;
+    background:linear-gradient(to right top,#23074d,#cc5333);
+    border-radius: 26px 26px 0px 0px;
+}
+
+#footer-elements{
+    position: relative;
+    width:25%;
+}
+
+#footer-elements h3{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+    left:32px;
+}
+
+#footer-elements ul li{
+    list-style: none;
+}
+
+#footer-elements ul li a{
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+/*Contact Footer - Button UI*/
 #connect-with-us-img-area{
     margin-left: 28px;
 }
+
 #connect-with-us-img-area a{
    display: inline-block;
    height: 43px;
@@ -300,6 +249,7 @@ nav .start-contact, .app-nav-a:nth-child(4):hover~.animation{
    border-radius: 50%;
    transition: all 0.3s ease;
 }
+
 #connect-with-us-img-area a:nth-child(1){
     background: #7289DA;
 }
@@ -323,8 +273,7 @@ nav .start-contact, .app-nav-a:nth-child(4):hover~.animation{
     transform: scale(1.1);
 }
 
-/*Contact Footer Links*/
-
+/*Contact Footer - Text-Links*/
 #contact-footer-links{
     font-family: 'Mulish';
 }
@@ -333,41 +282,7 @@ nav .start-contact, .app-nav-a:nth-child(4):hover~.animation{
     transform: scale(1.1);
 }
 
-
-/*Sign up/Register*/
-
-#cue-register-modal-header{
-    background:#f1e64a;
-    color: #1d2671;
-    font-family: 'Poppins';
-}
-
-#cue-register-modal-body{
-    background-image: linear-gradient(to top right, #e8f36c,#fffdd0);
-}
-
-#cue-register-modal-body Label{
-    color: #1d2671;
-    font-family: 'Rubik';
-}
-
-/*Login*/
-#cue-login-modal-header{
-    background:#7ec8f7;
-    color: #1d2671;
-    font-family: 'Poppins';
-}
-
-#cue-login-modal-body{
-    background-image: linear-gradient(to top right, #a9cdff,#89f7fe);
-}
-
-#cue-login-modal-body Label{
-    color: #1d2671;
-    font-family: 'Rubik';
-}
-
-/*FAQ*/
+/*Contact Footer - FAQ (Text-Link) */
 #cue-faq h5{
     font-family: 'Poppins';
     color:#0b6623;
@@ -397,7 +312,7 @@ nav .start-contact, .app-nav-a:nth-child(4):hover~.animation{
     background:linear-gradient(to left bottom,#0f0c29,#302b63);
 }
 
-/*License*/
+/*Contact Footer - License (Text-Link)*/
 #cue-license h5{
     font-family: 'Poppins';
     color: #c49102;
@@ -417,7 +332,6 @@ nav .start-contact, .app-nav-a:nth-child(4):hover~.animation{
     background-image: linear-gradient(to top right, #e8f36c,#fffdd0);
 }
 
-
 #cue-license-modal-header{
     background-image: linear-gradient(to right, #c33764, #1d2671);
     color: #c2e9fb;
@@ -428,7 +342,7 @@ nav .start-contact, .app-nav-a:nth-child(4):hover~.animation{
     background:linear-gradient(to left bottom,#0f0c29,#302b63);
 }
 
-/*Terms of service*/
+/*Contact Footer - Terms of service (Text-Link)*/
 #cue-terms-of-service h5{
     font-family: 'Poppins';
     color: #1034A6;
@@ -458,18 +372,34 @@ nav .start-contact, .app-nav-a:nth-child(4):hover~.animation{
 }
 
 
+/*CUE-ASAP Footer */
+.main-footer{
+    background:linear-gradient(to left bottom,#0f0c29,#302b63);
+    color:#fff;
+    text-align: center;
+}
+
+.main-footer h3{
+    font-size: 18px;
+    padding: 14px;
+    font-family: 'Blinker', sans-serif;
+    color:#fff;
+    pointer-events: none;
+    margin-bottom: 0px;
+    text-align: center;
+}
 
 
-
-
+/*Display properties of CUE-ASAP NavBar*/
 .app-nav-bar-mobile-view{
     display: none;
  }
 
- .app-nav{
+.app-nav{
     display: none;
  }
 
+ /*Media screen (Responsiveness for Mobile View)*/
 @media (max-width : 574px){
  .app-nav-bar-mobile-view{
      display: block;

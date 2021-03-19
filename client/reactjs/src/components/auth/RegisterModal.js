@@ -86,7 +86,7 @@ class RegisterModal extends Component {
         return (
             <div>
                   
-                <NavLink className="navbar-text mr-3" id="sign-up-btn" onClick={this.toggle} href="#" class="sup">   
+                <NavLink className="navbar-text mr-3" id="sign-up-btn" onClick={this.toggle} href="#Cue" class="sup">   
                    <h6 class="btn-text-sup">Sign up</h6>
                 </NavLink>
 

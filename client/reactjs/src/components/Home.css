@@ -134,37 +134,121 @@ html{
   }
 
 #home-text h5{
-      font-size: 18px;
-      font-family: 'Ubuntu';
-      color:#5089ac;
-      margin-bottom: 0px;
-  }
+    font-size: 18px;
+    font-family: 'Ubuntu';
+    color:#5089ac;
+    margin-bottom: 0px;
+}
 
 #home-text p{
-      font-size: 20px;
-      font-family: 'Hind guntur', sans-serif;
-      line-height: 1.6rem;
-      color:#4e62d1;
-  }
-
-  /**/
+    font-size: 20px;
+    font-family: 'Hind guntur', sans-serif;
+    line-height: 1.6rem;
+    color:#4e62d1;
+}
 
 
-.single-box-landing{
+
+/*About us UI*/
+.about-us-landing-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    height: 658px;
+    background:linear-gradient(to right top,#fc1,#b33);
+}
+
+.about-us-glass{
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    margin-top: 10px;
+    min-height: 75vh;
+    width: 84%;
+    border-radius: 2rem;
+    z-index: 0;
+    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3));
+}
+
+.about-us-gist{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center
+}
+
+.about-us-glass-inner{
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    margin: 40px 0px;
+    margin-right: 40px;
+    width: 84%;
+    border-radius: 2rem;
+    z-index: 0;
+    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+}
+.about-us-box-wrapper{
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+    width: 100%;
+    height: auto;
+}
+
+.about-us-single-box{
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 580px;
-    height: auto;
-    margin-top: 30px;
-    margin-bottom: 40px;
+    width: 265px;
+    height: 75%;
+    border-radius: 50%;
+    background: linear-gradient(to right bottom,#ffffd4, rgba(255, 255, 255, 0.3));
     text-align: center;
+    z-index: 0;
+    margin: 20px;
+    padding: 20px;
+    transition: 1.2s;
 }
 
 
-  /*Service UI*/
+#about-text h2{
+    font-size: 32px;
+    padding: 20px 10px;
+    font-family: 'Cairo', sans-serif;
+    color: rgb(185, 70, 70);
+}
+
+#about-us-single-box-details h3{
+    font-size: 22px;
+    font-family: 'Poppins';
+    margin-top: 28px;
+    color: #c69f26;
+}
+
+#about-us-single-box-details h4{
+    font-size: 15px;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    color: #cc9e06;
+}
+
+#about-us-single-box-details h5{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Blinker';
+    color: #cc9e06;
+}
+
+
+
+/*Service UI*/
 .service-landing-section{
     display: flex;
     flex-wrap: wrap;
@@ -251,105 +335,7 @@ html{
 
 
 
-  /*About UI*/
-.about-us-landing-section{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-top: 40px;
-    height: 658px;
-    background:linear-gradient(to right top,#fc1,#b33);
-}
-
-.about-us-glass{
-    display: flex;
-    flex-direction: row;
-    background: #fff;
-    margin-top: 10px;
-    min-height: 75vh;
-    width: 84%;
-    border-radius: 2rem;
-    z-index: 0;
-    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3));
-}
-
-.about-us-gist{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center
-}
-
-.about-us-glass-inner{
-    flex: 2;
-    display: flex;
-    flex-direction: row;
-    margin: 40px 0px;
-    margin-right: 40px;
-    width: 84%;
-    border-radius: 2rem;
-    z-index: 0;
-    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
-}
-.about-us-box-wrapper{
-    display: flex;
-    flex-direction: row;
-    margin-top: 60px;
-    width: 100%;
-    height: auto;
-}
-
-
-.about-us-single-box{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 265px;
-    height: 75%;
-    border-radius: 50%;
-    background: linear-gradient(to right bottom,#ffffd4, rgba(255, 255, 255, 0.3));
-    text-align: center;
-    z-index: 0;
-    margin: 20px;
-    padding: 20px;
-    transition: 1.2s;
-}
-
-
-#about-text h2{
-    font-size: 32px;
-    padding: 20px 10px;
-    font-family: 'Cairo', sans-serif;
-    color: rgb(185, 70, 70);
-}
-
-#about-us-single-box-details h3{
-    font-size: 22px;
-    font-family: 'Poppins';
-    margin-top: 28px;
-    color: #c69f26;
-}
-
-#about-us-single-box-details h4{
-    font-size: 15px;
-    font-family: 'Ubuntu';
-    font-weight: 500;
-    color: #cc9e06;
-}
-
-#about-us-single-box-details h5{
-    font-size: 20px;
-    font-weight: 600;
-    font-family: 'Blinker';
-    color: #cc9e06;
-}
-
-  /*Contact UI*/
+/*Contact UI*/
 .contact-landing-section{
     display: flex;
     flex-wrap: wrap;
@@ -483,6 +469,7 @@ html{
   justify-content: center;
   align-items: center;
 }
+
 #back-to-home-glass-inner-text h5{
   font-size: 16px;
   text-align: center;
@@ -514,7 +501,9 @@ html{
     outline: none;
 }
 
-  /*Media Screen (width:574px)*/
+
+
+/*Media Screen (Responsiveness for Mobile View)*/
 @media (max-width :1024px){
     .box-container{
         height: auto;
@@ -584,6 +573,7 @@ html{
         font-size: 18px;
     }
 }
+
 @media (max-width :574px){
     #back-to-home-glass-inner-info{
         margin-top:2.2%;

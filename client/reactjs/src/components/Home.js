@@ -46,9 +46,9 @@ function Home() {
             {
             guest_log
             ?
-              //Guest 
-            <div class="guest-user-ui" id="Home">
-                <div class="back-to-home">
+              // {/* Guest User */}
+            <div class="guest-user-ui" id="Cue">
+                <div class="back-to-home" >
                     <div class="back-to-home-glass-inner">
                         <div id="back-to-home-glass-inner-info">
                             <h5>Guest access will expire in </h5>
@@ -77,14 +77,14 @@ function Home() {
                 <GuestUser/>
             </div>
             :
-              // Home
-            <div class="home-landing-section" id="Home">       
+              // {/* Home */}
+            <div class="home-landing-section" id="Cue">       
                 <section class="home-glass">
                     <div class="home-dashboard" id="home-text">
                         <div id="home-guest-img"></div>
                         <h3 style={{margin:0, padding:0}}>Get Started</h3>
                         <h5 style={{padding:0}}>as</h5>
-                        <button id="home-guest-btn" onClick={guest_user}>Guest</button>
+                                <a href="#Cue" ><button id="home-guest-btn" onClick={guest_user}>Guest</button></a>
                         <p>CUE-ASAP is a solution that can help us to survive in this world without about any kind of threats and accidents.</p>
                     </div>
                     <div class="home-gist" id="home-text">
@@ -134,6 +134,7 @@ function Home() {
                 </section>
             </div>
 
+
             {/* Service */}
             <div class="service-landing-section" id="Services">
                 <div class="single-box">
@@ -158,6 +159,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+
 
             {/* Contact */}
             <div class="contact-landing-section" id="Contact">

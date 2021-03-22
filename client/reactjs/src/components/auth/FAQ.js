@@ -7,6 +7,7 @@ import {
     ModalFooter,
 } from 'reactstrap';
 
+import faq_icon from '../../assets/faq.svg'
 
 class FAQ extends Component {
 
@@ -28,7 +29,7 @@ class FAQ extends Component {
 
                 <Modal class="terms-modal" isOpen={this.state.modal} toggle={this.toggle} >
 
-                    <ModalHeader id="cue-faq-modal-header">FAQ's</ModalHeader>
+                    <ModalHeader id="cue-faq-modal-header"><a href><img src={faq_icon} style={{ height: 40, width: 40, paddingRight: 10 }} alt="" ></img></a>FAQ's</ModalHeader>
                     <ModalBody id="cue-faq-modal-body" style={{ 'max-height': 'calc(85vh - 210px)', 'overflow-y': 'auto', 'padding': '16px' }}>
 
                         <div id="cue-faq">

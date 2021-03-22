@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-
+import { Spinner } from 'reactstrap';
 import lottie from 'lottie-web'
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 import GuestUser from './GuestUser'
@@ -10,10 +10,19 @@ function Home() {
     const container = useRef(null);
     const [guest_log, set_guest_log] = React.useState(false)
     const [guest_log_timer, set_guest_log_timer] = React.useState(300000)  
+    const [loading, set_loading] = React.useState(false)
 
 
     // Access to Guest user (with expiry time)
+    const guest_user_loading = React.useCallback(() => {
+        set_loading(true);
+        setTimeout(() => {
+            guest_user();  
+        }, 2000)
+    }, [])
+
     const guest_user = React.useCallback(() => {
+        set_loading(false);
         set_guest_log_timer(300000);
         set_guest_log(true);
         setTimeout(() => {
@@ -22,7 +31,15 @@ function Home() {
     },[guest_log_timer]);
 
     // Back to home from guest page
+    const back_to_home_loading = React.useCallback(() => {
+        set_loading(true);
+        setTimeout(() => {
+            back_to_home();
+        }, 2000)
+    }, [])
+
     const back_to_home = React.useCallback(() => {
+        set_loading(false);
         set_guest_log_timer(0);
         set_guest_log(false);
         window.location.reload()
@@ -70,7 +87,14 @@ function Home() {
                         </div>
                         <div id="back-to-home-glass-inner-text">
                                 <h5>Back to</h5>
-                                <button id="back-to-home-btn" onClick={back_to_home}>Home</button>
+                                <button id="back-to-home-btn" onClick={back_to_home_loading}>
+                                {loading
+                                ?
+                                <Spinner animation="border" size="sm" style={{ color: "#fff" }} />
+                                :
+                                `Home`
+                                }
+                                </button>
                         </div>
                     </div>
                 </div>
@@ -84,7 +108,15 @@ function Home() {
                         <div id="home-guest-img"></div>
                         <h3 style={{margin:0, padding:0}}>Get Started</h3>
                         <h5 style={{padding:0}}>as</h5>
-                                <a href="#Cue" ><button id="home-guest-btn" onClick={guest_user}>Guest</button></a>
+                                <a href="#Cue" >
+                                <button id="home-guest-btn" onClick={guest_user_loading}>
+                                {loading
+                                ?
+                                <Spinner animation="border" size="sm"style={{ color: "#fff" }} />
+                                :
+                                `Guest`
+                                }
+                                </button></a>
                         <p>CUE-ASAP is a solution that can help us to survive in this world without about any kind of threats and accidents.</p>
                     </div>
                     <div class="home-gist" id="home-text">

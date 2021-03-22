@@ -7,6 +7,9 @@ import {
     Form,
     FormGroup,
     Label,
+    InputGroup, 
+    InputGroupText, 
+    InputGroupAddon,
     Input,
     NavLink,
     Alert
@@ -17,6 +20,8 @@ import PropTypes from 'prop-types';
 import { login } from '../../actions/authActions';
 import { clearErrors } from '../../actions/errorActions';
 import Login_icon from '../../assets/login_svg.svg'
+import { Mail } from '@styled-icons/heroicons-solid/Mail'
+import { KeyFill } from '@styled-icons/bootstrap/KeyFill'
 
 class LoginModal extends Component {
     state = {
@@ -93,28 +98,41 @@ class LoginModal extends Component {
                     <ModalHeader id="cue-login-modal-header" toggle={this.toggle}><a href><img src={Login_icon} style={{ height: 40, width: 40, paddingRight: 10 }} alt="" ></img></a>Login</ModalHeader>
                     <ModalBody id="cue-login-modal-body" >
 
-                        {this.state.msg ? (<Alert color='danger'> {this.state.msg} </Alert>) : null}
+                        {this.state.msg ? (<Alert style={{ background: '#d9f1ff' }} color='danger'> {this.state.msg} </Alert>) : null}
 
                         <Form onSubmit={this.onSubmit}>
                             <FormGroup>
+                                <h5>Log into your account</h5>
                                 <Label for="email">Email ID</Label>
-                                <Input
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                    placeholder="Email ID"
-                                    className='mb-3'
-                                    onChange={this.onChange}
-                                />
+                                <InputGroup>
+                                    <InputGroupAddon addonType="prepend">
+                                        <InputGroupText style={{ background: '#d9f1ff' }}><Mail style={{ height: 24, width: 24, fill: '#1d2671' }} /></InputGroupText>
+                                    </InputGroupAddon>
+                                    <Input
+                                        type="email"
+                                        name="email"
+                                        id="email"
+                                        placeholder="Email ID"
+                                        className='mb-0'
+                                        onChange={this.onChange}
+                                    />
+                                </InputGroup>
+                                
                                 <Label for="password">Password</Label>
+                                <InputGroup>
+                                    <InputGroupAddon addonType="prepend">
+                                        <InputGroupText style={{ background: '#d9f1ff' }}><KeyFill style={{ height: 24, width: 24, fill: '#1d2671' }} /></InputGroupText>
+                                    </InputGroupAddon>
                                 <Input
                                     type="password"
                                     name="password"
                                     id="password"
                                     placeholder="Password"
-                                    className='mb-3'
+                                    className='mb-0'
                                     onChange={this.onChange}
                                 />
+                                </InputGroup>
+                                <h6>Forgot Password?</h6>
                                 <Button color="dark" style={{ marginTop: '2rem' }} block>
                                     Login
                                 </Button>

@@ -7,8 +7,10 @@ import {
     ModalFooter,
 } from 'reactstrap';
 
+import user_agreement_icon from '../../assets/User agreement.svg'
 
-class TermsServiceModal extends Component {
+
+class UserAgreementModal extends Component {
 
     state = {
         modal: false,
@@ -24,14 +26,14 @@ class TermsServiceModal extends Component {
         return (
             <div>
 
-                <a onClick={this.toggle} id="contact-footer-links" href="#Terms-of-Service">Terms of Service</a>
+                <a onClick={this.toggle} id="contact-footer-links" href="#User-Agreement">User Agreement</a>
 
-                <Modal class="terms-modal" isOpen={this.state.modal} toggle={this.toggle} >
+                <Modal class="user-agreement-modal" isOpen={this.state.modal} toggle={this.toggle} >
 
-                    <ModalHeader id="cue-terms-of-service-modal-header">Service Agreement of CUE ASAP Platform</ModalHeader>
-                    <ModalBody id="cue-terms-of-service-modal-body" style={{ 'max-height': 'calc(85vh - 210px)', 'overflow-y': 'auto', 'padding':'16px'}}>
+                    <ModalHeader id="cue-user-agreement-modal-header"><a href><img src={user_agreement_icon} style={{ height: 40, width: 40, paddingRight: 10 }} alt="" ></img></a>User Agreement</ModalHeader>
+                    <ModalBody id="cue-user-agreement-modal-body" style={{ 'max-height': 'calc(85vh - 210px)', 'overflow-y': 'auto', 'padding':'16px'}}>
                         
-                        <div id="cue-terms-of-service">
+                        <div id="cue-user-agreement">
 
                         <h6>10 minutes 9 seconds reading.</h6>
                         <br/>
@@ -215,7 +217,7 @@ class TermsServiceModal extends Component {
                         </div>
                         
                         </ModalBody>
-                    <ModalFooter id="cue-terms-of-service-modal-footer" >
+                    <ModalFooter id="cue-user-agreement-modal-footer" >
                         <Button color="primary" onClick={this.toggle}>Close</Button>
                     </ModalFooter>
                 </Modal>
@@ -225,4 +227,4 @@ class TermsServiceModal extends Component {
     }
 }
 
-export default TermsServiceModal;
+export default UserAgreementModal;

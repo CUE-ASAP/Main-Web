@@ -7,6 +7,8 @@ import {
     ModalFooter,
 } from 'reactstrap';
 
+import licence_icon from '../../assets/licence.svg'
+
 
 class License extends Component {
 
@@ -27,7 +29,7 @@ class License extends Component {
                 <a onClick={this.toggle} id="contact-footer-links" href="#License">License</a>
                     <Modal id="cue-license-modal" isOpen={this.state.modal} toggle={this.toggle} >
 
-                        <ModalHeader id="cue-license-modal-header">License</ModalHeader>
+                    <ModalHeader id="cue-license-modal-header"><a href><img src={licence_icon} style={{ height: 40, width: 40, paddingRight: 10 }} alt="" ></img></a>License</ModalHeader>
                         <ModalBody id="cue-license-modal-body" style={{ 'max-height': 'calc(85vh - 210px)', 'overflow-y': 'auto', 'padding': '16px' }}>
 
                             <div id="cue-license">

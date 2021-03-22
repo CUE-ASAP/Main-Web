@@ -11,7 +11,7 @@ import discord from "./assets/discord.svg"
 import github from "./assets/github.svg"
 import slack from "./assets/slack.svg"
 import {NavItem} from 'reactstrap'
-import TermsServiceModal from './components/auth/TermsServiceModal'
+import UserAgreementModal from './components/auth/UserAgreementModal'
 import FAQ from './components/auth/FAQ'
 import License from './components/auth/License'
 
@@ -40,7 +40,7 @@ class App extends Component{
             <ul>
               <NavItem><FAQ/></NavItem>
               <NavItem><License/></NavItem>
-              <NavItem><TermsServiceModal/></NavItem>
+              <NavItem><UserAgreementModal/></NavItem>
             </ul>
           </div>
           <div id="footer-elements">
@@ -53,7 +53,7 @@ class App extends Component{
           </div>
           </div>
           <div class="main-footer">
-          <h3>&copy; 2020-2021 ⚡ CUE-ASAP ◽ Made with ❤ in India.</h3>
+          <h3>&copy; 2020-2021 CUE-ASAP. All Rights Reserved</h3>
           </div> 
       </div>
     </Provider>

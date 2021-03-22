@@ -176,9 +176,26 @@ nav .start-contact, .app-nav-a:nth-child(4):hover~.animation{
     background-image: linear-gradient(to top right, #e8f36c,#fffdd0);
 }
 
+#cue-register-modal-body h5{
+    color: #1d2671;
+    font-family: 'Mulish';
+    font-size: 18px;
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+#cue-register-modal-body h6{
+    color: #1d2671;
+    font-family: 'PT Sans';
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
 #cue-register-modal-body Label{
     color: #1d2671;
     font-family: 'Rubik';
+    margin-top: 16px;
 }
 
 /*CUE-ASAP NavBar - Login Modal*/
@@ -192,9 +209,26 @@ nav .start-contact, .app-nav-a:nth-child(4):hover~.animation{
     background-image: linear-gradient(to top right, #a9cdff,#89f7fe);
 }
 
+#cue-login-modal-body h5{
+    color: #1d2671;
+    font-family: 'Mulish';
+    font-size: 18px;
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+#cue-login-modal-body h6{
+    color: #1d2671;
+    font-family: 'PT Sans';
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
 #cue-login-modal-body Label{
     color: #1d2671;
     font-family: 'Rubik';
+    margin-top: 16px;
 }
 
 /*Contact footer (A supplementary to CUE-ASAP Footer)*/
@@ -303,13 +337,13 @@ nav .start-contact, .app-nav-a:nth-child(4):hover~.animation{
 }
 
 #cue-faq-modal-header{
-    background-image: linear-gradient(to right, #c33764, #1d2671);
-    color: #c2e9fb;
+    background: #0b6623;
+    color: #e5f3df;
     font-family: 'Poppins';
 }
 
 #cue-faq-modal-footer{
-    background:linear-gradient(to left bottom,#0f0c29,#302b63);
+    background: #0b6623;
 }
 
 /*Contact Footer - License (Text-Link)*/
@@ -320,55 +354,55 @@ nav .start-contact, .app-nav-a:nth-child(4):hover~.animation{
 
 #cue-license h6{
     font-family: 'Blinker';
-    color: #7c600c;;
+    color: #b38406;
 }
 
 #cue-license p{
     font-family: 'Rubik';
-    color: #b68603;;
+    color: #b68603;
 }
 
 #cue-license-modal-body{
-    background-image: linear-gradient(to top right, #e8f36c,#fffdd0);
+    background-image: linear-gradient(to top right, #ebf391,#fffdd0);
 }
 
 #cue-license-modal-header{
-    background-image: linear-gradient(to right, #c33764, #1d2671);
-    color: #c2e9fb;
+    background: #c49102;
+    color: #fffdd0;
     font-family: 'Poppins';
 }
 
 #cue-license-modal-footer{
-    background:linear-gradient(to left bottom,#0f0c29,#302b63);
+    background: #c49102;
 }
 
 /*Contact Footer - Terms of service (Text-Link)*/
-#cue-terms-of-service h5{
+#cue-user-agreement h5{
     font-family: 'Poppins';
     color: #1034A6;
 }
-#cue-terms-of-service h6{
+#cue-user-agreement h6{
     font-family: 'Blinker';
-    color: #1034A6;
+    color: #2545ac;
 }
 
-#cue-terms-of-service p{
+#cue-user-agreement p{
     font-family: 'Rubik';
-    color: #1564b3;
+    color: #025e97;
 }
 
-#cue-terms-of-service-modal-body{
-    background-image: linear-gradient(to top right, #66a6ff,#89f7fe);
+#cue-user-agreement-modal-body{
+    background-image: linear-gradient(to top right, #b1cef7,#89f7fe);
 }
 
-#cue-terms-of-service-modal-header{
-    background-image: linear-gradient(to right, #c33764, #1d2671);
-    color: #c2e9fb;
+#cue-user-agreement-modal-header{
+    background: #1034A6;
+    color: #89f7fe;
     font-family: 'Poppins';
 }
 
-#cue-terms-of-service-modal-footer{
-    background:linear-gradient(to left bottom,#0f0c29,#302b63);
+#cue-user-agreement-modal-footer{
+    background:#1034A6;
 }
 
 

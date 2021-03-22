@@ -612,7 +612,7 @@
     position: relative;
     width: 280px;
     height: 340px;
-    background: #1bb5d8;
+    background: linear-gradient(to right top,#1bb5d8, rgba(255, 255, 255, 0.1));
     display: flex;
     justify-content: center;
     align-items: center;

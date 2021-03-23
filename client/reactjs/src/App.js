@@ -41,6 +41,7 @@ class App extends Component{
               <NavItem><FAQ/></NavItem>
               <NavItem><License/></NavItem>
               <NavItem><UserAgreementModal/></NavItem>
+              <li><a id="contact-footer-links" href="https://mail.google.com/mail/?extsrc=mailto&url=mailto%3A%3Fto%3Dcueasap.help%40gmail.com%26bcc%3Dcueasap.help%40gmail.com%2Ckurtzcolonel848%40gmail.com%26subject%3DHello%2520Cue%2520Dev,%26body%3D<CUE-ASAP>%2520We%2520hope%2520that%2520our%2520CUE-ASAP%2520Platform%2520is%2520up%2520to%2520your%2520standards.%2520We%2520are%2520glad%2520to%2520receive%2520your%2520feedback%2520below:%2520</CUE-ASAP>" target="_blank" rel="noreferrer" >Feedback</a></li>
             </ul>
           </div>
           <div id="footer-elements">

@@ -74,7 +74,7 @@ class FAQ extends Component {
 
                     </ModalBody>
                     <ModalFooter id="cue-faq-modal-footer">
-                        <Button color="primary" onClick={this.toggle}>Close</Button>
+                        <Button color="success" onClick={this.toggle}>Close</Button>
                     </ModalFooter>
                 </Modal>
 

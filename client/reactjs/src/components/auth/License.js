@@ -60,7 +60,7 @@ class License extends Component {
 
                         </ModalBody>
                         <ModalFooter id="cue-license-modal-footer" >
-                            <Button color="primary" onClick={this.toggle}>Close</Button>
+                        <Button color="warning" onClick={this.toggle}>Close</Button>
                         </ModalFooter>
                     </Modal>
 

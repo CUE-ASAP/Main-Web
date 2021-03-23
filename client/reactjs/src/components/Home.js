@@ -17,33 +17,33 @@ function Home() {
     const guest_user_loading = React.useCallback(() => {
         set_loading(true);
         setTimeout(() => {
-            guest_user();  
+            guest_user(guest_log_timer);  
         }, 2000)
-    }, [])
+    },[guest_log_timer])
 
-    const guest_user = React.useCallback(() => {
+    const guest_user = (guest_log_timer) => {
         set_loading(false);
         set_guest_log_timer(300000);
         set_guest_log(true);
         setTimeout(() => {
                 set_guest_log(false)
             }, guest_log_timer)
-    },[guest_log_timer]);
+    }
 
     // Back to home from guest page
     const back_to_home_loading = React.useCallback(() => {
         set_loading(true);
         setTimeout(() => {
-            back_to_home();
+            back_to_home()
         }, 2000)
-    }, [])
+    },[])
 
-    const back_to_home = React.useCallback(() => {
+    const back_to_home = () => {
         set_loading(false);
         set_guest_log_timer(0);
         set_guest_log(false);
         window.location.reload()
-    },[]);
+    }
 
     // Lottie Animation container
     useEffect(() => {
@@ -203,7 +203,7 @@ function Home() {
                         <div class="contact-glass-inner">
                             <div id="contact-glass-inner-img-area"></div>
                             <div id="contact-glass-inner-img-text">
-                                <h5>cueasap.help@gmail.com</h5>
+                                <h5><a href="https://mail.google.com/mail/?extsrc=mailto&url=mailto%3A%3Fto%3Dcueasap.help%40gmail.com%26bcc%3Dcueasap.help%40gmail.com%2Ckurtzcolonel848%40gmail.com%26subject%3DHello%2520Cue%2520Dev,%26body%3D<CUE-ASAP>%2520We%2520hope%2520that%2520you%2520are%2520enjoying%2520our%2520CUE-ASAP%2520Platform.%2520If%2520you%2520have%2520any%2520queries%2520state%2520it%2520below:%2520</CUE-ASAP>" target="_blank" rel="noreferrer">cueasap.help@gmail.com</a></h5>
                             </div>
                         </div>
                     </div>

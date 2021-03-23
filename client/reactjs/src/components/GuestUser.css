@@ -563,7 +563,7 @@
     margin-top: 60px;
 }
 
-.single-box-map{
+#guest-map-box{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -579,15 +579,10 @@
     transition: .3s;
 }
 
-#home-text h4{
+#guest-map-box h4{
     font-size: 18px;
     font-family: 'Blinker', sans-serif;
     color:#fff;
-    pointer-events: none;
-}
-
-.single-box-map:hover{
-    background: #1bdf1b;
 }
 
 .map-api{

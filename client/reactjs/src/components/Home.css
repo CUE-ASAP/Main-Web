@@ -413,11 +413,18 @@ html{
     align-items: center;
 }
 
+#contact-glass-inner-img-text a{
+    color: #1a2980;
+}
+
+#contact-glass-inner-img-text a:hover{
+    color: #2f80ed;
+}
+
 #contact-glass-inner-img-text h5{
     font-size: 1.3rem;
     padding: 4% 0%;
     padding-right: 8%;
-    color: #1a2980;
     text-decoration: underline;
 }
 

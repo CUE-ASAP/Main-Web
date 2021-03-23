@@ -104,8 +104,8 @@ class AuthUser extends React.Component {
         emailjs.send('gmail', 'template_a7xa4hf', {
             "subject": "Regarding crime emergency",
             "name": `Dear user,`,
-            "email_from": "savage_coders@gmail.com",
-            "email_to": "kurtzcolonel848@gmail.com",
+            "email_from": "CUE Member",
+            "email_to": "cueasap.help@gmail.com",
             "email_to_bcc": `${email_for_bcc}`,
             "message": `This mail is to notify regarding a crime scene that took place at ${user_location} on ${new Date().toLocaleTimeString()}.`,
             "my_html": `View Map:<br/>  <a href="https://maps.google.com/maps?q=${user_location}&t=&z=14&ie=UTF">Click here...</a>`,
@@ -131,8 +131,8 @@ class AuthUser extends React.Component {
         emailjs.send('gmail', 'template_a7xa4hf', {
             "subject": "Regarding fire emergency",
             "name": `Dear user,`,
-            "email_from": "savage_coders@gmail.com",
-            "email_to": "kurtzcolonel848@gmail.com",
+            "email_from": "CUE Member",
+            "email_to": "cueasap.help@gmail.com",
             "email_to_bcc": `${email_for_bcc}`,
             "message": `Today, a fire broke out at ${user_location} on ${new Date().toLocaleTimeString()}.`,
             "my_html": `View Map:<br/>  <a href="https://maps.google.com/maps?q=${user_location}&t=&z=14&ie=UTF">Click here...</a>`,
@@ -159,8 +159,8 @@ class AuthUser extends React.Component {
         emailjs.send('gmail', 'template_a7xa4hf', {
             "subject": "Regarding medical emergency",
             "name": `Dear user,`,
-            "email_from": "savage_coders@gmail.com",
-            "email_to": "kurtzcolonel848@gmail.com",
+            "email_from": "CUE Member",
+            "email_to": "cueasap.help@gmail.com",
             "email_to_bcc": `${email_for_bcc}`,
             "message": `There is a need for medical assistance at ${user_location} on ${new Date().toLocaleTimeString()}.`,
             "my_html": `View Map:<br/>  <a href="https://maps.google.com/maps?q=${user_location}&t=&z=14&ie=UTF">Click here...</a>`,
@@ -186,8 +186,8 @@ class AuthUser extends React.Component {
         emailjs.send('gmail', 'template_a7xa4hf', {
             "subject": "Regarding vehicle emergency",
             "name": `Dear user,`,
-            "email_from": "savage_coders@gmail.com",
-            "email_to": "kurtzcolonel848@gmail.com",
+            "email_from": "CUE Member",
+            "email_to": "cueasap.help@gmail.com",
             "email_to_bcc": `${email_for_bcc}`,
             "message": `It is regarding a vehicle emergency at ${user_location} on ${new Date().toLocaleTimeString()}.`,
             "my_html": `View Map:<br/>  <a href="https://maps.google.com/maps?q=${user_location}&t=&z=14&ie=UTF">Click here...</a>`,

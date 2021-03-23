@@ -12,11 +12,10 @@ import medical_icon from '../assets/Medical.svg'
 import vehicle_icon from '../assets/Car.svg'
 import sos_icon from '../assets/sos-icon.png'
 import maps_icon from '../assets/maps-tracking.png'
-import user_locate from '../assets/user-location.png'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import emailjs from 'emailjs-com'
-import axios from 'axios';
+import axios from 'axios'
 
 
 // To configure Toast notification:
@@ -34,6 +33,7 @@ class GuestUser extends React.Component {
             latitude: null,
             longitude: null,
             useAddress: null,
+            ipAddress: null,
             emails_for_sos: null,
             police_cue_state: false,
             fire_cue_state: false,
@@ -97,19 +97,19 @@ class GuestUser extends React.Component {
 
     // To send SoS message to users
 
-    police(user_location, email_for_bcc) {
+    police(user_location, email_for_bcc, ip_address) {
         this.setState({
             police_loading: !this.state.police_loading
         })
         emailjs.send('gmail', 'template_a7xa4hf', {
             "subject": "Regarding crime emergency",
             "name": `Dear user,`,
-            "email_from": "cueasap.help@gmail.com",
+            "email_from": "citizen",
             "email_to": "kurtzcolonel848@gmail.com",
             "email_to_bcc": `${email_for_bcc}`,
             "message": `This mail is to notify regarding a crime scene that took place at ${user_location} on ${new Date().toLocaleTimeString()}.`,
             "my_html": `View Map:<br/>  <a href="https://maps.google.com/maps?q=${user_location}&t=&z=14&ie=UTF">Click here...</a>`,
-            "contact": `For further details:<br/>  Contact:<br/>  cueasap.help@gmail.com`,
+            "contact": `Further user details:<br/>  User IP: ${ip_address}`,
         }, 'user_8jlcQ5ZP3b4DP5GVGoiSd')
             .then((result) => {
                 this.setState({
@@ -124,19 +124,19 @@ class GuestUser extends React.Component {
             });
     }
 
-    fire(user_location, email_for_bcc) {
+    fire(user_location, email_for_bcc, ip_address) {
         this.setState({
             fire_loading: !this.state.fire_loading
         })
         emailjs.send('gmail', 'template_a7xa4hf', {
             "subject": "Regarding fire emergency",
             "name": `Dear user,`,
-            "email_from": "cueasap.help@gmail.com",
-            "email_to": "kurtzcolonel848@gmail.com",
+            "email_from": "citizen",
+            "email_to": "cueasap.help@gmail.com",
             "email_to_bcc": `${email_for_bcc}`,
             "message": `Today, a fire broke out at ${user_location} on ${new Date().toLocaleTimeString()}.`,
             "my_html": `View Map:<br/>  <a href="https://maps.google.com/maps?q=${user_location}&t=&z=14&ie=UTF">Click here...</a>`,
-            "contact": `For further details:<br/>  Contact:<br/>  cueasap.help@gmail.com`,
+            "contact": `Further user details:<br/>  User IP: ${ip_address}`,
         }, 'user_8jlcQ5ZP3b4DP5GVGoiSd')
             .then((result) => {
                 this.setState({
@@ -152,19 +152,19 @@ class GuestUser extends React.Component {
 
     }
 
-    medical(user_location, email_for_bcc) {
+    medical(user_location, email_for_bcc, ip_address) {
         this.setState({
             medical_loading: !this.state.medical_loading
         })
         emailjs.send('gmail', 'template_a7xa4hf', {
             "subject": "Regarding medical emergency",
             "name": `Dear user,`,
-            "email_from": "cueasap.help@gmail.com",
+            "email_from": "citizen",
             "email_to": "kurtzcolonel848@gmail.com",
             "email_to_bcc": `${email_for_bcc}`,
             "message": `There is a need for medical assistance at ${user_location} on ${new Date().toLocaleTimeString()}.`,
             "my_html": `View Map:<br/>  <a href="https://maps.google.com/maps?q=${user_location}&t=&z=14&ie=UTF">Click here...</a>`,
-            "contact": `For further details:<br/>  Contact:<br/>  cueasap.help@gmail.com`,
+            "contact": `Further user details:<br/>  User IP: ${ip_address}`,
         }, 'user_8jlcQ5ZP3b4DP5GVGoiSd')
             .then((result) => {
                 this.setState({
@@ -179,19 +179,19 @@ class GuestUser extends React.Component {
             });
     }
 
-    vehicle(user_location, email_for_bcc) {
+    vehicle(user_location, email_for_bcc, ip_address) {
         this.setState({
             vehicle_loading: !this.state.vehicle_loading
         })
         emailjs.send('gmail', 'template_a7xa4hf', {
             "subject": "Regarding vehicle emergency",
             "name": `Dear user,`,
-            "email_from": "cueasap.help@gmail.com",
+            "email_from": "citizen",
             "email_to": "kurtzcolonel848@gmail.com",
             "email_to_bcc": `${email_for_bcc}`,
             "message": `It is regarding a vehicle emergency at ${user_location} on ${new Date().toLocaleTimeString()}.`,
             "my_html": `View Map:<br/>  <a href="https://maps.google.com/maps?q=${user_location}&t=&z=14&ie=UTF">Click here...</a>`,
-            "contact": `For further details:<br/>  Contact:<br/>  cueasap.help@gmail.com`,
+            "contact": `Further user details:<br/>  User IP: ${ip_address}`,
         }, 'user_8jlcQ5ZP3b4DP5GVGoiSd')
             .then((result) => {
                 this.setState({
@@ -236,6 +236,15 @@ class GuestUser extends React.Component {
             })
     }
 
+    get_ip_address = () => {
+        fetch('https:/api.ipify.org/?format=json')
+        .then(results => results.json())
+        .then((data) => {
+            const ip = data.ip;
+            this.setState({ipAddress: ip})   
+        })
+    }
+
     // Cue-buttons state (active/inactive)
 
     change_police_cue_state = () => {
@@ -270,6 +279,8 @@ class GuestUser extends React.Component {
         this.get_email_id()
         // Tracking user's current location:
         //this.getLocation()
+        // Tracking user's ip address:
+        this.get_ip_address()
     }
 
     render() {
@@ -285,14 +296,14 @@ class GuestUser extends React.Component {
                             {
                                 this.state.police_cue_state
                                     ?
-                                    <button class="sos-pole-police-open" id="guest-cue-circle" onClick={() => this.police(this.state.useAddress, this.state.emails_for_sos)}><img id="guest-img-circle" src={sos_icon} width="52px" alt="" /></button>
+                                    <button class="sos-pole-police-open" id="guest-cue-circle" onClick={() => this.police(this.state.useAddress, this.state.emails_for_sos, this.state.ipAddress)}><img id="guest-img-circle" src={sos_icon} width="52px" alt="" /></button>
                                     :
                                     <button class="sos-pole-police-close" id="guest-cue-circle" ><img id="guest-img-circle" src={sos_icon} width="52px" alt="" /></button>
                             }
                             {
                                 this.state.fire_cue_state
                                     ?
-                                    <button class="sos-pole-fire-open" id="guest-cue-circle" onClick={() => this.fire(this.state.useAddress, this.state.emails_for_sos)}><img id="guest-img-circle" src={sos_icon} width="52px" alt="" /></button>
+                                    <button class="sos-pole-fire-open" id="guest-cue-circle" onClick={() => this.fire(this.state.useAddress, this.state.emails_for_sos, this.state.ipAddress)}><img id="guest-img-circle" src={sos_icon} width="52px" alt="" /></button>
                                     :
                                     <button class="sos-pole-fire-close" id="guest-cue-circle" ><img id="guest-img-circle" src={sos_icon} width="52px" alt="" /></button>
                             }
@@ -381,23 +392,23 @@ class GuestUser extends React.Component {
                             {
                                 this.state.medical_cue_state
                                     ?
-                                    <button class="sos-pole-medical-open" id="guest-cue-circle" onClick={() => this.medical(this.state.useAddress, this.state.emails_for_sos)}><img id="guest-img-circle" src={sos_icon} width="52px" alt="" /></button>
+                                    <button class="sos-pole-medical-open" id="guest-cue-circle" onClick={() => this.medical(this.state.useAddress, this.state.emails_for_sos, this.state.ipAddress)}><img id="guest-img-circle" src={sos_icon} width="52px" alt="" /></button>
                                     :
                                     <button class="sos-pole-medical-close" id="guest-cue-circle" ><img id="guest-img-circle" src={sos_icon} width="52px" alt="" /></button>
                             }
                             {
                                 this.state.vehicle_cue_state
                                     ?
-                                    <button class="sos-pole-vehicle-open" id="guest-cue-circle" onClick={() => this.vehicle(this.state.useAddress, this.state.emails_for_sos)}><img id="guest-img-circle" src={sos_icon} width="52px" alt="" /></button>
+                                    <button class="sos-pole-vehicle-open" id="guest-cue-circle" onClick={() => this.vehicle(this.state.useAddress, this.state.emails_for_sos, this.state.ipAddress)}><img id="guest-img-circle" src={sos_icon} width="52px" alt="" /></button>
                                     :
                                     <button class="sos-pole-vehicle-close" id="guest-cue-circle"><img id="guest-img-circle" src={sos_icon} width="52px" alt="" /></button>
                             }
                         </div>
                     </div>
                     {
-                            <div class="single-box-map" id="home-text" style={{ marginLeft: 60, marginRight: 60 }} >
+                            <div class="single-box-map" id="guest-map-box" style={{ marginLeft: 60, marginRight: 60 }} >
                                 <img class="map-api" src={map_static_none} width="auto" height="auto" alt="" />
-                                <h4 style={{ paddingTop: 6 }}><img src={user_locate} width="32px" alt=""/>Login to track your location</h4>
+                            <h4 style={{ paddingTop: 6 }}>Login to track your location! If you are a new user then Signup to create your own account</h4>
                             </div>
                     }
                 </div>

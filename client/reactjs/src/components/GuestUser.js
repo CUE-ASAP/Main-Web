@@ -278,7 +278,7 @@ class GuestUser extends React.Component {
         // To fetch all emails from server for sos
         this.get_email_id()
         // Tracking user's current location:
-        //this.getLocation()
+        this.getLocation()
         // Tracking user's ip address:
         this.get_ip_address()
     }

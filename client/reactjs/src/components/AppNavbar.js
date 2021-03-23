@@ -54,7 +54,7 @@ class AppNavBar extends Component {
             {window.innerWidth>574?
                 <nav class="app-nav">
                     <a class="app-nav-a" style={{ fontFamily: 'Mulish' }} href="#Cue">Home</a>
-                    <a class="app-nav-a" style={{ fontFamily: 'Mulish' }} href="#About us">About us</a>
+                    <a class="app-nav-a" style={{ fontFamily: 'Mulish' }} href="#About-us">About us</a>
                     <a class="app-nav-a" style={{ fontFamily: 'Mulish' }} href="#Services">Services</a>
                     <a class="app-nav-a" style={{ fontFamily: 'Mulish' }} href="#Contact">Contact</a>
                     <div class="animation start-home"></div>
@@ -64,7 +64,7 @@ class AppNavBar extends Component {
                     <a href="#Cue">Home</a>
                 </NavItem>
                 <NavItem>
-                    <a href="#About us">About us</a>
+                    <a href="#About-us">About us</a>
                 </NavItem>
                 <NavItem>
                     <a href="#Services">Services</a>

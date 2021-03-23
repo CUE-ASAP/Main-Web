@@ -133,7 +133,7 @@ function Home() {
 
 
             {/* About us */}
-            <div class="about-us-landing-section" id="About us">
+            <div class="about-us-landing-section" id="About-us">
                 <section class="about-us-glass">
                     <div class="about-us-gist" id="about-text">
                         <h2>Just have a look who we are!</h2>

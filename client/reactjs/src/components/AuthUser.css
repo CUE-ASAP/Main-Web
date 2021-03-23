@@ -19,7 +19,7 @@
     align-items: center;
     padding-top: 40px;
     height: 658px;
-    background:linear-gradient(to right top,#1a2980,#24c6dc);
+    background:linear-gradient(to right top,#3a7bd5,#00d2ff);
 }
 
 
@@ -569,11 +569,10 @@
     width: 300px;
     height: auto;
     border-radius: 10px;
-    background-color: #00bcd4;
+    background-image: linear-gradient(to right bottom, #c33764, #1d2671);
     text-align: center;
     margin: 20px;
     padding: 3px;
-    transition: .3s;
 }
 
 #home-text h4{
@@ -584,7 +583,7 @@
 }
 
 .single-box-map:hover{
-    background: #1bdf1b;
+    background: #1d2671;
 }
 
 .map-api{

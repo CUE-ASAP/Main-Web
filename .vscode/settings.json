@@ -2,11 +2,13 @@
     "cSpell.ignoreWords": [
         "emsp",
         "ensp",
+        "heroku",
         "jwtsecret",
         "kommunicate",
         "mern",
         "mongouri",
         "noreferrer",
+        "postbuild",
         "reactjs",
         "scrollreveal",
         "tawk",

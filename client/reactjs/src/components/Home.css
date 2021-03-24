@@ -581,23 +581,6 @@ html{
     }
 }
 
-@media (max-width :574px){
-    #back-to-home-glass-inner-info{
-        margin-top:2.2%;
-        width:90%;
-    }
-    #back-to-home-glass-inner-info h5{
-        font-size: 18px;
-    }
-    #back-to-home-glass-inner-timer{
-        margin-top:2.2%;
-    }
-    #back-to-home-btn{
-        height: 34px;
-        margin-bottom: 6px;
-    }
-}
-
 @media (max-width :1024px) and (min-width:574px){
     .about-us-glass{
         width: 50%;
@@ -647,5 +630,27 @@ html{
     }
     #back-to-home-btn{
         height: 36px;
+    }
+}
+
+
+@media (max-width :574px){
+    #back-to-home-glass-inner-info{
+        margin-top:2.2%;
+        width:100%;
+    }
+    #back-to-home-glass-inner-info h5{
+        font-size: 18px;
+    }
+    #back-to-home-glass-inner-timer{
+        margin-top:2.2%;
+    }
+    #back-to-home-glass-inner-text h5{
+       margin-bottom:5%;
+       margin-top:4%;
+    }
+    #back-to-home-btn{
+        height: 34px;
+        margin-bottom: 6px;
     }
 }

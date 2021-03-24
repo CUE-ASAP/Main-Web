@@ -6,12 +6,15 @@ import PropTypes from 'prop-types'
 import './GuestUser.css'
 
 import map_static_none from '../assets/map-static-none.png'
-import fire_icon from '../assets/Fire.svg'
 import police_icon from '../assets/Police.svg'
+import fire_icon from '../assets/Fire.svg'
 import medical_icon from '../assets/Medical.svg'
 import vehicle_icon from '../assets/Car.svg'
-import sos_icon from '../assets/sos-icon.png'
-import maps_icon from '../assets/maps-tracking.png'
+import sos_icon from '../assets/sos-icon.svg'
+import maps_police_icon from '../assets/police_map_pin.svg'
+import maps_fire_icon from '../assets/fire_map_pin.svg'
+import maps_medical_icon from '../assets/hospital_map_pin.svg'
+import maps_vehicle_icon from '../assets/vehicle_map_pin.svg'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import emailjs from 'emailjs-com'
@@ -311,9 +314,9 @@ class GuestUser extends React.Component {
                         <div class="cue-wrapper-inner">
                             {
                                 this.state.police_cue_state ?
-                                    <button class="maps-pole-police-open" id="guest-cue-circle" onClick={() => this.police_maps_link()}><img id="guest-img-circle" src={maps_icon} width="52px" alt="" /></button>
+                                    <button class="maps-pole-police-open" id="guest-cue-circle" onClick={() => this.police_maps_link()}><img id="guest-img-circle" src={maps_police_icon} width="52px" alt="" /></button>
                                     :
-                                    <button class="maps-pole-police-close" id="guest-cue-circle" ><img id="guest-img-circle" src={maps_icon} width="52px" alt="" /></button>
+                                    <button class="maps-pole-police-close" id="guest-cue-circle" ><img id="guest-img-circle" src={maps_police_icon} width="52px" alt="" /></button>
                             }
                             <div class="single-box-cue-pole-police" id="guest-cue-box" onClick={() => this.change_police_cue_state()}>
                                 {
@@ -342,9 +345,9 @@ class GuestUser extends React.Component {
 
                             {
                                 this.state.fire_cue_state ?
-                                    <button class="maps-pole-fire-open" id="guest-cue-circle" onClick={() => this.fire_maps_link()}><img id="guest-img-circle" src={maps_icon} width="52px" alt="" /></button>
+                                    <button class="maps-pole-fire-open" id="guest-cue-circle" onClick={() => this.fire_maps_link()}><img id="guest-img-circle" src={maps_fire_icon} width="52px" alt="" /></button>
                                     :
-                                    <button class="maps-pole-fire-close" id="guest-cue-circle" ><img id="guest-img-circle" src={maps_icon} width="52px" alt="" /></button>
+                                    <button class="maps-pole-fire-close" id="guest-cue-circle" ><img id="guest-img-circle" src={maps_fire_icon} width="52px" alt="" /></button>
                             }
 
                         </div>
@@ -352,9 +355,9 @@ class GuestUser extends React.Component {
                             {
                                 this.state.medical_cue_state
                                     ?
-                                    <button class="maps-pole-medical-open" id="guest-cue-circle" onClick={() => this.medical_maps_link()}><img id="guest-img-circle" src={maps_icon} width="52px" alt="" /></button>
+                                    <button class="maps-pole-medical-open" id="guest-cue-circle" onClick={() => this.medical_maps_link()}><img id="guest-img-circle" src={maps_medical_icon} width="52px" alt="" /></button>
                                     :
-                                    <button class="maps-pole-medical-close" id="guest-cue-circle" ><img id="guest-img-circle" src={maps_icon} width="52px" alt="" /></button>
+                                    <button class="maps-pole-medical-close" id="guest-cue-circle" ><img id="guest-img-circle" src={maps_medical_icon} width="52px" alt="" /></button>
                             }
                             <div class="single-box-cue-pole-medical" id="guest-cue-box" onClick={() => this.change_medical_cue_state()}>
                                 {
@@ -383,9 +386,9 @@ class GuestUser extends React.Component {
                             {
                                 this.state.vehicle_cue_state
                                     ?
-                                    <button class="maps-pole-vehicle-open" id="guest-cue-circle" onClick={() => this.vehicle_maps_link()}><img id="guest-img-circle" src={maps_icon} width="52px" alt="" /></button>
+                                    <button class="maps-pole-vehicle-open" id="guest-cue-circle" onClick={() => this.vehicle_maps_link()}><img id="guest-img-circle" src={maps_vehicle_icon} width="52px" alt="" /></button>
                                     :
-                                    <button class="maps-pole-vehicle-close" id="guest-cue-circle" ><img id="guest-img-circle" src={maps_icon} width="52px" alt="" /></button>
+                                    <button class="maps-pole-vehicle-close" id="guest-cue-circle" ><img id="guest-img-circle" src={maps_vehicle_icon} width="52px" alt="" /></button>
                             }
                         </div>
                         <div class="cue-wrapper-outer">

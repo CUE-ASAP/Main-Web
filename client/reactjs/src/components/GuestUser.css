@@ -656,17 +656,18 @@
 }
 
 .container .card:nth-child(1) .card-img-area{
-    background-image: url('../assets/user-location-large.png');
+    background-image: url('../assets/location_pin.svg');
+    background-size: 75%;
     background-repeat: no-repeat;
 }
 .container .card:nth-child(2) .card-img-area{
-    background-image: url('../assets/sos-icon-large.png');
+    background-image: url('../assets/sos-icon.svg');
+    background-size: 75%;
     background-repeat: no-repeat;
 }
 .container .card:nth-child(3) .card-img-area{
-    background-image: url('../assets/maps-tracking-large.png');
-    background-size: 90%;
-    background-position: 0.58em;
+    background-image: url('../assets/contact.svg');
+    background-size: 81%;
     background-repeat: no-repeat;
 }
 
@@ -873,4 +874,10 @@
       height: 24px;
   }
  
+}
+
+@media (max-height : 730px){
+    #guest-home-btn-map-bg{
+        height: auto;
+    }
 }

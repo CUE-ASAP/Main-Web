@@ -6,13 +6,16 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types'
 import './AuthUser.css'
 
-import fire_icon from '../assets/Fire.svg'
 import police_icon from '../assets/Police.svg'
+import fire_icon from '../assets/Fire.svg'
 import medical_icon from '../assets/Medical.svg'
 import vehicle_icon from '../assets/Car.svg'
-import sos_icon from '../assets/sos-icon.png'
-import maps_icon from '../assets/maps-tracking.png'
-import user_locate from '../assets/user-location.png'
+import sos_icon from '../assets/sos-icon.svg'
+import maps_police_icon from '../assets/police_map_pin.svg'
+import maps_fire_icon from '../assets/fire_map_pin.svg'
+import maps_medical_icon from '../assets/hospital_map_pin.svg'
+import maps_vehicle_icon from '../assets/vehicle_map_pin.svg'
+import { CurrentLocation } from '@styled-icons/boxicons-regular/CurrentLocation'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import emailjs from 'emailjs-com'
@@ -302,9 +305,9 @@ class AuthUser extends React.Component {
                 <div class="cue-wrapper-inner">
                     {
                         this.state.police_cue_state?
-                        <button class="maps-pole-police-open" onClick={() => this.police_maps_link()}><img src={maps_icon} width="52px" alt=""/></button>
+                        <button class="maps-pole-police-open" onClick={() => this.police_maps_link()}><img src={maps_police_icon} width="52px" alt=""/></button>
                         :
-                        <button class="maps-pole-police-close"><img src={maps_icon} width="52px" alt="" /></button>
+                        <button class="maps-pole-police-close"><img src={maps_police_icon} width="52px" alt="" /></button>
                     }
                         <div class="single-box-cue-pole-police" onClick={()=>this.change_police_cue_state()}>
                             {
@@ -333,9 +336,9 @@ class AuthUser extends React.Component {
                         
                     {
                         this.state.fire_cue_state?
-                        <button class="maps-pole-fire-open" onClick={() => this.fire_maps_link()}><img src={maps_icon} width="52px" alt="" /></button>
+                        <button class="maps-pole-fire-open" onClick={() => this.fire_maps_link()}><img src={maps_fire_icon} width="52px" alt="" /></button>
                         :
-                        <button class="maps-pole-fire-close"><img src={maps_icon} width="52px" alt="" /></button>
+                        <button class="maps-pole-fire-close"><img src={maps_fire_icon} width="52px" alt="" /></button>
                     }
                         
                 </div>
@@ -343,9 +346,9 @@ class AuthUser extends React.Component {
                     {
                         this.state.medical_cue_state
                         ?
-                        <button class="maps-pole-medical-open" onClick={() => this.medical_maps_link()}><img src={maps_icon} width="52px" alt="" /></button>
+                        <button class="maps-pole-medical-open" onClick={() => this.medical_maps_link()}><img src={maps_medical_icon} width="52px" alt="" /></button>
                         :
-                        <button class="maps-pole-medical-close"><img src={maps_icon} width="52px" alt="" /></button>
+                        <button class="maps-pole-medical-close"><img src={maps_medical_icon} width="52px" alt="" /></button>
                     }
                         <div class="single-box-cue-pole-medical" onClick={() => this.change_medical_cue_state()}>
                             {
@@ -374,9 +377,9 @@ class AuthUser extends React.Component {
                     {
                         this.state.vehicle_cue_state
                         ?
-                        <button class="maps-pole-vehicle-open" onClick={() => this.vehicle_maps_link()}><img src={maps_icon} width="52px" alt=""/></button>
+                        <button class="maps-pole-vehicle-open" onClick={() => this.vehicle_maps_link()}><img src={maps_vehicle_icon} width="52px" alt=""/></button>
                         :
-                        <button class="maps-pole-vehicle-close"><img src={maps_icon} width="52px" alt="" /></button>
+                        <button class="maps-pole-vehicle-close"><img src={maps_vehicle_icon} width="52px" alt="" /></button>
                     }
                 </div>
                 <div class="cue-wrapper-outer">
@@ -407,7 +410,7 @@ class AuthUser extends React.Component {
                                         :
                                         null
                                 }
-                                <h4 style={{ paddingTop: 6 }}><img src={user_locate} width="32px" alt="" />{this.state.useAddress}</h4>
+                                <h4 style={{ paddingTop: 6 }}><CurrentLocation style={{ height: 28, width: 28, fill: '#ffffff', paddingLeft: 4, paddingRight: 4, paddingBottom: 2}} />{this.state.useAddress}</h4>
                             </div>
                             :
                             null

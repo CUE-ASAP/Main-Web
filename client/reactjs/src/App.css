@@ -81,7 +81,7 @@ nav .start-contact, .app-nav-a:nth-child(4):hover~.animation{
 }
 
 .app-nav-bar-mobile-view a{
-    color:#a1f1f6;
+    color:#fff;
     display: block;
     font-family: 'Blinker';
     font-size: 1.0em;
@@ -93,7 +93,7 @@ nav .start-contact, .app-nav-a:nth-child(4):hover~.animation{
 }
 
 .app-nav-bar-mobile-view a:hover{
-    color:#fff;
+    color:#a1f1f6;
 }
 
 /*CUE-ASAP NavBar - Button UI*/

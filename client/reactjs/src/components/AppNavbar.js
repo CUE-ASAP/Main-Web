@@ -94,7 +94,7 @@ class AppNavBar extends Component {
                         ?
                         <NavbarBrand style={{ paddingLeft: 5, fontFamily: 'Blinker', fontSize: 22 }}>CUE ASAP</NavbarBrand>
                         :
-                        <NavbarBrand style={{ paddingRight: 6.25, fontFamily: 'Blinker', fontSize: 22 }}>CUE ASAP</NavbarBrand>
+                        <NavbarBrand style={{ paddingRight: 6, fontFamily: 'Blinker', fontSize: 22 }}>CUE ASAP</NavbarBrand>
                         }
                         <Button id="app-navbar-toggler" onClick={this.toggle} >
                         {

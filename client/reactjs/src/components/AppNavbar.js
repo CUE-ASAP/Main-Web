@@ -90,7 +90,12 @@ class AppNavBar extends Component {
                 <Navbar dark expand="sm" className="app-navbar fixed-top" style={{ borderRadius:'0px 0px 26px 26px'}}>
                     <Container>
                         <a href="/" ><img src={Logo} style={{ height: 40, width: 75, paddingRight: 10 }} alt="" ></img></a>
-                        <NavbarBrand style={{ paddingLeft: 5 , fontFamily:'Blinker', fontSize:22}}>CUE ASAP</NavbarBrand>
+                        {window.innerWidth > 574 
+                        ?
+                        <NavbarBrand style={{ paddingLeft: 5, fontFamily: 'Blinker', fontSize: 22 }}>CUE ASAP</NavbarBrand>
+                        :
+                        <NavbarBrand style={{ paddingRight: 6.25, fontFamily: 'Blinker', fontSize: 22 }}>CUE ASAP</NavbarBrand>
+                        }
                         <Button id="app-navbar-toggler" onClick={this.toggle} >
                         {
                             this.state.isOpen

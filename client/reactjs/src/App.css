@@ -96,6 +96,12 @@ nav .start-contact, .app-nav-a:nth-child(4):hover~.animation{
     color:#a1f1f6;
 }
 
+#app-navbar-toggler{
+    background: #101d63;
+    border-color: rgb(3, 167, 167);
+}
+
+
 /*CUE-ASAP NavBar - Button UI*/
 .btn-text-sup{
     font-size: 14px;
@@ -433,10 +439,18 @@ nav .start-contact, .app-nav-a:nth-child(4):hover~.animation{
     display: none;
  }
 
+#app-navbar-toggler{
+    visibility: hidden;
+}
+
  /*Media screen (Responsiveness for Mobile View)*/
 @media (max-width : 574px){
  .app-nav-bar-mobile-view{
      display: block;
+ }
+
+ #app-navbar-toggler{
+     visibility: visible;
  }
 
  .app-navbar{

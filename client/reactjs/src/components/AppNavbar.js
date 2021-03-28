@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import {
+    Button,
     Collapse,
     Navbar,
-    NavbarToggler,
     NavbarBrand,
     Nav,
     NavItem,
@@ -16,6 +16,8 @@ import LoginModal from './auth/LoginModal';
 import Logout from './auth/Logout'
 import Logo from '../assets/Cue_logo_v2_light.svg'
 import User_icon from '../assets/user_avatar_svg_v2.svg'
+import menu_open from '../assets/menu_open.svg'
+import menu_close from '../assets/menu_close.svg'
 
 class AppNavBar extends Component {
 
@@ -89,7 +91,15 @@ class AppNavBar extends Component {
                     <Container>
                         <a href="/" ><img src={Logo} style={{ height: 40, width: 75, paddingRight: 10 }} alt="" ></img></a>
                         <NavbarBrand style={{ paddingLeft: 5 , fontFamily:'Blinker', fontSize:22}}>CUE ASAP</NavbarBrand>
-                        <NavbarToggler onClick={this.toggle} />
+                        <Button id="app-navbar-toggler" onClick={this.toggle} >
+                        {
+                            this.state.isOpen
+                            ?
+                                <img src={menu_close} width="28px" alt="" />
+                            :
+                                <img src={menu_open} width="28px" alt="" />
+                        }
+                        </Button>
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav className="ml-auto" navbar>
                                 {isAuthenticated ? authLinks : guestLinks}

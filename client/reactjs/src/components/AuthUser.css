@@ -891,3 +891,17 @@
     }
 }
 
+/*Desktop site*/
+@media (max-width :1025px) and (min-width:574px){
+    #box-card-ui{
+        padding:50px 0px;
+    }
+}
+
+@media (max-width :1210px) and (min-width:1020px){
+    #box-card-ui{
+        height: auto;
+        padding:50px 0px;
+    }
+}
+

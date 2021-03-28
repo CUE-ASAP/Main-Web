@@ -679,6 +679,9 @@ html{
     .home-gist{
         padding: 20px;
     }
+    .about-us-landing-section{
+        padding: 20px 0px;
+    }
 
     .about-us-glass{
         min-height: auto;
@@ -702,6 +705,7 @@ html{
 
     .service-landing-section{
         height: auto;
+        padding: 50px 0px;
     }
 
     .contact-landing-section{
@@ -741,4 +745,100 @@ html{
         height: 34px;
         margin-bottom: 6px;
     }
+}
+
+@media (min-height : 670px){
+    .home-landing-section{
+        height: fit-content;
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+    .home-glass{
+        width: 90%;
+        min-height: auto;
+    }
+    .home-dashboard{
+        min-height: auto;
+        padding: 20px;
+    }
+    #home-guest-btn{
+        margin-top: 8px;
+    }
+    #home-text h3,h5,p{
+        margin-top: 4px;
+    }
+    .home-gist{
+        padding: 20px;
+    }
+    .about-us-landing-section{
+        padding: 20px 0px;
+    }
+
+    .about-us-glass{
+        min-height: auto;
+        width: 90%;
+    }
+    .about-us-single-box{
+        height: 70%;
+    }
+    #about-text h2{
+        font-size: 28px;
+    }
+    #about-us-single-box-details h3{
+    font-size: 18px;
+    }
+    #about-us-single-box-details h4{
+    font-size: 12px;
+    }
+    #about-us-single-box-details h5{
+    font-size: 18px;
+    }
+
+    .service-landing-section{
+        height: auto;
+        padding: 50px 0px;
+    }
+
+    .contact-landing-section{
+        height:auto;
+    }
+
+    .contact-glass{
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .contact-glass-inner{
+        padding: 10px;
+        min-height: 8vh;
+        width: auto;
+    }
+    .contact-gist{
+        margin: 14px 0px;
+    }
+    #contact-glass-inner-img-text{
+        padding: 14px;
+    }
+    #contact-glass-inner-img-area{
+        background-position: 0.8em;
+    }
+
+}
+
+@media (min-width : 1580px){
+
+    .about-us-glass{
+        min-height: auto;
+        width:auto;
+    }
+    .about-us-single-box{
+        height: 70%;
+    }
+}
+
+@media (max-width :1026px) and (min-width:574px){
+    .home-circle-1,.home-circle-2{
+        visibility: hidden;
+    }
+
 }

@@ -168,7 +168,7 @@
 ## Screenshots
 
 <p align="center">
-   <img src="images/Cue-asap-web.jpg" alt="" align="left" width="1200" height="500">
+   <img src="images/Cue-asap-web.jpg" alt="" width="1200" height="500">
 </p> 
 
 ---

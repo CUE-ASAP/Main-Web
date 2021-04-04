@@ -86,22 +86,22 @@
     MERN stands for MongoDB, Express, React, Node, after the four key technologies that make up the stack. 
   
   <br />
+  
   <div align="left" style="display:inline; white-space:nowrap;"> 
   <a href="" target="_blank" ><img src="images/mongodb.svg" alt="" width="80" height="40"></a>
   </div>
-  <br />
+  
   <div align="left" style="display:inline; white-space:nowrap;"> 
   <a href="" target="_blank" ><img src="images/expressjs.svg" alt="" width="80" height="40"></a>
   </div>
-  <br />
+  
   <div align="left" style="display:inline; white-space:nowrap;"> 
   <a href="" target="_blank" ><img src="images/reactjs.svg" alt="" width="80" height="40"></a>
   </div>
-  <br />
+
   <div align="left" style="display:inline; white-space:nowrap;"> 
   <a href="" target="_blank" ><img src="images/nodejs.svg" alt=""  width="80" height="40"></a>
   </div>
-  <br />
   <br />
 
 ---

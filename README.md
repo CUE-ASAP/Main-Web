@@ -72,7 +72,7 @@
 
     As per the degree of emergency, the help will be provided by using an AI chatbot CUE Assist. Each color represents an emergency, which can be shown in front of a surveillance camera or click the respective situation. This is programmed to report the selected situation to nearby authority as soon as possible. Thanks to any smart device with a camera and CUE ASAP. It can help with people who need of an assist. From this project, we hope to build an application that aids people in emergencies. 
 
-
+---
 
 ## Built With
 
@@ -81,27 +81,28 @@
   </p>
   <br/>
 
-    MERN stands for MongoDB, Express, React, Node, after the four key technologies that make up the stack. 
+> MERN stands for MongoDB, Express, React, Node, after the four key technologies that make up the stack. 
   
   <br />
   <div style="display:inline; white-space:nowrap;"> 
-  <a href="" target="_blank" ><img src="images/mongodb.svg" alt="" align="left" width="80" height="40"></a>
+  <a href="" target="_blank" ><img src="images/mongodb.svg" alt="" align="left" width="100" height="40"></a>
   </div>
   <br />
   <div style="display:inline; white-space:nowrap;"> 
-  <a href="" target="_blank" ><img src="images/expressjs.svg" alt="" align="left" width="80" height="40"></a>
+  <a href="" target="_blank" ><img src="images/expressjs.svg" alt="" align="left" width="100" height="40"></a>
   </div>
   <br />
   <div style="display:inline; white-space:nowrap;"> 
-  <a href="" target="_blank" ><img src="images/reactjs.svg" alt="" align="left" width="80" height="40"></a>
+  <a href="" target="_blank" ><img src="images/reactjs.svg" alt="" align="left" width="100" height="40"></a>
   </div>
   <br />
   <div style="display:inline; white-space:nowrap;"> 
-  <a href="" target="_blank" ><img src="images/nodejs.svg" alt="" align="left" width="80" height="40"></a>
+  <a href="" target="_blank" ><img src="images/nodejs.svg" alt="" align="left" width="100" height="40"></a>
   </div>
+  <br />
   <br />
 
-
+---
 
 <!-- HARDWARE AND SOFTWARE SPECIFICATION  -->
 ## Hardware and Software Specification
@@ -128,6 +129,7 @@
     <img src="images/mern-stack-arch.jpg" alt="" width="500" height="300">
 </p>
 
+---
 
 <!--CUE-ASAP NOMENCLATURE -->
 ## CUE-ASAP Nomenclature
@@ -140,14 +142,14 @@
     6. CUE Mentor - Trusted adviser of CUE ASAP 
     7. CUE Notify - Automated Email bot 
 
-
+---
 
 <!-- LICENSE -->
 ## License
 
     Distributed under the MIT License. See `LICENSE` for more information.
 
-
+---
 
 <!-- SCREENSHOTS -->
 ## Screenshots
@@ -159,7 +161,7 @@
   </div>
 </p> 
 
-
+---
 
 <!-- CONTACT -->
 ## Contact

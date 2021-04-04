@@ -69,10 +69,16 @@
 <!-- ABSTRACT -->
 ## Abstract
 
+```
+
     CUE ASAP is a solution that can help us to survive in this world without worrying about any kind of threats and accidents. The emergency happens without our unpredictable knowledge, so we tend to aid in that scenario by using this application. The issue of violence is one of the major real-world problems that every human face. To solve all kinds of threats to mankind, CUE ASAP might come in handy. All the required information to protect a person is at hand which is a smartphone. At Least if, we can predict 3 minutes of the future it can really save many precious lives. 
 
+```
+```
 
     As per the degree of emergency, the help will be provided by using an AI chatbot CUE Assist. Each color represents an emergency, which can be shown in front of a surveillance camera or click the respective situation. This is programmed to report the selected situation to nearby authority as soon as possible. Thanks to any smart device with a camera and CUE ASAP. It can help with people who need of an assist. From this project, we hope to build an application that aids people in emergencies. 
+
+```
 
 ---
 

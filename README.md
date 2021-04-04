@@ -70,8 +70,12 @@
 ## Abstract
 
 ```
-
-    CUE ASAP is a solution that can help us to survive in this world without worrying about any kind of threats and accidents. The emergency happens without our unpredictable knowledge, so we tend to aid in that scenario by using this application. The issue of violence is one of the major real-world problems that every human face. To solve all kinds of threats to mankind, CUE ASAP might come in handy. All the required information to protect a person is at hand which is a smartphone. At Least if, we can predict 3 minutes of the future it can really save many precious lives. 
+    CUE ASAP is a solution that can help us to survive in this world without worrying about any kind of threats and accidents. 
+    The emergency happens without our unpredictable knowledge, so we tend to aid in that scenario by using this application. 
+    The issue of violence is one of the major real-world problems that every human face. 
+    To solve all kinds of threats to mankind, CUE ASAP might come in handy. 
+    All the required information to protect a person is at hand which is a smartphone.
+    At Least if, we can predict 3 minutes of the future it can really save many precious lives.
 
 ```
 ```

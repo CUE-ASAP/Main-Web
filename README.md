@@ -114,7 +114,6 @@
   > <div align="left" style="display:inline; white-space:nowrap;"> 
   <a href="https://nodejs.org/en/docs/" target="_blank" ><img src="images/nodejs.svg" alt=""  width="100" height="50"></a>
   </div>
-  <br />
 
 ---
 

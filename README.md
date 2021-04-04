@@ -84,7 +84,6 @@
     authority as soon as possible. Thanks to any smart device with a camera and CUE ASAP. It can
     help with people who need of an assist. From this project, we hope to build an application
     that aids people in emergencies. 
-
 ```
 
 ---

@@ -28,7 +28,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/CUE-ASAP/Main-Web">
-    <img src="images/CUE asap LOGO Black.gif" alt="Logo" width="674" height="400">
+    <img src="images/CUE asap LOGO Black.gif" alt="Logo" width="120" height="80">
   </a>
 
   <h3 align="center">CUE-ASAP</h3>
@@ -68,7 +68,7 @@
 ## Abstract
 
     CUE ASAP is a solution that can help us to survive in this world without worrying about any kind of threats and accidents. The emergency happens without our unpredictable knowledge, so we tend to aid in that scenario by using this application. The issue of violence is one of the major real-world problems that every human face. To solve all kinds of threats to mankind, CUE ASAP might come in handy. All the required information to protect a person is at hand which is a smartphone. At Least if, we can predict 3 minutes of the future it can really save many precious lives. 
-
+<br/>
     As per the degree of emergency, the help will be provided by using an AI chatbot CUE Assist. Each color represents an emergency, which can be shown in front of a surveillance camera or click the respective situation. This is programmed to report the selected situation to nearby authority as soon as possible. Thanks to any smart device with a camera and CUE ASAP. It can help with people who need of an assist. From this project, we hope to build an application that aids people in emergencies. 
 
 
@@ -84,19 +84,19 @@
   
   <br />
   <div style="display:inline; white-space:nowrap;"> 
-  <a href="" target="_blank" ><img src="images/mongodb.svg" alt="" align="left" width="24" height="24"></a>
+  <a href="" target="_blank" ><img src="images/mongodb.svg" alt="" align="left" width="auto" height="auto"></a>
   </div>
   <br />
   <div style="display:inline; white-space:nowrap;"> 
-  <a href="" target="_blank" ><img src="images/expressjs.svg" alt="" align="left" width="24" height="24"></a>
+  <a href="" target="_blank" ><img src="images/expressjs.svg" alt="" align="left" width="auto" height="auto"></a>
   </div>
   <br />
   <div style="display:inline; white-space:nowrap;"> 
-  <a href="" target="_blank" ><img src="images/reactjs.svg" alt="" align="left" width="24" height="24"></a>
+  <a href="" target="_blank" ><img src="images/reactjs.svg" alt="" align="left" width="auto" height="auto"></a>
   </div>
   <br />
   <div style="display:inline; white-space:nowrap;"> 
-  <a href="" target="_blank" ><img src="images/nodejs.svg" alt="" align="left" width="24" height="24"></a>
+  <a href="" target="_blank" ><img src="images/nodejs.svg" alt="" align="left" width="auto" height="auto"></a>
   </div>
 
 
@@ -151,10 +151,11 @@
 ## Screenshots
 
 <p align="center">
-  <div id="texts" style="display:inline; white-space:nowrap;"> 
-   <img src="images/Cue-asap-web.jpg" alt="" align="left" width="1345" height="647">
+  <div style="display:inline; white-space:nowrap;"> 
+   <img src="images/Cue-asap-web.jpg" alt="" align="left" width="1200" height="500">
   </div>
 </p> 
+<br/>
 
 
 
@@ -162,8 +163,8 @@
 ## Contact
 
     CUE Dev :   Vimal Kannan (vk2049627@gmail.com) - Full Stack Developer
-            Joshua Prem Cyril (joshua.cyril88@gmail.com) - AI Data Analyst
-            Dinesh Kumar (dineshrdk07@gmail.com) - Web Testing Executive
+                Joshua Prem Cyril (joshua.cyril88@gmail.com) - AI Data Analyst
+                Dinesh Kumar (dineshrdk07@gmail.com) - Web Testing Executive
 
 
     Project Link: [https://cueasap.xyz](https://cueasap.xyz)

@@ -177,6 +177,7 @@
 ---
 
 <!-- CONTACT -->
+<br />
 ## Contact
 
     CUE Dev :   Vimal Kannan (vk2049627@gmail.com) - Full Stack Developer

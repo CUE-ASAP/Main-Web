@@ -79,9 +79,10 @@
     future it can really save many precious lives.
 
     As per the degree of emergency, the help will be provided by using an AI chatbot CUE Assist.
-    Each color represents an emergency, which can be shown in front of a surveillance camera or 
-    click the respective situation. This is programmed to report the selected situation to nearby authority as soon as possible. Thanks to any smart device with a camera and CUE ASAP. It can 
-    help with people who need of an assist. From this project, we hope to build an application 
+    Each color represents an emergency, which can be shown in front of a surveillance camera or
+    click the respective situation. This is programmed to report the selected situation to nearby
+    authority as soon as possible. Thanks to any smart device with a camera and CUE ASAP. It can
+    help with people who need of an assist. From this project, we hope to build an application
     that aids people in emergencies. 
 
 ```

@@ -103,7 +103,7 @@
   <a href="" target="_blank" ><img src="images/mongodb.svg" alt="" width="100" height="50"></a>
   </div>
 
-  > <div align="left" style="display:inline; white-space:nowrap; padding:10px 0px"> 
+  > <div align="left" style="display:inline; white-space:nowrap; padding:"10px"> 
   <a href="" target="_blank" ><img src="images/expressjs.svg" alt="" width="100" height="50"></a>
   </div>
 
